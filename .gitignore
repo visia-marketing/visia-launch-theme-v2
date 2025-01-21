@@ -1,0 +1,8 @@
+# Ignore Node Modules
+node_modules
+package-lock.json
+
+assets/scripts/src/
+assets/styles/src/
+
+.DS_Store
