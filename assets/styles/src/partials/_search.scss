@@ -1,0 +1,284 @@
+
+
+
+/* Search Page */
+.main-search { 
+  background-color: $grey-bg;
+  padding: 20px 0 30px;
+  position: relative;
+  z-index: 99;
+
+  .main-search-bar {
+    background-color: $grey-bg;
+    position: relative;
+
+    .main-search-form {
+      border: 1px solid darken($grey-bg,5%);
+      border-radius: 10px;
+      background-color: #fff;
+      padding: 0.5rem;
+
+      form {
+        padding: 0;
+
+        @include breakpoint(medium) {
+          padding: 0.5rem;
+        }
+
+        display: flex;
+        align-items: center;
+
+        .is-screen-reader-text {
+          display: none;
+        }
+
+        label {
+          flex-grow: 1;
+          margin-right: 1rem;
+          display: flex;
+          align-items: center;
+
+          @include breakpoint(medium) {
+            margin-right: 3rem;
+          }
+
+          i {
+            margin-right: 0.5rem;
+            color: $red;
+            font-size: 1.125rem;
+          }
+
+          input {
+            margin: 0;
+            background-color: #fff;
+            border: none;
+            outline: none;
+            font-size: 14px;
+            color: $black;
+            width: 100%;
+
+            @include breakpoint(medium) {
+              font-size: 20px;
+            }
+
+            &:focus,
+            &:active {
+              outline: none;
+              border: none;
+              box-shadow: none;
+            }
+
+            &::placeholder {
+              color: $dark-grey;
+              font-family: $sans;
+            }
+          }
+        }
+
+        button {
+          margin-left: auto;
+          background-color: $red;
+          padding: 0.75rem 1.5rem;
+          color: #fff;
+          font-size: 15px;
+          font-weight: 600;
+          cursor: pointer;
+          transition: all 0.3s;
+
+          @include breakpoint(medium) {
+            font-size: 16px;
+            padding: 0.75rem 2.5rem;
+          }
+
+          &:hover,
+          &:focus {
+            background-color: darken($red,5%);
+          }
+        }
+      }
+    }
+
+    .search-border {
+      height: 1px;
+      background-color: #535353;
+      margin: 0 1rem;
+    }
+
+  }
+}
+
+
+
+
+
+
+.search-results-wrapper {
+  margin-top: 50px;
+
+  .search-results-cell {
+    border-bottom: 1px solid #ededed;
+    margin-bottom: 26px;
+    padding-bottom: 26px;
+
+    display: flex;
+    gap: 30px;
+
+    .search-results-cell-image {
+      flex: 0 0 100px;
+
+      img {
+        max-width: 100px;
+      }
+
+    }
+
+    h2 {
+      font-size: 18px;
+      font-weight: 600;
+      margin-bottom: 2px;
+
+      a {
+        color: $black;
+
+        i {
+          color: $black;
+          font-size: 16px;
+        }
+
+        &:hover {
+          color: $red;
+        }
+
+      }
+
+    }
+
+    span.search-permalink {
+      display: block;
+      font-size: 14px;
+      color: #999;
+      margin-bottom: 7px;
+    }
+
+    p {
+      //color: #71777a;
+      font-size: 14px;
+      margin-bottom: 0;
+    }
+
+    .read-more {
+      color: $reveal-border;
+      display: inline-block;
+      margin: 6px 0 0 0;
+      font-size: 13px;
+      font-weight: 400;
+      text-transform: uppercase;
+    }
+
+  }
+
+  .search-results-none {
+    margin-bottom: 170px;
+
+    h2 {
+      font-size: 18px;
+      font-weight: 400;
+      margin-bottom: 26px;
+    }
+  }
+
+}
+
+.search-pagination {
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  font-size: 12px;
+  display: flex;
+
+  .page-numbers {
+    text-align: center;
+    margin: 0 0.25em;
+    border-bottom: 2px solid #fff;
+    display: block;
+    color: $red;
+    padding: 0 0.5rem;
+
+    &:hover {
+      color: #202020;
+    }
+
+    &.current {
+      border-color: $red;
+      color: #202020;
+      font-weight: bold;
+    }
+
+    &.next,
+    &.prev {
+      color: $red;
+    }
+  }
+}
+
+#resources-search-wrapper {
+
+  .search-suggestions, .search-border {
+    display: none;
+  }
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/*
+#main-search-wrapper {
+  background-color: darken($grey-bg,7%);
+  display: none;
+  height: 110px;
+  position: fixed;
+   top: 0;
+   right: 0;
+   left: 0;
+  width: 100%;
+  z-index: 999999;
+
+  @include breakpoint(medium) {
+    height: 240px;
+  }
+
+  &.active {
+    display: block;
+  }
+
+  .main-search {
+    margin-top: 8px;
+
+    @include breakpoint(medium) {
+      margin-top: 80px;
+    }
+
+  }
+
+  input {
+     border: none;
+  }
+
+  .main-search-close {
+    color: $black;
+    cursor: pointer;
+    position: absolute;
+     top: 16px;
+     right: 16px;
+  }
+
+}
+*/

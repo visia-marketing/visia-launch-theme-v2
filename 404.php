@@ -1,4 +1,4 @@
-<article class="page page-<?php global $post; echo $post->post_name; ?>">
+<article class="page page-404">
 
   <?php get_template_part('templates/page-header'); ?>
   

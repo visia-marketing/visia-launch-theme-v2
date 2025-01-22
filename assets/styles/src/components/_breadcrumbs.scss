@@ -1,0 +1,16 @@
+.page-breadcrumbs {
+  color: $black;
+  font-size: .925rem;
+  margin: 1.35rem 0 4rem;
+
+  span > a > span {
+    color: $black;
+    font-weight: 600;
+  }
+
+  span {
+    font-size: .925rem;
+    font-weight: 400;
+  }
+
+}

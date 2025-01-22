@@ -1,0 +1,152 @@
+.fc-section-timeline {
+
+  .timeline {
+    position: relative;
+    margin: 0 auto;
+    padding: 80px 0 40px;
+    width: 100%;
+  }
+  
+  .timeline:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    width: 4px;
+    background-color: $red;
+    transform: translateX(-50%);
+  }
+  
+  .timeline-item {
+    padding: 0 30px 20px;
+    position: relative;
+    width: 50%;
+
+    margin-top: -70px;
+  }
+  
+  .timeline-item.left {
+    left: 0;
+  }
+  
+  .timeline-item.right {
+    left: 50%;
+  }
+  
+  .timeline-item.right .content {
+    //text-align: right;
+  }
+  
+  .timeline-item .content {
+    background-color: white;
+    padding: 20px;
+    border: 1px solid $red;
+    border-radius: 5px;
+    position: relative;
+    width: 100%;
+
+    display: flex;
+    gap: 20px;
+  }
+
+  .timeline-item.left .content:after {
+    content: '';
+    position: absolute;
+    top: 20px;
+    right: -12px;
+    border-width: 12px;
+    border-style: solid;
+    border-color: transparent transparent transparent white;
+  }
+  
+  .timeline-item.right .content:after {
+    content: '';
+    position: absolute;
+    top: 20px;
+    left: -12px;
+    border-width: 12px;
+    border-style: solid;
+    border-color: transparent white transparent transparent;
+  }
+  
+  .date {
+    font-size: 18px;
+    font-weight: bold;
+    color: $red;
+  }
+  
+  .then, .now {
+    font-size: 16px;
+    margin: 10px 0;
+  }
+
+  .now {
+    color: $red;
+    font-style: italic;
+  }
+
+  .image {
+    float: left;
+    flex-grow: 0;     /* do not grow   - initial value: 0 */
+    flex-shrink: 0;   /* do not shrink - initial value: 1 */
+    flex-basis: 80px; 
+  }
+
+  .timeline-item.right .image {
+    float: right;
+  }
+
+  .timeline-item .connector {
+    position: absolute;
+    top: 20px;
+    width: 30px;
+    height: 2px;
+    background-color: $red;
+  }
+
+  .timeline-item.left .connector {
+      right: 0; /* Connect to the middle line */
+  }
+
+  .timeline-item.right .connector {
+      left: 0; /* Connect to the middle line */
+  }
+
+  .timeline-item .timeline-icon {
+    position: absolute;
+    top: 20px;
+    left: 0;
+    width: 30px;
+    height: 30px;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    border-radius: 50%;
+    border: 2px solid #ccc;
+    z-index: 1;
+  }
+
+  .timeline-item.left .timeline-icon {
+    right: -30px;
+    left: auto;
+  }
+  
+  /* Responsive Design */
+  @media screen and (max-width: 768px) {
+    .timeline-item {
+        width: 100%;
+    }
+  
+    .timeline-item.right {
+        left: 0;
+    }
+  
+    .timeline:before {
+        left: 0;
+    }
+  }
+
+
+
+}
+

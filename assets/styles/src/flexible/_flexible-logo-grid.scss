@@ -1,0 +1,71 @@
+/*
+ * NOT USING THIS
+ */
+
+.fc-section-logo-grid {
+  margin-bottom: 70px;
+
+  .logo-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 18px;
+    
+    &.logo-grid-1 {
+      grid-template-columns: repeat(1, 1fr);
+    }
+
+    &.logo-grid-2 {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  
+    &.logo-grid-3 {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  
+    &.logo-grid-4 {
+      grid-template-columns: repeat(1, 1fr);
+      //row-gap: 10px;
+  
+      @include breakpoint(medium) {
+        grid-template-columns: repeat(2, 1fr);
+        //row-gap: 20px;
+      }
+  
+      @include breakpoint(xlarge) {
+        grid-template-columns: repeat(4, 1fr);
+        row-gap: 0;
+      }
+  
+    }
+  
+    &.logo-grid-5 {
+      grid-template-columns: repeat(5, 1fr);
+    }
+    
+ 
+    .logo-cell {
+      border: 1px solid #f2f2f2;
+      border-radius: 10px;
+      box-shadow: 0 5px 10px rgba(0,0,0,.1);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 200px;
+
+      &:hover {
+        border: 1px solid $red;
+      }
+      
+      img {
+        max-height: 120px;
+        max-width: 90%;
+        height: auto;
+        width: auto;
+      }
+      
+  
+    }
+
+  }
+
+}

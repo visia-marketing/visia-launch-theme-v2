@@ -1,0 +1,53 @@
+.gform_wrapper.gravity-theme.akro_wrapper {
+
+  .gform_required_legend {
+    display: none;
+  }
+
+  .gform_required_legend {
+    display: none;
+  }
+
+  /* Make input fields transparent */
+  .gfield input[type="text"],
+  .gfield input[type="email"],
+  .gfield input[type="tel"],
+  .gfield input[type="url"],
+  .gfield textarea,
+  .gfield select {
+    background-color: white;
+    box-shadow: none;
+    border: 1px solid grey; // Border color
+    color: $black; // Text color
+    padding: 10px;
+    border-radius: 5px;
+    width: 100%;
+
+    &:focus {
+        //border-color: #0073aa; // Change border color on focus
+        outline: none;
+    }
+
+    &::placeholder {
+      font-size: 16px;
+      opacity: 1; // Full opacity for placeholders
+    }
+  }
+
+  /* Hide labels */
+  .gfield_label {
+      //font-family: $condensed;
+      //text-transform: uppercase;
+  }
+
+  .gfield--type-checkbox {
+    margin-top: 12px;
+
+    .gfield-choice-input { 
+      margin-bottom: 0;
+    }
+    
+  }
+} 
+
+

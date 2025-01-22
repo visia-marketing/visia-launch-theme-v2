@@ -10,6 +10,7 @@
  * @link https://github.com/roots/sage/pull/1042
  */
 $sage_includes = [
+  'lib/class-tgm-plugin-activation.php', // Required and Recommended Plugins Class
   'lib/acf.php',       // Everything ACF
   'lib/assets.php',    // Scripts and stylesheets
   'lib/extras.php',    // Custom functions
@@ -82,3 +83,55 @@ function add_nonce_to_scripts($tag, $handle, $src) {
     }
     return $tag;
 }
+
+
+/**
+ * Recommended and Required Plugins
+ */
+function my_theme_register_required_plugins() {
+  $plugins = array(
+    array(
+			'name'     => 'Classic Editor',
+			'slug'     => 'classic-editor',
+			'required' => false,
+		),
+    array(
+			'name'     => 'Wordfence',
+			'slug'     => 'wordfence',
+			'required' => false,
+		),
+    array(
+			'name'     => 'Classic Widgets',
+			'slug'     => 'classic-widgets',
+			'required' => false,
+		),
+    array(
+			'name'   => 'Advanced Custom Fields Pro',
+      'slug'   => 'acf-pro',
+			'source' => 'https://github.com/pronamic/advanced-custom-fields-pro/archive/refs/heads/main.zip',
+      'external_url' => 'https://github.com/pronamic/advanced-custom-fields-pro', // If set, overrides default API URL and points to an external URL.
+		),
+    array(
+			'name'     => 'Query Monitor',
+			'slug'     => 'query-monitor',
+			'required' => false,
+		),
+  );
+
+  $config = array(
+		'id'           => 'tgmpa',                 // Unique ID for hashing notices for multiple instances of TGMPA.
+		'default_path' => '',                      // Default absolute path to bundled plugins.
+		'menu'         => 'tgmpa-install-plugins', // Menu slug.
+		'parent_slug'  => 'themes.php',            // Parent menu slug.
+		'capability'   => 'edit_theme_options',    // Capability needed to view plugin install page, should be a capability associated with the parent menu used.
+		'has_notices'  => true,                    // Show admin notices or not.
+		'dismissable'  => true,                    // If false, a user cannot dismiss the nag message.
+		'dismiss_msg'  => '',                      // If 'dismissable' is false, this message will be output at top of nag.
+		'is_automatic' => false,                   // Automatically activate plugins after installation or not.
+		'message'      => '',                      // Message to output right before the plugins table.
+  );
+
+  tgmpa( $plugins, $config );
+
+}
+add_action( 'tgmpa_register', 'my_theme_register_required_plugins' );

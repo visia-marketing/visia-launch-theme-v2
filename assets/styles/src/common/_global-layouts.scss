@@ -1,0 +1,16 @@
+// Some global styles for sections of content
+html, body {
+  -webkit-font-smoothing: antialiased;
+  -moz-font-smoothing: antialiased;
+  -o-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  scroll-behavior: smooth;
+}
+
+.main {
+	background-size: 100%;
+}
+
+.flex {
+  display: flex;
+}

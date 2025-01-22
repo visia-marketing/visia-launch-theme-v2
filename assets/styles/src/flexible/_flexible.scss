@@ -1,0 +1,134 @@
+@import "../flexible/flexible-accordion";
+@import "../flexible/flexible-akro-in-action";
+@import "../flexible/flexible-cards";
+@import "../flexible/flexible-columns";
+@import "../flexible/flexible-downloads";
+@import "../flexible/flexible-logo-grid";
+@import "../flexible/flexible-page-header";
+@import "../flexible/flexible-section-heading";
+@import "../flexible/flexible-styles";
+@import "../flexible/flexible-tabs";
+@import "../flexible/flexible-timeline";
+
+.fc-wrapper {
+
+  .fc-section {
+    padding: 30px 0;
+    position: relative;
+    overflow: hidden;
+
+    @include breakpoint(medium) {
+      padding: 50px 0;
+    }
+
+    &.fc-section-1 {
+      padding: 30px 0 30px;
+
+      @include breakpoint(medium) {
+        padding: 70px 0 50px;
+      }
+
+    }
+
+    &.fc-section-image {
+      background: radial-gradient(circle, rgba(0, 0, 0, 0.6) 0%, rgba(0, 0, 0, 0) 100%);
+      position: relative;
+
+      img.fc-section-background-image {
+        height: 100%;
+        object-fit: cover;
+        position: absolute;
+         top: 0;
+         left: 0;
+         right: 0;
+         bottom: 0;
+        width: 100%;
+        z-index: -1;
+      }
+
+      h1, h2, h3, h4, h5, h6, p, li, a, .g-section-subtitle {
+        color: #fff;
+      }
+
+    }
+   
+    &.center {
+      text-align: center;
+    } 
+
+    &.fc-section-dark {
+      background-color: $black;
+
+      h1, h2, h3, h4, h5, h6, p, a, li, blockquote, .g-style-section-title, .g-style-section-heading {
+        color: #fff;
+      }
+
+      a.button.grey {
+        color: $red;
+      }
+
+    }
+
+    &.fc-section-grey {
+      background-color: #EEEDED;
+    }
+
+  }
+
+  &.fc-wrapper-tabs {
+
+    .fc-section {
+      padding: 20px 0 20px;
+    }
+
+  }
+
+}
+
+.fc-section-cta {
+  padding: 20px 0;
+  
+  &:after {
+    content: "";
+    position: absolute;
+    left: 10%;
+    top: 0;
+    height: 150%;
+    width: 300px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    opacity: .5;
+  }
+  
+
+  .flex {
+    display: flex;
+    flex-direction:column;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+
+    @include breakpoint(medium) {
+      flex-direction: row;
+      gap: 50px;
+    }
+
+    h6 {
+      font-size: 22px;
+      margin-bottom: 0;
+      text-align: center;
+
+      @include breakpoint(medium) {
+        flex-direction: row;
+        text-align: left;
+      }
+
+    }
+
+    .button {
+      margin: 0;
+    }
+
+  }
+
+}

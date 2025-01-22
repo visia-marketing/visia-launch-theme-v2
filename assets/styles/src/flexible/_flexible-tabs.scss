@@ -1,0 +1,55 @@
+.fc-section-tabs {
+
+
+    .tabs {
+      margin: 0;
+      border: none;
+      border-bottom: 1px solid rgba(#283A84,.35);
+      background: #fff;
+      list-style-type: none;
+
+      .tabs-title > a {
+        display: block;
+        border-right: 1px solid rgba(#283A84,.35);
+        margin: .5rem 0;
+        padding: .5rem .875rem;
+        font-size: .875rem;
+        line-height: 1;
+        color: $red;
+
+        @include breakpoint(medium) {
+          padding: .5rem 1.5rem;
+          font-size: 1.125rem;
+        }
+
+      }
+
+      .tabs-title:last-child > a {
+        border-right: none;
+      }
+
+      .tabs-title>a:focus, .tabs-title>a[aria-selected=true] {
+        background: transparent;
+        color: $red;
+        font-weight: 800;
+      }
+    
+      .tabs-title>a:hover {
+        background: transparent;
+        color: $red;
+      }
+
+    }
+
+    .tabs-content {
+      border: none;
+      border-top: 0;
+      background: #fff;
+      padding-top: 2rem;
+      transition: all .5s ease;
+    }
+
+
+
+}
+
