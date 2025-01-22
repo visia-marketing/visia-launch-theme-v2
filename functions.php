@@ -95,7 +95,7 @@ function my_theme_register_required_plugins() {
 
     array(
 			'name'   => 'Advanced Custom Fields Pro',
-      'slug'   => 'acf-pro',
+      'slug'   => 'advanced-custom-fields-pro',
 			'source' => 'https://github.com/pronamic/advanced-custom-fields-pro/archive/refs/heads/main.zip',
       'required'     => true,
       'force_activation'  => true,
