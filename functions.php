@@ -90,9 +90,37 @@ function add_nonce_to_scripts($tag, $handle, $src) {
  */
 function my_theme_register_required_plugins() {
   $plugins = array(
+    
+
+
+    array(
+			'name'   => 'Advanced Custom Fields Pro',
+      'slug'   => 'acf-pro',
+			'source' => 'https://github.com/pronamic/advanced-custom-fields-pro/archive/refs/heads/main.zip',
+      'required'     => true,
+      'force_activation'  => true,
+      'external_url' => 'https://github.com/pronamic/advanced-custom-fields-pro', // If set, overrides default API URL and points to an external URL.
+		),
     array(
 			'name'     => 'Classic Editor',
 			'slug'     => 'classic-editor',
+			'required' => true,
+      'force_activation'  => true,
+		),
+    array(
+			'name'     => 'SVG Support',
+			'slug'     => 'svg-support',
+			'required' => true,
+		),
+    array(
+			'name'     => 'Classic Widgets',
+			'slug'     => 'classic-widgets',
+			'required' => true,
+      'force_activation'  => true,
+		),
+    array(
+			'name'     => 'Query Monitor',
+			'slug'     => 'query-monitor',
 			'required' => false,
 		),
     array(
@@ -101,21 +129,31 @@ function my_theme_register_required_plugins() {
 			'required' => false,
 		),
     array(
-			'name'     => 'Classic Widgets',
-			'slug'     => 'classic-widgets',
+			'name'     => 'Really Simple Security',
+			'slug'     => 'really-simple-ssl',
 			'required' => false,
 		),
     array(
-			'name'   => 'Advanced Custom Fields Pro',
-      'slug'   => 'acf-pro',
-			'source' => 'https://github.com/pronamic/advanced-custom-fields-pro/archive/refs/heads/main.zip',
-      'external_url' => 'https://github.com/pronamic/advanced-custom-fields-pro', // If set, overrides default API URL and points to an external URL.
-		),
-    array(
-			'name'     => 'Query Monitor',
-			'slug'     => 'query-monitor',
+			'name'     => 'WP Fastest Cache',
+			'slug'     => 'wp-fastest-cache',
 			'required' => false,
 		),
+    array(
+			'name'     => 'UpdraftPlus: WP Backup & Migration Plugin',
+			'slug'     => 'updraftplus',
+			'required' => false,
+		),
+    array(
+			'name'     => 'WebP Express',
+			'slug'     => 'webp-express',
+			'required' => false,
+		),
+    array(
+			'name'     => 'Disable Comments',
+			'slug'     => 'disable-comments',
+			'required' => false,
+		),
+
   );
 
   $config = array(
@@ -129,6 +167,9 @@ function my_theme_register_required_plugins() {
 		'dismiss_msg'  => '',                      // If 'dismissable' is false, this message will be output at top of nag.
 		'is_automatic' => false,                   // Automatically activate plugins after installation or not.
 		'message'      => '',                      // Message to output right before the plugins table.
+    'strings'      => array(
+      'page_title'  => __( 'Install Standard Plugins', 'theme-slug' ),
+    )
   );
 
   tgmpa( $plugins, $config );
