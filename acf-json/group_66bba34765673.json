@@ -21,49 +21,6 @@
             "endpoint": 0
         },
         {
-            "key": "field_6733abfbc72bf",
-            "label": "Use as Anchor",
-            "name": "use_as_anchor",
-            "aria-label": "",
-            "type": "radio",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "20",
-                "class": "",
-                "id": ""
-            },
-            "choices": {
-                "yes": "Yes",
-                "no": "No"
-            },
-            "default_value": "no",
-            "return_format": "value",
-            "allow_null": 0,
-            "other_choice": 0,
-            "allow_in_bindings": 1,
-            "layout": "horizontal",
-            "save_other_choice": 0
-        },
-        {
-            "key": "field_673e0f80a1379",
-            "label": "Section Heading Button",
-            "name": "section_heading_button",
-            "aria-label": "",
-            "type": "link",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "60",
-                "class": "",
-                "id": ""
-            },
-            "return_format": "array",
-            "allow_in_bindings": 0
-        },
-        {
             "key": "field_66bba50f7582b",
             "label": "Section Heading (Sentence Case)",
             "name": "section_heading",
@@ -141,5 +98,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1737492832
+    "modified": 1737995316
 }
