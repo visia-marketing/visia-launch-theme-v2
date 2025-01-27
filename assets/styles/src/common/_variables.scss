@@ -36,7 +36,7 @@ $black:       #2b2b2b;
 $white:       #ffffff;
 
 // Brand Colors - Set the brand colors here
-$red:       #D51F2A;
+$red:       #2b1fd5;
 $black:      #232323;
 
 $primary: $black;
@@ -147,6 +147,7 @@ $footer-bg: $red;
 //  55. Xy Grid
 
 @import '../../../../node_modules/foundation-sites/scss/util/util.scss';
+// @import '~foundation-sites/scss/util/util';
 
 // 1. Global
 // ---------

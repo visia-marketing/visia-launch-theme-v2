@@ -1,62 +1,44 @@
-////////////////////////////////////////////////////////////////////////////////////////////////////// 
-// 
+//////////////////////////////////////////////////////////////////////////////////////////////////////
+//
 // Theme @imports
-// 
+//
 //////////////////////////////////////////////////////////////////////////////////////////////////////
 
-
-// Import Foundation variables
+// First Foundation's settings and your variables
+@import "../../../node_modules/foundation-sites/scss/settings/_settings";
 @import "common/variables";
 
+// Then Foundation's utility functions (needed for grid)
+@import "../../../node_modules/foundation-sites/scss/util/util";
 
-///////////////////////////////////////////////
+// Then Foundation framework (this includes the grid)
+@import "../../../node_modules/foundation-sites/scss/foundation";
 
+// Initialize Foundation
+@include foundation-everything;
 
-// Automatically injected Bower dependencies via wiredep (never manually edit this block)
-// bower:scss
-@import "../../../node_modules/foundation-sites/scss/foundation.scss";
-// endbower
-
-// Motion UI - Comment out if you do not  need it
+// Motion UI
 @import '../../../node_modules/motion-ui/motion-ui';
 @include motion-ui-transitions;
 @include motion-ui-animations;
 
-// Foundation
-@include foundation-everything;
-
-
-///////////////////////////////////////////////
-
-
-// Font Awesome - Comment out if you do not need itf
-// @import "font-awesome/scss/font-awesome";
-
-// Slick Carousel - works better than orbit
+// Slick Carousel
 @import "../../../node_modules/slick-carousel/slick/slick.scss";
 @import "../../../node_modules/slick-carousel/slick/slick-theme.scss";
 
-// @import '~slick-carousel/slick/slick.scss';
-// @import '~slick-carousel/slick/slick-theme.scss';
-
-// // Extras
+// Simplelightbox
 @import "../../../node_modules/simplelightbox/";
 
-
-///////////////////////////////////////////////
-
-
+// Your custom styles
 @import "common/global-styles";
 @import "common/global-layouts";
 @import "common/helpers";
-
 @import "components/boxes";
 @import "components/breadcrumbs";
 @import "components/buttons";
 @import "components/forms";
 @import "components/misc";
 @import "components/wp-classes";
-
 @import "partials/page-content";
 @import "partials/page-header";
 @import "partials/posts";
@@ -66,12 +48,82 @@
 @import "partials/site-header";
 @import "partials/site-footer";
 @import "partials/tinymce";
-
 @import "woocommerce/wc-archive";
 @import "woocommerce/wc-single";
-
 @import "flexible/flexible";
-
-
-// Custom Pages
 @import "pages/home";
+
+
+// ////////////////////////////////////////////////////////////////////////////////////////////////////// 
+// // 
+// // Theme @imports
+// // 
+// //////////////////////////////////////////////////////////////////////////////////////////////////////
+
+// @import "../../../node_modules/foundation-sites/scss/settings/_settings";
+// @import "common/variables";
+
+// // Import Foundation grid
+// // Import Foundation
+// @import "../../../node_modules/foundation-sites/scss/grid/grid.scss";
+
+// // Import Foundation
+// @import "../../../node_modules/foundation-sites/scss/foundation.scss";
+
+
+
+// // Motion UI - Comment out if you do not  need it
+// @import '../../../node_modules/motion-ui/motion-ui';
+// @include motion-ui-transitions;
+// @include motion-ui-animations;
+
+// // Foundation
+// @include foundation-everything;
+
+
+// ///////////////////////////////////////////////
+
+
+// // Font Awesome - Comment out if you do not need itf
+// // @import "font-awesome/scss/font-awesome";
+
+// // Slick Carousel - works better than orbit
+// @import "../../../node_modules/slick-carousel/slick/slick.scss";
+// @import "../../../node_modules/slick-carousel/slick/slick-theme.scss";
+
+// // // Extras
+// @import "../../../node_modules/simplelightbox/";
+
+
+// ///////////////////////////////////////////////
+
+
+// @import "common/global-styles";
+// @import "common/global-layouts";
+// @import "common/helpers";
+
+// @import "components/boxes";
+// @import "components/breadcrumbs";
+// @import "components/buttons";
+// @import "components/forms";
+// @import "components/misc";
+// @import "components/wp-classes";
+
+// @import "partials/page-content";
+// @import "partials/page-header";
+// @import "partials/posts";
+// @import "partials/product";
+// @import "partials/search";
+// @import "partials/sidebar";
+// @import "partials/site-header";
+// @import "partials/site-footer";
+// @import "partials/tinymce";
+
+// @import "woocommerce/wc-archive";
+// @import "woocommerce/wc-single";
+
+// @import "flexible/flexible";
+
+
+// // Custom Pages
+// @import "pages/home";

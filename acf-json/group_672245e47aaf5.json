@@ -462,6 +462,82 @@
                     "min": "",
                     "max": ""
                 },
+                "layout_67979e1ead18e": {
+                    "key": "layout_67979e1ead18e",
+                    "name": "section_cards",
+                    "label": "Cards",
+                    "display": "block",
+                    "sub_fields": [
+                        {
+                            "key": "field_67979e1ead192",
+                            "label": "Section Options",
+                            "name": "section_options",
+                            "aria-label": "",
+                            "type": "clone",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "clone": [
+                                "group_673e30af57f9e"
+                            ],
+                            "display": "seamless",
+                            "layout": "block",
+                            "prefix_label": 0,
+                            "prefix_name": 0
+                        },
+                        {
+                            "key": "field_67979e1ead193",
+                            "label": "Section Header",
+                            "name": "section_header",
+                            "aria-label": "",
+                            "type": "clone",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "clone": [
+                                "group_66bba34765673"
+                            ],
+                            "display": "seamless",
+                            "layout": "block",
+                            "prefix_label": 0,
+                            "prefix_name": 0
+                        },
+                        {
+                            "key": "field_67979e1ead194",
+                            "label": "Cards",
+                            "name": "section_cards",
+                            "aria-label": "",
+                            "type": "clone",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "clone": [
+                                "group_672b86eae0ac8"
+                            ],
+                            "display": "seamless",
+                            "layout": "block",
+                            "prefix_label": 0,
+                            "prefix_name": 0
+                        }
+                    ],
+                    "min": "",
+                    "max": ""
+                },
                 "layout_6722467d7ce7a": {
                     "key": "layout_6722467d7ce7a",
                     "name": "section_accordion_simple",
@@ -731,5 +807,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1737492827
+    "modified": 1737989712
 }

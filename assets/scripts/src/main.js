@@ -9,7 +9,13 @@
  * The routing is enclosed within an anonymous function so that you can
  * always reference jQuery with $, even when in .noConflict() mode.
  * ======================================================================== */
+import $ from 'jquery';
+import 'foundation-sites';
+import 'slick-carousel';
+// import 'simple-lightbox';
 
+// If you only need specific modules:
+// import { Foundation, Accordion, Tabs } from 'foundation-sites';
 (function($) {
 
   // Use this variable to set up the common and page specific functions. If you
