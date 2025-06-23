@@ -1,0 +1,25 @@
+[
+  {
+    "title": "Section Subtitle",
+    "inline": "span",
+    "classes": "g-section-subtitle",
+    "wrapper": true
+  },
+  {
+    "title": "Section Title",
+    "inline": "span",
+    "classes": "g-section-title",
+    "wrapper": true
+  },
+  {
+    "title": "Large Number - Red",
+    "inline": "span",
+    "classes": "g-section-large-numbers",
+    "wrapper": true
+  },
+  {
+    "title": "Button with Arrow",
+    "selector": "a",
+    "classes": "button button-arrow"
+  }
+]
