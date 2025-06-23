@@ -11,7 +11,7 @@
  * ======================================================================== */
 import $ from 'jquery';
 import 'foundation-sites';
-import 'slick-carousel';
+// import 'slick-carousel';
 // import 'simple-lightbox';
 
 // If you only need specific modules:
@@ -39,30 +39,13 @@ import 'slick-carousel';
         // JavaScript to be fired on the home page
       },
       finalize: function() {
-
-        
-
-        // Content Slides Navigation
-        var $homeHeroSlides = $('.home-hero-slides');
-
-        $homeHeroSlides.slick({
-          dots: false,
-          fade: true,
-          arrows: false,
-          infinite: true,
-          speed: 300,
-          autoplay: true,
-          //slidesToShow: 1,
-          //slidesToScroll: 1,
-        });
-
+        // JavaScript to be fired on the home page, after the init JS
       }
     },
-    // About us page, note the change from about-us to about_us.
+    // All Other Pages.
     'page': {
       init: function() {
         
-        //
         // Accordion
         $('.accordion-topic').click(function(){
           $(this).next('.accordion-response').slideToggle(500).toggleClass('current');
@@ -70,87 +53,6 @@ import 'slick-carousel';
           $(this).parents('.accordion').siblings().find('.accordion-topic').slideUp(500);
           $(this).parents('.accordion').siblings().find('.accordion-response').removeClass('current');
         });
-
-        //
-        // Akro in Action Slider
-        
-        var $akroSlides = $('.akro-in-action-slider');
-
-        $akroSlides.on('init reInit afterChange', function (event, slick, currentSlide) {
-          var i = (currentSlide ? currentSlide : 0) + 1; // Convert to 1-based index
-          //$('.slide-index').text(i + '  /  ' + slick.slideCount);
-        });
-
-        $('.akro-in-action-slider-navigation .slider-prev').click(function(){
-          $akroSlides.slick('slickPrev');
-        })
-        
-        $('.akro-in-action-slider-navigation .slider-next').click(function(){
-          $akroSlides.slick('slickNext');
-        })
-
-        $akroSlides.slick({
-          dots: false,
-          arrows: true,
-          infinite: true,
-          speed: 300,
-          autoplay: true,
-          slidesToShow: 4,
-          slidesToScroll: 1,
-          prevArrow: $('.akro-in-action-slider-navigation .slider-prev'),
-          nextArrow: $('.akro-in-action-slider-navigation .slider-next'),
-          responsive: [
-            {
-              breakpoint: 1024,
-              settings: {
-                slidesToShow: 4,
-                slidesToScroll: 4,
-                infinite: true,
-                //dots: true
-              }
-            },
-            {
-              breakpoint: 600,
-              settings: {
-                slidesToShow: 2,
-                slidesToScroll: 2
-              }
-            },
-            {
-              breakpoint: 480,
-              settings: {
-                slidesToShow: 1,
-                slidesToScroll: 1
-              }
-            }
-            // You can unslick at a given breakpoint now by adding:
-            // settings: "unslick"
-            // instead of a settings object
-          ]
-        });
-
-        //
-        // Akro in Action Slider
-        
-        var $wcSlides = $('.wc-slider');
-
-        $wcSlides.on('init reInit afterChange', function (event, slick, currentSlide) {
-          var i = (currentSlide ? currentSlide : 0) + 1; // Convert to 1-based index
-          $('.slide-index').text(i + '  /  ' + slick.slideCount);
-        });
-
-        $wcSlides.slick({
-          dots: false,
-          arrows: true,
-          infinite: true,
-          speed: 300,
-          autoplay: true,
-          slidesToShow: 2,
-          slidesToScroll: 1,
-          prevArrow: $('.slider-prev'),
-          nextArrow: $('.slider-next'),
-        });
-
         
 
       }
