@@ -18,7 +18,7 @@ function setup() {
 
   // Make theme available for translation
   // Community translations can be found at https://github.com/roots/sage-translations
-  load_theme_textdomain('sage', get_template_directory() . '/lang');
+  load_theme_textdomain('visia_starter_theme', get_template_directory() . '/lang');
 
   // Enable plugins to manage the document title
   // http://codex.wordpress.org/Function_Reference/add_theme_support#Title_Tag
@@ -27,15 +27,15 @@ function setup() {
   // Register wp_nav_menu() menus
   // http://codex.wordpress.org/Function_Reference/register_nav_menus
   register_nav_menus([
-    'primary_navigation'      => __('Primary Navigation', 'sage'),
-    //'store_navigation'        => __('Store Navigation', 'sage'),
-    'top_navigation'          => __('Top Navigation', 'sage'),
-    'mobile_navigation'       => __('Mobile Navigation', 'sage'),
-    'footer_navigation_1'     => __('Footer Navigation 1', 'sage'),
-    'footer_navigation_2'     => __('Footer Navigation 2', 'sage'),
-    'footer_navigation_3'     => __('Footer Navigation 3', 'sage'),
-    'footer_navigation_4'     => __('Footer Navigation 4', 'sage'),
-    'footer_navigation_legal' => __('Footer Navigation Legal', 'sage'),
+    'primary_navigation'      => __('Primary Navigation', 'visia_starter_theme'),
+    //'store_navigation'        => __('Store Navigation', 'visia_starter_theme'),
+    'top_navigation'          => __('Top Navigation', 'visia_starter_theme'),
+    'mobile_navigation'       => __('Mobile Navigation', 'visia_starter_theme'),
+    'footer_navigation_1'     => __('Footer Navigation 1', 'visia_starter_theme'),
+    'footer_navigation_2'     => __('Footer Navigation 2', 'visia_starter_theme'),
+    'footer_navigation_3'     => __('Footer Navigation 3', 'visia_starter_theme'),
+    'footer_navigation_4'     => __('Footer Navigation 4', 'visia_starter_theme'),
+    'footer_navigation_legal' => __('Footer Navigation Legal', 'visia_starter_theme'),
   ]);
 
   // Enable post thumbnails
@@ -64,7 +64,7 @@ add_action('after_setup_theme', __NAMESPACE__ . '\\setup');
  */
 function widgets_init() {
   register_sidebar([
-    'name'          => __('Primary', 'sage'),
+    'name'          => __('Primary', 'visia_starter_theme'),
     'id'            => 'sidebar-primary',
     'before_widget' => '<section class="widget %1$s %2$s">',
     'after_widget'  => '</section>',
@@ -73,7 +73,7 @@ function widgets_init() {
   ]);
 
   register_sidebar([
-    'name'          => __('Footer', 'sage'),
+    'name'          => __('Footer', 'visia_starter_theme'),
     'id'            => 'sidebar-footer',
     'before_widget' => '<section class="widget %1$s %2$s">',
     'after_widget'  => '</section>',
@@ -82,7 +82,7 @@ function widgets_init() {
   ]);
 
   register_sidebar([
-    'name'          => __('Shop Category', 'sage'),
+    'name'          => __('Shop Category', 'visia_starter_theme'),
     'id'            => 'sidebar-shop-category',
     'before_widget' => '<section class="widget %1$s %2$s">',
     'after_widget'  => '</section>',
@@ -91,7 +91,7 @@ function widgets_init() {
   ]);
 
   register_sidebar([
-    'name'          => __('Shop Archive', 'sage'),
+    'name'          => __('Shop Archive', 'visia_starter_theme'),
     'id'            => 'sidebar-shop-archive',
     'before_widget' => '<section class="widget %1$s %2$s">',
     'after_widget'  => '</section>',
