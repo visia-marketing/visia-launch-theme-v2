@@ -1,0 +1,18 @@
+# Ignore everything in this directory
+*
+
+# But don't ignore the cspn-theme directory and all its contents
+!sas-theme/
+!sas-theme/**/*
+
+# Don't ignore the .gitignore file itself
+!.gitignore
+
+# Don't ignore GitHub workflow files
+!.github/
+!.github/**/*
+
+# Don't ignore the readme file
+!README.md
+
+ignore/
