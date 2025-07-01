@@ -37,6 +37,7 @@ $white:       #ffffff;
 $green:       #86AB3C;
 $black:      #002B49;
 $subtleBlue: #F7FCFF;
+$subtleGray: #F1F1F1;
 
 $lightGrade: linear-gradient(0deg, rgba(255, 255, 255, 0.00) -6.56%, #EDF4FA 88.2%);
 $darkGrade: linear-gradient(270deg, rgba(0, 43, 73, 0.70) -5%, rgba(0, 34, 57, 0.70) 70%);
@@ -85,7 +86,7 @@ $breadcrumb-text-color: $grey;
 $breadcrumb-anchor-color: $secondary;;
 
 // Footer
-$footer-bg: $green;
+$footer-bg: $subtleGray;
 
 
 //  Foundation for Sites Settings
