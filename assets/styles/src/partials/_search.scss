@@ -44,7 +44,7 @@
 
           i {
             margin-right: 0.5rem;
-            color: $red;
+            color: $green;
             font-size: 1.125rem;
           }
 
@@ -77,7 +77,7 @@
 
         button {
           margin-left: auto;
-          background-color: $red;
+          background-color: $green;
           padding: 0.75rem 1.5rem;
           color: #fff;
           font-size: 15px;
@@ -92,7 +92,7 @@
 
           &:hover,
           &:focus {
-            background-color: darken($red,5%);
+            background-color: darken($green,5%);
           }
         }
       }
@@ -146,7 +146,7 @@
         }
 
         &:hover {
-          color: $red;
+          color: $green;
         }
 
       }
@@ -200,7 +200,7 @@
     margin: 0 0.25em;
     border-bottom: 2px solid #fff;
     display: block;
-    color: $red;
+    color: $green;
     padding: 0 0.5rem;
 
     &:hover {
@@ -208,14 +208,14 @@
     }
 
     &.current {
-      border-color: $red;
+      border-color: $green;
       color: #202020;
       font-weight: bold;
     }
 
     &.next,
     &.prev {
-      color: $red;
+      color: $green;
     }
   }
 }

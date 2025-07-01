@@ -20,7 +20,7 @@
     width: 100%;
 
     .page-header-content {
-      background-color: rgba($red,.7);
+      background-color: rgba($green,.7);
       padding: 18px 30px 18px;
 
       @include breakpoint(medium) {
@@ -50,7 +50,7 @@
   position: relative;
 
   .page-header-content-wrapper {
-    background-color: $red;
+    background-color: $green;
     align-self: flex-end;
     width: 100%;
 

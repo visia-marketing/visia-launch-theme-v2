@@ -13,7 +13,7 @@
 
 
   &:hover {
-    border: 1px solid $red;
+    border: 1px solid $green;
   }
 
   .wc-card-image {
@@ -38,7 +38,7 @@
     height: 190px;
 
     .wc-card-sku {
-      color: $red;
+      color: $green;
       font-weight: 400;
       font-size: 15px;
     }
@@ -155,7 +155,7 @@
 
 
 .woocommerce-products-header {
-  background: $red;
+  background: $green;
   //margin-bottom: 70px;
   min-height: 100px;
   position: relative;
@@ -291,7 +291,7 @@
 	    border-bottom: 2px solid transparent;
 	    border-right: none;
 	    display: block;
-	    color: $red;
+	    color: $green;
 	    padding: 0 0.5rem;
 
 	    list-style: none;
@@ -309,7 +309,7 @@
 
 	    &.next,
 	    &.prev {
-	      color: $red;
+	      color: $green;
 	    }
 
 	  }
@@ -352,7 +352,7 @@
     .wpfFilterWrapper {
 
       .wpfFilterTitle {
-        border-bottom: 1px solid $red;
+        border-bottom: 1px solid $green;
         margin-bottom: 5px;
         padding-bottom: 5px;
   
@@ -455,7 +455,7 @@
 }
 
 .prdctfltr_wc_widget.prdctfltr_wc .prdctfltr_filter .prdctfltr_widget_title {
-	//border-bottom: 1px solid $red;
+	//border-bottom: 1px solid $green;
 	display: block;
 	margin-bottom: 5px;
 	padding-bottom: 3px;
