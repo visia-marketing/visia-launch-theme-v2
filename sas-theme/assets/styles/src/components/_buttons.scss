@@ -1,7 +1,7 @@
 .button,
 .woocommerce:where(body:not(.woocommerce-block-theme-has-button-styles)) a.button,
 .wpfFilterButton.wpfButton {
-	background-color: $red;
+	background-color: $green;
 	border-radius: 2px;
   border: none;
 	color: $white;
@@ -27,10 +27,10 @@
 
   &.grey {
 		background-color: #f3f3f3;
-		color: $red !important;
+		color: $green !important;
 
 		&:hover, &.active {
-      background-color: $red;
+      background-color: $green;
 			color: #fff !important;
 		}
 
