@@ -49,6 +49,7 @@
       $background = get_sub_field('background') ?: '';
       $background_image_id = get_sub_field('background_image');
 
+
       echo '<section class="fc-section fc-section-' . esc_attr(get_row_index()) . ' fc-section-' . esc_attr($background) . ' ' . esc_attr($class) . ' ' . esc_attr($justification) . ' ' . esc_attr($column_style) . '" id="' . esc_attr($id) . '">';
 
       // Display the background image if the background type is 'image' and an image ID exists

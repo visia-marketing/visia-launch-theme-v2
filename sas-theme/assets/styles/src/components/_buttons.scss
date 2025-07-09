@@ -2,18 +2,22 @@
 .woocommerce:where(body:not(.woocommerce-block-theme-has-button-styles)) a.button,
 .wpfFilterButton.wpfButton {
 	background-color: $green;
-	border-radius: 2px;
+	border-radius: 1px;
   border: none;
 	color: $white;
 	font-family: $sans;
-	font-size: 13px !important;
-	font-weight: 600;
-  letter-spacing: .75px;
 	margin: 1rem 0 0 0;
   min-height: 24px;
-	padding: 8px 16px 8px 16px;
-	text-transform: uppercase;
+	padding: 0.69rem 1.5rem;
   text-align: center;
+
+
+  font-size: 1.125rem;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 1.75rem;
+
+
 
   i {
     margin-left: 11px;

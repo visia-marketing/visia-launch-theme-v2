@@ -6,19 +6,18 @@ body#tinymce {
 .g {
 
   &-section-subtitle {
-    color: $black;
-    display: block;
+    color: $green;
+    text-align: center;
     font-family: $sans;
-    font-size: 14px;
-    font-weight: 400;
-    letter-spacing: 2px;
-    line-height: 1.2;
-    margin-bottom: 12px;
+    font-style: normal;
+    font-weight: 700;
     text-transform: uppercase;
+    letter-spacing: 0.2rem;
 
     @include breakpoint(medium) {
-      font-size: 17px;
-      letter-spacing: 3.5px;
+      font-size: 1.5rem;
+      letter-spacing: 0.3rem;
+      line-height: 1.9375rem; /* 129.167% */
     }
 
   }
@@ -39,6 +38,12 @@ body#tinymce {
       font-size: 46px;
     }
 
+  }
+
+  &-section-narrow-p{
+    display: block;
+    max-width: 36.5rem;
+    margin: auto;
   }
 
   &-section-intro {
@@ -103,5 +108,57 @@ body#tinymce {
     }
 
   }
+
+  &-image--top-left{
+    
+    border-radius: 1rem;
+    position: relative;
+    right: unset;
+    left: unset;
+    margin: auto;
+    display: block;
+    transition: all 0.5s ease-in-out;
+
+    @include breakpoint(xlarge) {
+      position: absolute;
+      top: 0;
+      left:  -7rem;
+    }
+
+    @include breakpoint(xxlarge) {
+      position: absolute;
+      top: 0;
+      left: -16px;
+      
+    }
+
+
+  }
+
+  &-image--top-right{
+    
+    position: relative;
+    border-radius: 1rem;
+    right: unset;
+    left: unset;
+    margin: auto;
+    display: block;
+    transition: all 0.5s ease-in-out;
+
+    @include breakpoint(xlarge) {
+      position: absolute;
+      bottom: 0;
+      right: -7rem;
+    }
+
+    @include breakpoint(xxlarge) {
+      right: -16px;
+      position: absolute;
+      bottom: 0;
+      
+    }
+
+  }
+
 
 }

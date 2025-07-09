@@ -9,7 +9,12 @@
 
   <article class="page page-flexible page-flexible-<?php echo get_post_type( $post->ID ); ?> page-<?php global $post; echo $post->post_name; ?>" id="overview">
     
-    <?php get_template_part('templates/page-header'); ?>
+    
+    <?php if( is_front_page() ): ?>
+      <?php get_template_part('partials/homepage-hero'); ?>
+    <?php else: ?>
+      <?php get_template_part('templates/page-header'); ?>
+    <?php endif; ?>
 
     <?php get_flexible_content(); ?>
 

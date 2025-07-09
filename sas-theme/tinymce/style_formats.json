@@ -12,14 +12,19 @@
     "wrapper": true
   },
   {
-    "title": "Large Number - Red",
+    "title": "Narrow Paragraph - 600px",
     "inline": "span",
-    "classes": "g-section-large-numbers",
+    "classes": "g-section-narrow-p",
     "wrapper": true
   },
   {
-    "title": "Button with Arrow",
-    "selector": "a",
-    "classes": "button button-arrow"
+    "title": "Image Top Left",
+    "selector": "img",
+    "classes": "g-image--top-left"
+  },
+  {
+    "title": "Image Top Right",
+    "selector": "img",
+    "classes": "g-image--top-right"
   }
 ]

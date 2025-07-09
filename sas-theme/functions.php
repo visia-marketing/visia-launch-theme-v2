@@ -177,3 +177,4 @@ function my_theme_register_required_plugins() {
 
 }
 add_action( 'tgmpa_register', 'my_theme_register_required_plugins' );
+
