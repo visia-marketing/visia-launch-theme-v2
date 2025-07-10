@@ -55,6 +55,10 @@ body#tinymce {
     margin: 0 0 0;
   }
 
+  &-small-text{
+    font-size: 0.9375rem;
+  }
+
   &-section-large-numbers {
     color: $green;
     display: block;
@@ -113,23 +117,25 @@ body#tinymce {
     
     border-radius: 1rem;
     position: relative;
-    right: unset;
-    left: unset;
-    margin: auto;
+    top: 0;
+    left: -16%;
     display: block;
     transition: all 0.5s ease-in-out;
+    padding-bottom: 2rem;
+
+    @include breakpoint(medium) {
+      left:  -6rem;
+    }
 
     @include breakpoint(xlarge) {
       position: absolute;
       top: 0;
-      left:  -7rem;
+      padding-bottom: 0;
     }
 
     @include breakpoint(xxlarge) {
       position: absolute;
       top: 0;
-      left: -16px;
-      
     }
 
 
@@ -139,20 +145,24 @@ body#tinymce {
     
     position: relative;
     border-radius: 1rem;
-    right: unset;
-    left: unset;
-    margin: auto;
-    display: block;
+    bottom: 0;
+    right: -16%;
+    margin-left: auto;
     transition: all 0.5s ease-in-out;
+    display: block;
+    padding-top: 2rem;
+
+    @include breakpoint(medium) {
+      right:  -6rem;
+    }
 
     @include breakpoint(xlarge) {
       position: absolute;
       bottom: 0;
-      right: -7rem;
+      padding-top: 0;
     }
 
     @include breakpoint(xxlarge) {
-      right: -16px;
       position: absolute;
       bottom: 0;
       

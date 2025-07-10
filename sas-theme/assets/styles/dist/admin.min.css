@@ -62,6 +62,9 @@ body#tinymce {
   font-weight: 400;
   margin: 0 0 0;
 }
+.g-small-text {
+  font-size: 0.9375rem;
+}
 .g-section-large-numbers {
   color: #86AB3C;
   display: block;
@@ -111,45 +114,54 @@ body#tinymce {
 .g-image--top-left {
   border-radius: 1rem;
   position: relative;
-  right: unset;
-  left: unset;
-  margin: auto;
+  top: 0;
+  left: -16%;
   display: block;
   transition: all 0.5s ease-in-out;
+  padding-bottom: 2rem;
+}
+@media print, screen and (min-width: 40em) {
+  .g-image--top-left {
+    left: -6rem;
+  }
 }
 @media screen and (min-width: 80em) {
   .g-image--top-left {
     position: absolute;
     top: 0;
-    left: -7rem;
+    padding-bottom: 0;
   }
 }
 @media screen and (min-width: 90em) {
   .g-image--top-left {
     position: absolute;
     top: 0;
-    left: -16px;
   }
 }
 .g-image--top-right {
   position: relative;
   border-radius: 1rem;
-  right: unset;
-  left: unset;
-  margin: auto;
-  display: block;
+  bottom: 0;
+  right: -16%;
+  margin-left: auto;
   transition: all 0.5s ease-in-out;
+  display: block;
+  padding-top: 2rem;
+}
+@media print, screen and (min-width: 40em) {
+  .g-image--top-right {
+    right: -6rem;
+  }
 }
 @media screen and (min-width: 80em) {
   .g-image--top-right {
     position: absolute;
     bottom: 0;
-    right: -7rem;
+    padding-top: 0;
   }
 }
 @media screen and (min-width: 90em) {
   .g-image--top-right {
-    right: -16px;
     position: absolute;
     bottom: 0;
   }

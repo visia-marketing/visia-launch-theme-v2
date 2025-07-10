@@ -178,3 +178,70 @@ function my_theme_register_required_plugins() {
 }
 add_action( 'tgmpa_register', 'my_theme_register_required_plugins' );
 
+
+
+
+
+function sas_card_shortcode($atts) {
+    // Define default attributes
+    $atts = shortcode_atts(array(
+        'title' => '',
+        'text' => '',
+        'image_id' => '',
+        'link' => ''
+    ), $atts, 'sas_card');
+    
+    // Sanitize attributes
+    $title = sanitize_text_field($atts['title']);
+    $text = wp_kses_post($atts['text']);
+    $image_id = intval($atts['image_id']);
+    $link = esc_url($atts['link']);
+    
+    // Get image URL if image_id is provided
+    $image_html = '';
+    if ($image_id) {
+        $image_url = wp_get_attachment_image_url($image_id, 'medium');
+        if ($image_url) {
+            $image_html = '<img src="' . esc_url($image_url) . '" alt="' . esc_attr($title) . '" class="sas-card-image">';
+        }
+    }
+    
+    // Build the card HTML
+    $output = '<div class="sas-card">';
+    
+    // Add image if available
+    if ($image_html) {
+        $output .= '<div class="sas-card-image-wrapper">' . $image_html . '</div>';
+    }
+    
+    // Add content wrapper
+    $output .= '<div class="sas-card-content">';
+    
+    // Add title if provided
+    if ($title) {
+        $output .= '<h3 class="sas-card-title">' . esc_html($title) . '</h3>';
+    }
+    
+    // Add text if provided
+    if ($text) {
+        $output .= '<div class="sas-card-text">' . $text . '</div>';
+    }
+    
+    // Add link if provided
+    if ($link) {
+        $output .= '<div class="sas-card-link-wrapper">';
+        $output .= '  <a href="' . $link . '" class="sas-card-link" title="Read More">';
+        $output .= '    <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" viewBox="0 0 50 50" fill="none"><circle cx="25" cy="25" r="24" stroke="#86AB3C" stroke-width="2"/><path d="M25.4775 17.2881C25.869 16.8988 26.4973 16.9047 26.8809 17.3018L33.709 24.375C34.0923 24.7724 34.0858 25.4105 33.6943 25.7998L26.7295 32.7266C26.338 33.1159 25.7098 33.1098 25.3262 32.7129C24.9426 32.3156 24.9492 31.6776 25.3408 31.2881L30.7744 25.8838H18C17.4477 25.8838 17 25.4361 17 24.8838C17 24.3315 17.4477 23.8838 18 23.8838H30.4551L25.4629 18.7129C25.0793 18.3156 25.086 17.6776 25.4775 17.2881Z" fill="#86AB3C"/></svg>';
+        $output .= '  </a>';
+        $output .= '</div>';
+    }
+    
+    $output .= '</div>'; // Close content wrapper
+    $output .= '</div>'; // Close card wrapper
+    
+    return $output;
+}
+
+// Register the shortcode
+add_shortcode('sas_card', 'sas_card_shortcode');
+

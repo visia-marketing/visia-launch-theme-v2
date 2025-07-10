@@ -204,11 +204,11 @@ $breakpoint-classes: (small medium large);
 // 3. The Grid
 // -----------
 
-$grid-row-width: 1440px; //$global-width;
+$grid-row-width: 1290px; //$global-width;
 $grid-column-count: 12;
 $grid-column-gutter: (
   small: 20px,
-  medium: 25px,
+  medium: 54px,
 );
 $grid-column-align-edge: true;
 $grid-column-alias: 'columns';

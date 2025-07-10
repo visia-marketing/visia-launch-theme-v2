@@ -12,6 +12,12 @@
     "wrapper": true
   },
   {
+    "title": "Small Text",
+    "inline": "span",
+    "classes": "g-small-text",
+    "wrapper": true
+  },
+  {
     "title": "Narrow Paragraph - 600px",
     "inline": "span",
     "classes": "g-section-narrow-p",

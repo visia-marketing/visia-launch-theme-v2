@@ -530,7 +530,7 @@ pre {
 }
 
 .row {
-  max-width: 1440px;
+  max-width: 1290px;
   margin-right: auto;
   margin-left: auto;
 }
@@ -551,14 +551,14 @@ pre {
 }
 @media print, screen and (min-width: 40em) {
   .row .row {
-    margin-right: -0.78125rem;
-    margin-left: -0.78125rem;
+    margin-right: -1.6875rem;
+    margin-left: -1.6875rem;
   }
 }
 @media print, screen and (min-width: 64em) {
   .row .row {
-    margin-right: -0.78125rem;
-    margin-left: -0.78125rem;
+    margin-right: -1.6875rem;
+    margin-left: -1.6875rem;
   }
 }
 .row .row.collapse {
@@ -580,8 +580,8 @@ pre {
   padding-left: 0.625rem;
 }
 .row.gutter-medium > .column, .row.gutter-medium > .columns {
-  padding-right: 0.78125rem;
-  padding-left: 0.78125rem;
+  padding-right: 1.6875rem;
+  padding-left: 1.6875rem;
 }
 
 .column, .columns {
@@ -592,8 +592,8 @@ pre {
 }
 @media print, screen and (min-width: 40em) {
   .column, .columns {
-    padding-right: 0.78125rem;
-    padding-left: 0.78125rem;
+    padding-right: 1.6875rem;
+    padding-left: 1.6875rem;
   }
 }
 .column:last-child:not(:first-child), .columns:last-child:not(:first-child) {
@@ -1247,8 +1247,8 @@ pre {
     margin-left: 0;
   }
   .medium-uncollapse > .column, .medium-uncollapse > .columns {
-    padding-right: 0.78125rem;
-    padding-left: 0.78125rem;
+    padding-right: 1.6875rem;
+    padding-left: 1.6875rem;
   }
   .medium-centered {
     margin-right: auto;
@@ -1545,8 +1545,8 @@ pre {
     margin-left: 0;
   }
   .large-uncollapse > .column, .large-uncollapse > .columns {
-    padding-right: 0.78125rem;
-    padding-left: 0.78125rem;
+    padding-right: 1.6875rem;
+    padding-left: 1.6875rem;
   }
   .large-centered {
     margin-right: auto;
@@ -1573,7 +1573,7 @@ pre {
 }
 @media print, screen and (min-width: 40em) {
   .column-block {
-    margin-bottom: 1.5625rem;
+    margin-bottom: 3.375rem;
   }
   .column-block > :last-child {
     margin-bottom: 0;
@@ -6269,9 +6269,16 @@ body h2 {
   font-style: normal;
   font-weight: 400;
   line-height: 1.2;
-  letter-spacing: -0.125rem;
-  font-size: clamp(1.25rem, 6vw, 3.375rem);
+  letter-spacing: clamp(-0.0125rem, 4vw, -0.125rem);
+  font-size: clamp(1.825rem, 4vw, 3.375rem);
   margin-bottom: 1.125rem;
+}
+body h2.section-h2 {
+  margin-bottom: 4rem;
+}
+body h4 {
+  padding-top: 1rem;
+  padding-bottom: 0.6rem;
 }
 
 html, body {
@@ -6363,7 +6370,7 @@ a, button, .button, [type=submit] {
 .woocommerce:where(body:not(.woocommerce-block-theme-has-button-styles)) a.button,
 .wpfFilterButton.wpfButton {
   background-color: #86AB3C;
-  border-radius: 1px;
+  border-radius: 0.3125rem;
   border: none;
   color: #ffffff;
   font-family: "Source Sans 3", sans-serif;
@@ -7091,15 +7098,18 @@ a, button, .button, [type=submit] {
   }
   .main-header .primary-navigation-wrapper .primary-navigation > li:last-child a {
     background-color: #86AB3C;
-    border-radius: 2px;
+    border-radius: 0.3125rem;
     border: none;
     color: #ffffff;
     font-family: "Source Sans 3", sans-serif;
-    font-size: 14px !important;
-    font-weight: 600;
-    letter-spacing: 1px;
-    padding: 8px 40px 8px 16px;
-    text-transform: uppercase;
+    margin: 1rem 0 0 0;
+    min-height: 24px;
+    padding: 0.69rem 1.5rem;
+    padding-right: 3rem;
+    text-align: center;
+    font-size: 1.125rem;
+    font-style: normal;
+    font-weight: 500;
     position: relative;
   }
   .main-header .primary-navigation-wrapper .primary-navigation > li:last-child a:after {
@@ -7681,6 +7691,9 @@ body#tinymce {
   font-weight: 400;
   margin: 0 0 0;
 }
+.g-small-text {
+  font-size: 0.9375rem;
+}
 .g-section-large-numbers {
   color: #86AB3C;
   display: block;
@@ -7730,45 +7743,54 @@ body#tinymce {
 .g-image--top-left {
   border-radius: 1rem;
   position: relative;
-  right: unset;
-  left: unset;
-  margin: auto;
+  top: 0;
+  left: -16%;
   display: block;
   transition: all 0.5s ease-in-out;
+  padding-bottom: 2rem;
+}
+@media print, screen and (min-width: 40em) {
+  .g-image--top-left {
+    left: -6rem;
+  }
 }
 @media screen and (min-width: 80em) {
   .g-image--top-left {
     position: absolute;
     top: 0;
-    left: -7rem;
+    padding-bottom: 0;
   }
 }
 @media screen and (min-width: 90em) {
   .g-image--top-left {
     position: absolute;
     top: 0;
-    left: -16px;
   }
 }
 .g-image--top-right {
   position: relative;
   border-radius: 1rem;
-  right: unset;
-  left: unset;
-  margin: auto;
-  display: block;
+  bottom: 0;
+  right: -16%;
+  margin-left: auto;
   transition: all 0.5s ease-in-out;
+  display: block;
+  padding-top: 2rem;
+}
+@media print, screen and (min-width: 40em) {
+  .g-image--top-right {
+    right: -6rem;
+  }
 }
 @media screen and (min-width: 80em) {
   .g-image--top-right {
     position: absolute;
     bottom: 0;
-    right: -7rem;
+    padding-top: 0;
   }
 }
 @media screen and (min-width: 90em) {
   .g-image--top-right {
-    right: -16px;
     position: absolute;
     bottom: 0;
   }
@@ -8830,6 +8852,81 @@ body#tinymce {
 .fc-section-columns .row {
   position: relative;
 }
+.fc-section-columns .row .columns {
+  margin-bottom: 3rem;
+}
+@media print, screen and (min-width: 40em) {
+  .fc-section-columns .row .columns {
+    margin-bottom: 0rem;
+  }
+}
+.fc-section-columns .content-columns {
+  display: flex;
+  flex-direction: column;
+}
+
+.sas-card {
+  position: relative;
+  border-radius: 0.8125rem;
+  z-index: 1;
+  display: flex;
+  flex-grow: 1;
+  overflow: hidden;
+}
+@media screen and (min-width: 80em) {
+  .sas-card {
+    aspect-ratio: 13/8;
+  }
+}
+.sas-card-image-wrapper {
+  position: absolute;
+  z-index: 0;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+.sas-card-image-wrapper img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.sas-card-content {
+  position: relative;
+  justify-content: space-between;
+  display: flex;
+  flex-direction: column;
+  z-index: 2;
+  height: 100%;
+  padding: 2.625rem;
+}
+.sas-card-content h3.sas-card-title {
+  color: #FFF;
+  font-size: 2.125rem;
+  font-size: clamp(1.75rem, 3vw, 2.125rem);
+  font-weight: 400;
+  line-height: 1.6;
+  text-transform: uppercase;
+}
+.sas-card-content div.sas-card-text {
+  color: #FFF;
+  font-size: 1.3125rem;
+  font-size: clamp(1rem, 1.5vw, 1.3125rem);
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1.3;
+  max-width: 100%;
+  margin-bottom: 2rem;
+}
+@media screen and (min-width: 80em) {
+  .sas-card-content div.sas-card-text {
+    max-width: 75%;
+  }
+}
+.sas-card-content div.sas-card-link-wrapper {
+  margin-top: auto;
+}
 
 .fc-section-heading {
   margin-bottom: 1.5rem;
@@ -9027,14 +9124,9 @@ body#tinymce {
 
 */
 .fc-wrapper .fc-section {
-  padding: 30px 0;
   position: relative;
   overflow: hidden;
-}
-@media print, screen and (min-width: 40em) {
-  .fc-wrapper .fc-section {
-    padding: 50px 0;
-  }
+  background-size: cover;
 }
 .fc-wrapper .fc-section.fc-section-1 {
   padding: 30px 0 30px;
