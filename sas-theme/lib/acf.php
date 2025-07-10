@@ -64,7 +64,7 @@
         $style .= "#$id .padding-row { padding-top: {$desktop_padding['padding_top']}rem; padding-bottom: {$desktop_padding['padding_bottom']}rem; }";
       }
       if ($mobile_padding['padding_top'] || $mobile_padding['padding_bottom']) {
-        print_r($mobile_padding);
+        //print_r($mobile_padding);
         $style .= "@media (max-width: 1024px) { #$id .padding-row { padding-top: {$mobile_padding['padding_top']}rem; padding-bottom: {$mobile_padding['padding_bottom']}rem; } }";
       }
 
