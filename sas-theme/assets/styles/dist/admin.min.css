@@ -35,9 +35,11 @@ body#tinymce {
   color: #002B49;
   display: block;
   font-family: "Source Sans 3", sans-serif;
-  font-size: 26px;
-  font-weight: 800;
-  margin: 0 0 30px;
+  font-size: 2.75rem;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 1.25;
+  letter-spacing: -0.125rem;
 }
 @media print, screen and (min-width: 40em) {
   .g-section-title {
@@ -52,6 +54,13 @@ body#tinymce {
 .g-section-narrow-p {
   display: block;
   max-width: 36.5rem;
+  width: 100%;
+  margin: auto;
+}
+.g-section-xnarrow-p {
+  display: block;
+  width: 22.5rem;
+  max-width: 100%;
   margin: auto;
 }
 .g-section-intro {
@@ -65,14 +74,22 @@ body#tinymce {
 .g-small-text {
   font-size: 0.9375rem;
 }
-.g-section-large-numbers {
-  color: #86AB3C;
-  display: block;
-  font-family: "Source Sans 3", sans-serif;
-  font-size: 90px;
-  font-weight: 300;
-  line-height: 1;
-  margin-bottom: 20px;
+.g-medium-text {
+  font-size: 1.375rem;
+}
+.g-large-text {
+  font-size: 2.125rem;
+  line-height: 3.125rem;
+  letter-spacing: -0.125rem;
+}
+.g-xlarge-text {
+  font-size: 7.5rem;
+  font-style: normal;
+  font-weight: 750;
+  line-height: 0.9;
+  letter-spacing: 0.0625rem;
+  text-transform: uppercase;
+  margin-left: auto;
 }
 .g-button.button {
   margin-right: 10px;
@@ -165,6 +182,85 @@ body#tinymce {
     position: absolute;
     bottom: 0;
   }
+}
+
+.button,
+.woocommerce:where(body:not(.woocommerce-block-theme-has-button-styles)) a.button,
+.wpfFilterButton.wpfButton {
+  background-color: #86AB3C;
+  border-radius: 0.3125rem;
+  border: none;
+  color: #ffffff;
+  font-family: "Source Sans 3", sans-serif;
+  margin: 1rem 0 0 0;
+  min-height: 24px;
+  padding: 0.69rem 1.5rem;
+  text-align: center;
+  font-size: 1.125rem;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 1.75rem;
+}
+.button i,
+.woocommerce:where(body:not(.woocommerce-block-theme-has-button-styles)) a.button i,
+.wpfFilterButton.wpfButton i {
+  margin-left: 11px;
+}
+.button:hover, .button.active,
+.woocommerce:where(body:not(.woocommerce-block-theme-has-button-styles)) a.button:hover,
+.woocommerce:where(body:not(.woocommerce-block-theme-has-button-styles)) a.button.active,
+.wpfFilterButton.wpfButton:hover,
+.wpfFilterButton.wpfButton.active {
+  background-color: rgb(0, 21.9712328767, 37.3);
+  color: #fff !important;
+}
+.button.grey,
+.woocommerce:where(body:not(.woocommerce-block-theme-has-button-styles)) a.button.grey,
+.wpfFilterButton.wpfButton.grey {
+  background-color: #f3f3f3;
+  color: #86AB3C !important;
+}
+.button.grey:hover, .button.grey.active,
+.woocommerce:where(body:not(.woocommerce-block-theme-has-button-styles)) a.button.grey:hover,
+.woocommerce:where(body:not(.woocommerce-block-theme-has-button-styles)) a.button.grey.active,
+.wpfFilterButton.wpfButton.grey:hover,
+.wpfFilterButton.wpfButton.grey.active {
+  background-color: #86AB3C;
+  color: #fff !important;
+}
+.button.button-arrow,
+.woocommerce:where(body:not(.woocommerce-block-theme-has-button-styles)) a.button.button-arrow,
+.wpfFilterButton.wpfButton.button-arrow {
+  padding-right: 40px;
+  position: relative;
+}
+.button.button-arrow:after,
+.woocommerce:where(body:not(.woocommerce-block-theme-has-button-styles)) a.button.button-arrow:after,
+.wpfFilterButton.wpfButton.button-arrow:after {
+  color: #fff;
+  content: "\f178";
+  font-family: "Font Awesome 6 Pro";
+  font-weight: 300;
+  position: absolute;
+  right: 15px;
+  top: 7.5px;
+}
+
+.gform_wrapper.gravity-theme.uavionix_wrapper .gform_button {
+  padding-right: 28px;
+  margin-left: auto;
+  position: relative;
+}
+.gform_wrapper.gravity-theme.uavionix_wrapper .gform_button:before {
+  font-family: "Font Awesome 6 Pro";
+  content: "\f054";
+  font-weight: 700;
+  position: absolute;
+  top: 5px;
+  right: 14px;
+  height: 30px;
+  font-size: 16px;
+  width: 8px;
 }
 
 /*# sourceMappingURL=admin.min.css.map*/

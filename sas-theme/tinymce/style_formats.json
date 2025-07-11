@@ -18,10 +18,41 @@
     "wrapper": true
   },
   {
+    "title": "Medium Text",
+    "inline": "span",
+    "classes": "g-medium-text",
+    "wrapper": true
+  },
+  {
+    "title": "Large Text",
+    "inline": "span",
+    "classes": "g-large-text",
+    "wrapper": true
+  },
+  {
+    "title": "X Large Text",
+    "inline": "span",
+    "classes": "g-xlarge-text",
+    "wrapper": true
+  },
+  {
     "title": "Narrow Paragraph - 600px",
     "inline": "span",
     "classes": "g-section-narrow-p",
     "wrapper": true
+  },
+
+  {
+    "title": "X Narrow Paragraph - 350px",
+    "inline": "span",
+    "classes": "g-section-xnarrow-p",
+    "wrapper": true
+  },
+  {
+    "title": "Button",
+    "inline": "a",
+    "classes": "button",
+    "wrapper": false
   },
   {
     "title": "Image Top Left",

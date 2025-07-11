@@ -6271,10 +6271,11 @@ body h2 {
   line-height: 1.2;
   letter-spacing: clamp(-0.0125rem, 4vw, -0.125rem);
   font-size: clamp(1.825rem, 4vw, 3.375rem);
-  margin-bottom: 1.125rem;
+  margin-bottom: clamp(0.525rem, 4vw, 1.25rem);
 }
 body h2.section-h2 {
   margin-bottom: 4rem;
+  margin-bottom: clamp(2rem, 4vw, 4rem);
 }
 body h4 {
   padding-top: 1rem;
@@ -7664,9 +7665,11 @@ body#tinymce {
   color: #002B49;
   display: block;
   font-family: "Source Sans 3", sans-serif;
-  font-size: 26px;
-  font-weight: 800;
-  margin: 0 0 30px;
+  font-size: 2.75rem;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 1.25;
+  letter-spacing: -0.125rem;
 }
 @media print, screen and (min-width: 40em) {
   .g-section-title {
@@ -7681,6 +7684,13 @@ body#tinymce {
 .g-section-narrow-p {
   display: block;
   max-width: 36.5rem;
+  width: 100%;
+  margin: auto;
+}
+.g-section-xnarrow-p {
+  display: block;
+  width: 22.5rem;
+  max-width: 100%;
   margin: auto;
 }
 .g-section-intro {
@@ -7694,14 +7704,22 @@ body#tinymce {
 .g-small-text {
   font-size: 0.9375rem;
 }
-.g-section-large-numbers {
-  color: #86AB3C;
-  display: block;
-  font-family: "Source Sans 3", sans-serif;
-  font-size: 90px;
-  font-weight: 300;
-  line-height: 1;
-  margin-bottom: 20px;
+.g-medium-text {
+  font-size: 1.375rem;
+}
+.g-large-text {
+  font-size: 2.125rem;
+  line-height: 3.125rem;
+  letter-spacing: -0.125rem;
+}
+.g-xlarge-text {
+  font-size: 7.5rem;
+  font-style: normal;
+  font-weight: 750;
+  line-height: 0.9;
+  letter-spacing: 0.0625rem;
+  text-transform: uppercase;
+  margin-left: auto;
 }
 .g-button.button {
   margin-right: 10px;
@@ -8855,11 +8873,6 @@ body#tinymce {
 .fc-section-columns .row .columns {
   margin-bottom: 3rem;
 }
-@media print, screen and (min-width: 40em) {
-  .fc-section-columns .row .columns {
-    margin-bottom: 0rem;
-  }
-}
 .fc-section-columns .content-columns {
   display: flex;
   flex-direction: column;
@@ -8872,6 +8885,7 @@ body#tinymce {
   display: flex;
   flex-grow: 1;
   overflow: hidden;
+  width: 100%;
 }
 @media screen and (min-width: 80em) {
   .sas-card {
@@ -8916,6 +8930,7 @@ body#tinymce {
   font-style: normal;
   font-weight: 400;
   line-height: 1.3;
+  width: 100%;
   max-width: 100%;
   margin-bottom: 2rem;
 }

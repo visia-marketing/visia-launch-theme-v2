@@ -26,9 +26,11 @@ body#tinymce {
     color: $black;
     display: block;
     font-family: $sans;
-    font-size: 26px;
-    font-weight: 800;
-    margin: 0 0 30px;
+    font-size: 2.75rem;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 1.25;
+    letter-spacing: -0.125rem;
 
     @include breakpoint(medium) {
       font-size: 36px;
@@ -43,6 +45,14 @@ body#tinymce {
   &-section-narrow-p{
     display: block;
     max-width: 36.5rem;
+    width: 100%;
+    margin: auto;
+  }
+
+  &-section-xnarrow-p{
+    display: block;
+    width: 22.5rem;
+    max-width: 100%;
     margin: auto;
   }
 
@@ -59,14 +69,24 @@ body#tinymce {
     font-size: 0.9375rem;
   }
 
-  &-section-large-numbers {
-    color: $green;
-    display: block;
-    font-family: $sans;
-    font-size: 90px;
-    font-weight: 300;
-    line-height: 1;
-    margin-bottom: 20px;
+  &-medium-text{
+    font-size: 1.375rem;
+  }
+
+  &-large-text{
+    font-size: 2.125rem;
+    line-height: 3.125rem;
+    letter-spacing: -0.125rem;
+  }
+
+  &-xlarge-text{
+    font-size: 7.5rem;
+    font-style: normal;
+    font-weight: 750;
+    line-height: 0.9;
+    letter-spacing: 0.0625rem;
+    text-transform: uppercase;
+    margin-left: auto;
   }
 
   &-button.button {
