@@ -7,7 +7,7 @@ $layout = get_sub_field('accordion_layout');
 <div class="fc-section-accordion-simple" id="<?php //echo $anchor;?>">
   <?php get_template_part('flexible/section_header'); ?>
   <?php if( have_rows('accordion') ): ?>
-  <div class="row columns "> 
+  <div class="row padding-row columns "> 
     <div class="row columns">
       <div class="accordion <?php if ( $layout  === 'separated'): echo 'separated'; endif; ?>">
       <?php while ( have_rows('accordion' ) ): the_row(); ?>
