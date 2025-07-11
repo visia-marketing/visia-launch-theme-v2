@@ -7012,11 +7012,12 @@ a, button, .button, [type=submit] {
     height: 100%;
     display: flex;
     align-items: center;
+    justify-content: center;
   }
   .main-header .primary-navigation-wrapper .primary-navigation > li > a {
     color: #002B49;
-    font-size: 15px;
-    font-weight: 700;
+    font-size: 1rem;
+    font-weight: 500;
     padding: 0 0;
     position: relative;
     text-decoration: none;
@@ -7025,7 +7026,7 @@ a, button, .button, [type=submit] {
 }
 @media print, screen and (min-width: 64em) and (min-width: 40em) {
   .main-header .primary-navigation-wrapper .primary-navigation > li > a {
-    font-size: 16px;
+    font-size: 1.125rem;
   }
 }
 @media print, screen and (min-width: 64em) {
@@ -7103,7 +7104,7 @@ a, button, .button, [type=submit] {
     border: none;
     color: #ffffff;
     font-family: "Source Sans 3", sans-serif;
-    margin: 1rem 0 0 0;
+    margin: 0;
     min-height: 24px;
     padding: 0.69rem 1.5rem;
     padding-right: 3rem;
@@ -7166,7 +7167,7 @@ a, button, .button, [type=submit] {
   }
 }
 .top-header {
-  background-color: #f3f3f3;
+  background-color: #F7FCFF;
   color: #002B49;
 }
 .top-header .top-header-flex {
