@@ -44,10 +44,15 @@
 
   .footer-site-description{
     color: $black;
-    font-size: 4rem;
+    font-size: 2rem;
     font-style: normal;
     font-weight: 700;
-    line-height: 1.88;
+    line-height: 2.8;
+
+    @include breakpoint(medium){
+      font-size: 4rem;
+      line-height: 1.88;
+    }
   }
 
   .footer-menu {

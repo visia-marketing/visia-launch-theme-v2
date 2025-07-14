@@ -7477,10 +7477,16 @@ a, button, .button, [type=submit] {
 }
 .main-footer .footer-site-description {
   color: #002B49;
-  font-size: 4rem;
+  font-size: 2rem;
   font-style: normal;
   font-weight: 700;
-  line-height: 1.88;
+  line-height: 2.8;
+}
+@media print, screen and (min-width: 40em) {
+  .main-footer .footer-site-description {
+    font-size: 4rem;
+    line-height: 1.88;
+  }
 }
 .main-footer .footer-menu {
   list-style: none;
