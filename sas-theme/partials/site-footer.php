@@ -49,7 +49,7 @@ if ( $footer_form && (!empty($footer_form['heading']) || !empty($footer_form['ti
       </div>
     <?php endif; ?>
   </div>
-  <div class="row columns">
+  <div class="row columns footer-bottom">
     <div class="footer-copyright">
       <div class="copyright">
         <?php echo get_field('copyright', 'options');?>
@@ -61,11 +61,5 @@ if ( $footer_form && (!empty($footer_form['heading']) || !empty($footer_form['ti
       ?>
     </div>
   </div>
-  <div class="row">
-    <div class="small-12 columns">
-      <strong class="footer-tagline">
-        <?php echo get_field('footer_tagline', 'options');?>
-      </strong>
-    </div>
-  </div>
+ 
 </footer>

@@ -102,7 +102,6 @@
 
   }
 
-
   .footer-contact {
     margin: 0;
     padding: 0;
@@ -138,8 +137,6 @@
     justify-content: space-between;
     color: $black;
 
-
-
     ul {
       display: flex;
       gap: 30px;
@@ -156,21 +153,13 @@
 
   }
 
-  .footer-tagline {
+  .footer-bottom {
     display: block;
-     align-items: center;
-    font-size: 30px;
-    font-weight: 800;
-    margin-top: 50px;
-    text-align: center;
-    width: 100%;
+    align-items: center;
+    border-top: 1px solid rgba(0, 43, 73, 0.40);  
 
-    @include breakpoint(medium) {
-      font-size: 50px;
-    }
-
-    @include breakpoint(xlarge) {
-      font-size: 90px;
+    @include breakpoint(medium){
+      margin-top: 7rem;
     }
 
   }

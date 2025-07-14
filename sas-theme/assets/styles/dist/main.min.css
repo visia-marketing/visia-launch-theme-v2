@@ -7559,23 +7559,14 @@ a, button, .button, [type=submit] {
 .main-footer .footer-copyright ul li {
   font-size: 14px;
 }
-.main-footer .footer-tagline {
+.main-footer .footer-bottom {
   display: block;
   align-items: center;
-  font-size: 30px;
-  font-weight: 800;
-  margin-top: 50px;
-  text-align: center;
-  width: 100%;
+  border-top: 1px solid rgba(0, 43, 73, 0.4);
 }
 @media print, screen and (min-width: 40em) {
-  .main-footer .footer-tagline {
-    font-size: 50px;
-  }
-}
-@media screen and (min-width: 80em) {
-  .main-footer .footer-tagline {
-    font-size: 90px;
+  .main-footer .footer-bottom {
+    margin-top: 7rem;
   }
 }
 
