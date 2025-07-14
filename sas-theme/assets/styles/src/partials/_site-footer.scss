@@ -18,6 +18,22 @@
     }
     
   }
+
+  h4{
+    font-size: 1.25rem;
+    font-weight: 700;
+  }
+
+  h5{
+    font-size: 0.8125rem;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 1.1875rem;
+    text-transform: uppercase;
+    margin-bottom: 1rem;
+  }
+  
+
   .footer-logo{
     display: flex;
     flex-direction: column;
@@ -47,9 +63,9 @@
       > a {
         color: $black;
         display: inline-block;
-        font-size: 15px;
+        font-size: 1.25rem;
         font-weight: 700;
-        line-height: 30px;
+        line-height: 1;
         padding: 0;
         vertical-align: top;
       }
@@ -99,6 +115,10 @@
       justify-content: flex-start;
     }
 
+    i.fa-xl{
+      font-size: 1.5rem;
+      margin-right: 0.6rem;
+    }
 
     li {
       color: $black;
@@ -116,6 +136,9 @@
   .footer-copyright {
     display: flex;
     justify-content: space-between;
+    color: $black;
+
+
 
     ul {
       display: flex;

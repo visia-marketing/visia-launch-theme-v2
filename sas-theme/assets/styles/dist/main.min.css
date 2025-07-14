@@ -7456,6 +7456,18 @@ a, button, .button, [type=submit] {
 .main-footer a:hover {
   text-decoration: underline;
 }
+.main-footer h4 {
+  font-size: 1.25rem;
+  font-weight: 700;
+}
+.main-footer h5 {
+  font-size: 0.8125rem;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 1.1875rem;
+  text-transform: uppercase;
+  margin-bottom: 1rem;
+}
 .main-footer .footer-logo {
   display: flex;
   flex-direction: column;
@@ -7481,9 +7493,9 @@ a, button, .button, [type=submit] {
 .main-footer .footer-menu li > a {
   color: #002B49;
   display: inline-block;
-  font-size: 15px;
+  font-size: 1.25rem;
   font-weight: 700;
-  line-height: 30px;
+  line-height: 1;
   padding: 0;
   vertical-align: top;
 }
@@ -7521,6 +7533,10 @@ a, button, .button, [type=submit] {
     justify-content: flex-start;
   }
 }
+.main-footer .footer-contact i.fa-xl {
+  font-size: 1.5rem;
+  margin-right: 0.6rem;
+}
 .main-footer .footer-contact li {
   color: #002B49;
   font-size: 30px;
@@ -7531,6 +7547,7 @@ a, button, .button, [type=submit] {
 .main-footer .footer-copyright {
   display: flex;
   justify-content: space-between;
+  color: #002B49;
 }
 .main-footer .footer-copyright ul {
   display: flex;
