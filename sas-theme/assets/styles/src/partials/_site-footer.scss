@@ -11,17 +11,27 @@
   }
 
   a {
-    color: #fff;
+    color: $black;
 
     &:hover {
       text-decoration: underline;
     }
     
   }
-
-  .footer-logo {
+  .footer-logo{
+    display: flex;
+    flex-direction: column;
+  }
+  .footer-logo img {
     max-width: 200px;
-    margin: 0 auto 40px;
+  }
+
+  .footer-site-description{
+    color: $black;
+    font-size: 4rem;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 1.88;
   }
 
   .footer-menu {
@@ -35,7 +45,7 @@
       padding: 0;
 
       > a {
-        color: $white;
+        color: $black;
         display: inline-block;
         font-size: 15px;
         font-weight: 700;
@@ -54,7 +64,7 @@
           padding: 0;
 
           a {
-            color: $white;
+            color: $black;
             display: inline-block;
             font-size: 15px;
             font-weight: 400;
@@ -76,61 +86,14 @@
 
   }
 
-  .footer-badges {
-    border-bottom: 1px solid rgba(#fff,.7);
-    margin-top: 50px;
-    margin-bottom: 20px;
-    padding-bottom: 15px;
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-    width: 100%;
 
-    @include breakpoint(medium) {
-      flex-direction: row;
-      gap: 40px;
-    }
-
-    .badge {
-      display: flex;
-      gap: 10px;
-      font-size: 14px;
-      color: rgba(#fff,.8);
-      justify-content: center;
-      align-items: center;
-
-      @include breakpoint(medium) {
-        justify-content: flex-start;
-      }
-
-      a {
-        color: #fff;
-
-        &:hover {
-          text-decoration: underline;
-        }
-
-      }
-
-      p {
-        margin-bottom: 0;
-      }
-
-      img {
-        height: 20px;
-        width: auto;
-      }
-    }
-
-  }
-
-  .footer-social {
-    margin: 10px auto 20px;
+  .footer-contact {
+    margin: 0;
     padding: 0;
     display: flex;
-    justify-content: center;
-    gap: 10px;
+    flex-direction: column;
     list-style: none;
+    color: $black;
 
     @include breakpoint(medium) {
       justify-content: flex-start;
@@ -138,11 +101,11 @@
 
 
     li {
-      color: #fff;
+      color: $black;
       font-size: 30px;
       
       a {
-        color: #fff;
+        color: $black;
       }
       
     }

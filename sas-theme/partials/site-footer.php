@@ -12,33 +12,20 @@ if ( $footer_form && (!empty($footer_form['heading']) || !empty($footer_form['ti
 
 <footer class="main-footer">
   <div class="row">   
-    <div class="small-12 medium-2 columns">
+    <div class="small-12 medium-8 columns">
       <div class="footer-logo">
         <a href="<?= esc_url(home_url('/')); ?>"><img src="<?php the_field('footer_logo', 'option');?>" alt="<?php bloginfo('name'); ?>"></a>
+        <span class="footer-site-description"><?php echo get_bloginfo('description');?></span>
       </div>
     </div>
-    <div class="small-12 medium-3 medium-offset-1 columns show-for-medium">   
+    <div class="small-12 medium-2 columns footer-menu">   
       <?php
       if (has_nav_menu('footer_navigation_1')) :
       wp_nav_menu(['theme_location' => 'footer_navigation_1', 'depth' => 2, 'menu_class' => 'footer-menu' ]); 
       endif;
       ?>
     </div>
-    <div class="small-12 medium-2 columns show-for-medium">   
-      <?php
-      if (has_nav_menu('footer_navigation_2')) :
-      wp_nav_menu(['theme_location' => 'footer_navigation_2', 'depth' => 2, 'menu_class' => 'footer-menu' ]); 
-      endif;
-      ?>
-    </div>
-    <div class="small-12 medium-2 columns show-for-medium">   
-      <?php
-      if (has_nav_menu('footer_navigation_3')) :
-      wp_nav_menu(['theme_location' => 'footer_navigation_3', 'depth' => 2, 'menu_class' => 'footer-menu' ]); 
-      endif;
-      ?>
-    </div>
-    <div class="small-12  medium-2 columns">
+    <div class="small-12  medium-2 columns footer-contact">
       <?php echo get_field('footer_contact', 'options');?>
     </div>
   </div>
