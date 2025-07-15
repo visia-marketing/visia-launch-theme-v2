@@ -11,7 +11,7 @@
  * ======================================================================== */
 import $ from 'jquery';
 import 'foundation-sites';
-// import 'slick-carousel';
+import 'slick-carousel';
 // import 'simple-lightbox';
 
 // If you only need specific modules:
@@ -27,10 +27,51 @@ import 'foundation-sites';
         
         $(document).foundation(); // Foundation JavaScript
 
-        
-      
       },
       finalize: function() {
+
+
+        // Slick Carousel
+        // Announcement Bar Slides
+        var $testimonialSlider = $('.content-testimonial-slider-slides');
+        $testimonialSlider.slick({
+          dots: false,
+          arrows: true,
+          infinite: true,
+          speed: 400,
+          fade: true,
+          cssEase: 'linear',
+          slidesToShow: 1,
+          slidesToScroll: 1,
+          autoplay: false,
+          prevArrow: $('.slider-prev'),
+          nextArrow: $('.slider-next'),
+        })
+        .on("setPosition", function () {
+          resizeSlider();
+        });
+
+        $(window).on("resize", function (e) {
+          resizeSlider();
+        });
+        
+        var slickHeight = $(".slick-track").outerHeight();
+        var slideHeight = $(".slick-track").find(".slick-slide").outerHeight();
+        
+        function resizeSlider() {
+
+          $(".slick-track")
+            .find(".content-testimonial-slider-slide").css("height", "auto");
+            slickHeight = $(".slick-track").outerHeight();
+            slideHeight = $(".slick-track").find(".slick-slide").outerHeight();
+
+          $(".slick-track")
+            .find(".content-testimonial-slider-slide")
+            .css("height", slickHeight + "px");
+        }
+        // END ANNOUNCEMENT SLIDER
+
+
       }
     },
     // Home page

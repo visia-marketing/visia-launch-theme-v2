@@ -9162,6 +9162,58 @@ body#tinymce {
 }
 
 */
+.content-testimonial-slider-container .slider-inner {
+  background-color: #ffffff;
+  z-index: 9;
+  position: relative;
+  border-radius: 0.75rem;
+  box-shadow: 0px 0px 24px 4px rgba(0, 0, 0, 0.05);
+  padding: 2.5rem 4.5rem;
+}
+@media print, screen and (min-width: 64em) {
+  .content-testimonial-slider-container .slider-inner {
+    padding: 4.5rem 7.5rem;
+  }
+}
+.content-testimonial-slider-container h2 {
+  font-size: 1.5rem;
+  padding-bottom: 3rem;
+  border-bottom: 1px solid rgba(0, 43, 73, 0.25);
+  margin-bottom: 3.45rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 1.3;
+  letter-spacing: 0.3rem;
+  text-transform: uppercase;
+}
+.content-testimonial-slider-slides {
+  margin-top: 3rem;
+}
+.content-testimonial-slider-slides p {
+  font-size: 2.80625rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 3.41919rem;
+}
+.content-testimonial-slider-slides .testimonial-author {
+  font-size: 1.3095rem;
+  font-style: normal;
+  font-weight: 900;
+  line-height: 2.037rem;
+}
+.content-testimonial-slider-slides .testimonial-author + .testimonial-title:before {
+  content: ",";
+  margin-right: 0.2rem;
+  font-weight: 400;
+  font-size: 1.3095rem;
+}
+.content-testimonial-slider-slides .testimonial-title {
+  font-size: 1.3095rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 2.037rem;
+}
+
 .fc-wrapper .fc-section {
   position: relative;
   overflow: hidden;
