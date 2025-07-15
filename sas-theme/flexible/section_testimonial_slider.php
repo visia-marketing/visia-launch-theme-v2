@@ -51,10 +51,25 @@
                     <?php endif; ?>
 
                 <div class="content-testimonial-slider-navigation">
-                    <div class="row columns">
-                        <button class="slider-prev"><i class="fa-regular fa-chevron-left"></i></button>
-                        <button class="slider-next"><i class="fa-regular fa-chevron-right"></i></button>
-                        <div class="slide-index"></div>
+                    <div class="row columns slider-navigation-container">
+                        <div class="slider-navigation-arrows">
+
+                            <button class="slider-prev">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="51" height="50" viewBox="0 0 51 50" fill="none">
+                                    <circle cx="25" cy="25" r="24" transform="matrix(-1 0 0 1 50 0)" stroke="#86AB3C" stroke-width="2"/>
+                                    <path d="M24.5225 17.2881C24.131 16.8988 23.5027 16.9047 23.1191 17.3018L16.291 24.375C15.9077 24.7724 15.9142 25.4105 16.3057 25.7998L23.2705 32.7266C23.662 33.1159 24.2902 33.1098 24.6738 32.7129C25.0574 32.3156 25.0508 31.6776 24.6592 31.2881L19.2256 25.8838H32C32.5523 25.8838 33 25.4361 33 24.8838C33 24.3315 32.5523 23.8838 32 23.8838H19.5449L24.5371 18.7129C24.9207 18.3156 24.914 17.6776 24.5225 17.2881Z" fill="#86AB3C"/>
+                                </svg>
+                            </button>
+                            <button class="slider-next">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="52" height="50" viewBox="0 0 52 50" fill="none">
+                                    <circle cx="26.241" cy="25" r="24" stroke="#86AB3C" stroke-width="2"/>
+                                    <path d="M26.7185 17.2881C27.11 16.8988 27.7382 16.9047 28.1218 17.3018L34.95 24.375C35.3332 24.7724 35.3268 25.4105 34.9353 25.7998L27.9705 32.7266C27.579 33.1159 26.9508 33.1098 26.5671 32.7129C26.1835 32.3156 26.1902 31.6776 26.5818 31.2881L32.0154 25.8838H19.241C18.6887 25.8838 18.241 25.4361 18.241 24.8838C18.241 24.3315 18.6887 23.8838 19.241 23.8838H31.696L26.7039 18.7129C26.3203 18.3156 26.3269 17.6776 26.7185 17.2881Z" fill="#86AB3C"/>
+                                </svg>
+                            </button>
+                            <div class="slide-index"></div>
+
+                        </div>
+                        
                     </div>
                 </div>
             </div>
