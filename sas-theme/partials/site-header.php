@@ -13,13 +13,13 @@
 <?php endif; ?>
 
 <header class="main-header">
-	<div class="row">
-    <div class="small-6 medium-4 columns">
+	<div class="row" data-equalizer>
+    <div class="small-6 medium-4 columns" data-equalizer-watch>
       <div class="main-logo">
         <a href="<?= esc_url(home_url('/')); ?>"><img src="<?php the_field('main_logo', 'option');?>" alt="<?php bloginfo('name'); ?>"></a>
       </div>
     </div>
-    <div class="small-2 small-offset-4 medium-1 medium-offset-7 columns hide-for-large">
+    <div class="small-2 small-offset-4 medium-1 medium-offset-7 columns hide-for-large menu-icon-column" data-equalizer-watch>
       <button class="menu-icon" type="button" data-open="off-canvas-menu"></button>
 		</div>
     <div class="small-4 medium-8 columns show-for-large">

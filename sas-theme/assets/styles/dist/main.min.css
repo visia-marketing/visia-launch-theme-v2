@@ -6948,7 +6948,6 @@ a, button, .button, [type=submit] {
 */
 .main-header {
   background-color: #ffffff;
-  height: 50px;
   padding: 0;
   position: relative;
   width: 100%;
@@ -6980,11 +6979,37 @@ a, button, .button, [type=submit] {
 .main-header .row, .main-header .row > .columns {
   height: 100%;
 }
-.main-header .main-logo {
+.main-header .menu-icon-column {
   display: flex;
   align-items: center;
+  justify-content: center;
+  height: 100%;
+  width: 50px;
+  padding: 0;
+}
+@media print, screen and (min-width: 64em) {
+  .main-header .menu-icon-column {
+    width: 62px;
+  }
+}
+.main-header .menu-icon-column .menu-icon {
+  color: #002B49;
+  font-size: 20px;
+  font-weight: 400;
+  padding: 0 !important;
+  text-decoration: none;
+}
+.main-header .menu-icon-column .menu-icon:hover {
+  background-color: transparent;
+  color: #86AB3C;
+}
+.main-header .main-logo {
+  display: flex;
+  align-items: flex-end;
   height: 100%;
   margin-right: auto;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
 }
 .main-header .main-logo img {
   width: 100%;

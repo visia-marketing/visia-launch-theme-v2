@@ -29,26 +29,7 @@ if ( $footer_form && (!empty($footer_form['heading']) || !empty($footer_form['ti
       <?php echo get_field('footer_contact', 'options');?>
     </div>
   </div>
-  <div class="row columns">
-    <?php if( have_rows('footer_badges', 'options') ): ?>
-      <div class="footer-badges">
-          <?php while (have_rows('footer_badges', 'options')): the_row(); 
-              $image = get_sub_field('badge_image', 'options');
-              $text = get_sub_field('badge_text', 'options');
-              $url = get_sub_field('badge_url', 'options');
-              ?>
-              <div class="badge">
-                <?php if($url): echo '<a href="' . esc_url($url) . '">'; endif;?>
-                  <img src="<?php echo esc_url($image['url']); ?>" alt="<?php echo esc_attr($image['alt']); ?>">
-                <?php if($url): echo '</a>'; endif;?>
-                <?php if($url): echo '<a href="' . esc_url($url) . '">'; endif;?>
-                  <p><?php echo esc_html($text); ?></p>
-                <?php if($url): echo '</a>'; endif;?>
-              </div>
-          <?php endwhile; ?>
-      </div>
-    <?php endif; ?>
-  </div>
+
   <div class="row columns footer-bottom">
     <div class="footer-copyright">
       <div class="copyright">

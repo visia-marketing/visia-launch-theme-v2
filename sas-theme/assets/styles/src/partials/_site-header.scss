@@ -10,7 +10,7 @@ $top-header-link-color: $top-header-link-color;
 
 .main-header {
   background-color: $header-background;
-  height: 50px;
+  // height: 50px;
   padding: 0;
   position: relative;
   width: 100%;
@@ -22,6 +22,32 @@ $top-header-link-color: $top-header-link-color;
 
   .row, .row > .columns {
     height: 100%;
+  }
+
+  .menu-icon-column{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    width: 50px;
+    padding: 0;
+
+    @include breakpoint(large) {
+      width: 62px;
+    }
+
+    .menu-icon {
+      color: $header-link-color;
+      font-size: 20px;
+      font-weight: 400;
+      padding: 0 !important;
+      text-decoration: none;
+
+      &:hover {
+        background-color: transparent;
+        color: $secondary;
+      }
+    }
   }
 
   /*
@@ -45,9 +71,12 @@ $top-header-link-color: $top-header-link-color;
   
   .main-logo {
     display: flex;
-    align-items: center;
+    align-items: flex-end;
     height: 100%;
     margin-right: auto;
+
+    padding-top: 1rem;
+    padding-bottom: 1rem;
 
     img {
       //height: 19px;
