@@ -9,7 +9,7 @@ if( $args['testimonials']){
     $slider_id =  uniqid();
 
     echo '<style>';
-    echo '.case-study--testimonial-slider#slider-'.$slider_id.' { padding: 6rem 0; background-image: url("'.wp_get_attachment_image_url(284, 'large').'"); }';
+    echo '.case-study--testimonial-slider#slider-'.$slider_id.' { padding: 6rem 0; background-image: url("'.wp_get_attachment_image_url(287, 'large').'"); }';
     echo '</style>';
 }
 
