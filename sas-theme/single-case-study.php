@@ -9,20 +9,24 @@
       <div class="page-content">
 
 
-          <div class="row">
-            <div class="small-12 medium-12 columns">
+          <div class="case-study--header" style="background-image: url(<?php echo get_the_post_thumbnail_url( get_the_ID(), 'large');  ?>);">
+            <div class="row columns">
+              <div class="small-12 medium-12">
 
+                  <div class="case-study--header-content">
+                    <h1 class="case-study--title"><?php $title = get_the_title(); echo $title; ?></h1>
 
-              <h1 class="case-study--title"><?php $title = get_the_title(); echo $title; ?></h1>
+                    <?php if( array_key_exists('location', $fields) ): ?>
+                      <span class="case-study--location"><?php echo $fields['location'];?></span>
+                    <?php endif; ?>
 
-              <?php if( array_key_exists('location', $fields) ): ?>
-                <span class="case-study--location"><?php echo $fields['location'];?></span>
-              <?php endif; ?>
+                  </div>
 
+              </div>
             </div>
           </div>
 
-          <div class="row">
+          <div class="row case-study--feature">
             <div class="small-12 medium-12 columns">
               <?php if( array_key_exists('headline', $fields) ): ?>
                 <h2 class="case-study--headline"><?php echo $fields['headline'];?></h2>
@@ -47,31 +51,25 @@
           </div>
 
 
-              <?php get_template_part('flexible/section_testimonial_slider', '', array('testimonials' => $fields['testimonials']) ); ?>
+          <?php get_template_part('flexible/section_testimonial_slider', '', array('testimonials' => $fields['testimonials']) ); ?>
 
-          <div class="row">
-            <div class="small-12 medium-12 columns">
-              <?php if( array_key_exists('overview', $fields) ): ?>
-                <div class="row case-study--overview">
-                  <div class="small-12 columns">
-                    <?php echo $fields['overview'];?>
-                  </div>
-                </div>
-              <?php endif; ?>
+          <?php if( array_key_exists('overview', $fields) ): ?>
+            <div class="row case-study--overview">
+              <div class="small-12 columns">
+                <?php echo $fields['overview'];?>
+              </div>
             </div>
-          </div>
+          <?php endif; ?>
 
-          <div class="row">
-            <div class="small-12 medium-12 columns">
-              <?php if( array_key_exists('gallery', $fields) ): ?>
-                <div class="row case-study--overview">
-                  <div class="small-12 columns">
-                    <?php echo do_shortcode( '[gallery ids="'.implode(',' ,$fields['gallery'] ).'"]'); // $fields['overview'];?>
-                  </div>
-                </div>
-              <?php endif; ?>
+
+
+          <?php if( array_key_exists('gallery', $fields) ): ?>
+            <div class="row case-study--gallery">
+              <div class="small-12 columns">
+                <?php echo do_shortcode( '[gallery ids="'.implode(',' ,$fields['gallery'] ).'"]'); // $fields['overview'];?>
+              </div>
             </div>
-          </div>
+          <?php endif; ?>
 
 
 

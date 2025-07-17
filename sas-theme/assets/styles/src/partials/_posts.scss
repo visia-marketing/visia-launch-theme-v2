@@ -62,3 +62,38 @@
   }
 
 }
+
+.single-case-study{
+
+
+  .case-study{
+    &--header{
+      background-size: cover;
+      height: calc(100vh - 192px);
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: flex-start;
+
+      &-content{
+        background: #fff;
+        display: inline-block;
+        padding: 2rem;
+        border-radius: 1rem;
+      }
+
+    }
+
+    &--location{
+      font-size: 2rem;
+    }
+
+    &--feature,
+    &--overview{
+      padding-top: 4rem;
+      padding-bottom: 4rem;
+    }
+  }
+
+
+}

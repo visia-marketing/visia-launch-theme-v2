@@ -6446,6 +6446,28 @@ a, button, .button, [type=submit] {
   letter-spacing: 1px;
 }
 
+.single-case-study .case-study--header {
+  background-size: cover;
+  height: calc(100vh - 192px);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+}
+.single-case-study .case-study--header-content {
+  background: #fff;
+  display: inline-block;
+  padding: 2rem;
+  border-radius: 1rem;
+}
+.single-case-study .case-study--location {
+  font-size: 2rem;
+}
+.single-case-study .case-study--feature, .single-case-study .case-study--overview {
+  padding-top: 4rem;
+  padding-bottom: 4rem;
+}
+
 /* TTEEMMPMP */
 .Xwoocommerce-breadcrumb {
   display: none;
