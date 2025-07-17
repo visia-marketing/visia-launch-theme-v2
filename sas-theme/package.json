@@ -26,9 +26,9 @@
   "dependencies": {
     "bourbon": "^4.2.7",
     "font-awesome": "^4.7.0",
-    "foundation-sites": "6.3.1",
+    "foundation-sites": "^6.3.1",
     "motion-ui": "^2.0.8",
-    "simplelightbox": "^2.14.3",
+    "simple-lightbox": "^2.1.0",
     "slick-carousel": "^1.8.1",
     "style-loader": "^4.0.0"
   }

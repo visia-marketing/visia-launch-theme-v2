@@ -155,7 +155,7 @@ body#tinymce {
     top: 0;
   }
 }
-.g-image--top-right {
+.g-image--top-right, .g-image--bottom-right {
   position: relative;
   border-radius: 1rem;
   bottom: 0;
@@ -166,21 +166,20 @@ body#tinymce {
   padding-top: 2rem;
 }
 @media print, screen and (min-width: 40em) {
-  .g-image--top-right {
+  .g-image--top-right, .g-image--bottom-right {
     right: -6rem;
   }
 }
 @media screen and (min-width: 80em) {
-  .g-image--top-right {
+  .g-image--top-right, .g-image--bottom-right {
     position: absolute;
-    bottom: 0;
+    bottom: 4rem;
     padding-top: 0;
   }
 }
 @media screen and (min-width: 90em) {
-  .g-image--top-right {
+  .g-image--top-right, .g-image--bottom-right {
     position: absolute;
-    bottom: 0;
   }
 }
 

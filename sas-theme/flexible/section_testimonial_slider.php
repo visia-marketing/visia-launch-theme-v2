@@ -1,9 +1,24 @@
-<?php $testimonials = get_sub_field('testimonials'); 
+<?php
+$testimonials = get_sub_field('testimonials'); 
+
+
+
+if( $args['testimonials']){
+    $testimonials = $args['testimonials'];
+    $class = "case-study--testimonial-slider";
+    $slider_id =  uniqid();
+
+    echo '<style>';
+    echo '.case-study--testimonial-slider#slider-'.$slider_id.' { padding: 6rem 0; background-image: url("'.wp_get_attachment_image_url(284, 'large').'"); }';
+    echo '</style>';
+}
+
+
 
 // print_r( $testimonials);
 ?>
 <div class="padding-row">
-    <div class="fc-section-content-testimonial-slider content-testimonial-slider-wrapper" id="slider-<?php echo uniqid(); ?>">
+    <div class="fc-section-content-testimonial-slider content-testimonial-slider-wrapper <?php echo $class;?>" id="slider-<?php echo $slider_id; ?>">
 
         <div class="content-testimonial-slider-container row">
 

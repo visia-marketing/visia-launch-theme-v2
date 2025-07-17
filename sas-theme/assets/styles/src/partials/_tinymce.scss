@@ -163,7 +163,8 @@ body#tinymce {
 
   }
 
-  &-image--top-right{
+  &-image--top-right,
+  &-image--bottom-right{
     
     position: relative;
     border-radius: 1rem;
@@ -180,13 +181,13 @@ body#tinymce {
 
     @include breakpoint(xlarge) {
       position: absolute;
-      bottom: 0;
+      bottom: 4rem;
       padding-top: 0;
     }
 
     @include breakpoint(xxlarge) {
       position: absolute;
-      bottom: 0;
+      //bottom: 0;
       
     }
 

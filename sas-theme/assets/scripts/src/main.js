@@ -12,7 +12,8 @@
 import $ from 'jquery';
 import 'foundation-sites';
 import 'slick-carousel';
-// import 'simple-lightbox';
+//import 'simple-lightbox';
+var SimpleLightbox = require('simple-lightbox');
 
 // If you only need specific modules:
 // import { Foundation, Accordion, Tabs } from 'foundation-sites';
@@ -32,7 +33,6 @@ import 'slick-carousel';
 
 
         // Slick Carousel
-        // Announcement Bar Slides
         var $testimonialSlider = $('.content-testimonial-slider-slides');
         $testimonialSlider.slick({
           dots: false,
@@ -69,7 +69,27 @@ import 'slick-carousel';
             .find(".content-testimonial-slider-slide")
             .css("height", slickHeight + "px");
         }
-        // END ANNOUNCEMENT SLIDER
+        // END TESTIMONIAL SLIDER
+
+        
+        var galleries = document.querySelectorAll('.gallery');
+
+        galleries.forEach(function(gallery) {
+          var galleryId = gallery.id;
+          new SimpleLightbox({
+            elements: '#' + galleryId + ' .gallery-item a',
+            /* Options can be added here */
+          });
+        }
+        );
+
+
+        
+
+
+
+
+
 
 
       }
