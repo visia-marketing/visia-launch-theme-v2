@@ -245,3 +245,30 @@ function sas_card_shortcode($atts) {
 // Register the shortcode
 add_shortcode('sas_card', 'sas_card_shortcode');
 
+
+
+/**
+ * Replace WordPress login logo
+ */
+function custom_login_logo() {
+  $main_logo_url = get_field('main_logo', 'option');
+  ?>
+  <style type="text/css">
+      #login h1 a, 
+      .login h1 a {
+          background-image: url('<?php echo $main_logo_url; ?>');
+          max-width: 320px;
+          background-size: contain;
+          background-repeat: no-repeat;
+          width: 100%;
+      }
+  </style>
+  <?php
+}
+add_action('login_enqueue_scripts', 'custom_login_logo');
+
+
+function custom_login_logo_url() {
+  return home_url(); // Links to your site's homepage
+}
+add_filter('login_headerurl', 'custom_login_logo_url');
