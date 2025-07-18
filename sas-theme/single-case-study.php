@@ -62,13 +62,15 @@
           <?php endif; ?>
 
 
-
+          
           <?php if( array_key_exists('gallery', $fields) ): ?>
-            <div class="row case-study--gallery">
-              <div class="small-12 columns">
-                <?php echo do_shortcode( '[gallery ids="'.implode(',' ,$fields['gallery'] ).'"]'); // $fields['overview'];?>
+            <?php if( is_array($fields['gallery']) && count($fields['gallery']) > 0 ): ?>
+              <div class="row case-study--gallery">
+                <div class="small-12 columns">
+                  <?php echo do_shortcode( '[gallery ids="'.implode(',' ,$fields['gallery'] ).'"]'); // $fields['overview'];?>
+                </div>
               </div>
-            </div>
+            <?php endif; ?>
           <?php endif; ?>
 
 
