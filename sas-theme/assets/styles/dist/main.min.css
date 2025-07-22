@@ -8560,15 +8560,11 @@ body#tinymce {
   color: #002B49;
 }
 .fc-section-accordion-simple .tabs-title > a:focus, .fc-section-accordion-simple .tabs-title > a[aria-selected=true], .fc-section-accordion-tabs .tabs-title > a:focus, .fc-section-accordion-tabs .tabs-title > a[aria-selected=true] {
-  background: #86AB3C;
   color: #fff;
 }
 .fc-section-accordion-simple .tabs-panel, .fc-section-accordion-tabs .tabs-panel {
   border: none;
   padding: 0;
-}
-.fc-section-accordion-simple .accordion, .fc-section-accordion-tabs .accordion {
-  border-top: 1px solid #737373;
 }
 .fc-section-accordion-simple .accordion.separated, .fc-section-accordion-tabs .accordion.separated {
   border-top: none;
@@ -8577,17 +8573,13 @@ body#tinymce {
   margin-bottom: 24px;
 }
 .fc-section-accordion-simple .accordion.separated .accordion-topic, .fc-section-accordion-tabs .accordion.separated .accordion-topic {
-  border: 1px solid #737373;
-  border-top: 1px solid #737373;
-  border-radius: 10px;
   overflow: hidden;
 }
 .fc-section-accordion-simple .accordion.in-tabs, .fc-section-accordion-tabs .accordion.in-tabs {
   border-top: none;
 }
 .fc-section-accordion-simple .accordion .accordion-topic, .fc-section-accordion-tabs .accordion .accordion-topic {
-  border: 1px solid #737373;
-  border-top: none;
+  border-top: 1px solid #737373;
   padding: 22px 30px;
   position: relative;
 }
@@ -8596,9 +8588,9 @@ body#tinymce {
   font-size: 24px;
   font-weight: 400;
   margin: 0;
+  padding-right: 30px;
 }
 .fc-section-accordion-simple .accordion .accordion-topic .accordion-arrow, .fc-section-accordion-tabs .accordion .accordion-topic .accordion-arrow {
-  border-left: 1px solid #737373;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -8610,18 +8602,17 @@ body#tinymce {
   width: 120px;
   transition: all 0.5s ease;
 }
+@media screen and (max-width: 1024px) {
+  .fc-section-accordion-simple .accordion .accordion-topic .accordion-arrow, .fc-section-accordion-tabs .accordion .accordion-topic .accordion-arrow {
+    width: 60px;
+  }
+}
 .fc-section-accordion-simple .accordion .accordion-topic .accordion-arrow i, .fc-section-accordion-tabs .accordion .accordion-topic .accordion-arrow i {
   color: #002B49;
   font-size: 34px;
 }
-.fc-section-accordion-simple .accordion .accordion-topic:hover .accordion-arrow, .fc-section-accordion-tabs .accordion .accordion-topic:hover .accordion-arrow {
-  background-color: #86AB3C;
-}
 .fc-section-accordion-simple .accordion .accordion-topic:hover .accordion-arrow i, .fc-section-accordion-tabs .accordion .accordion-topic:hover .accordion-arrow i {
-  color: #fff;
-}
-.fc-section-accordion-simple .accordion .accordion-topic.current, .fc-section-accordion-tabs .accordion .accordion-topic.current {
-  border-radius: 10px 10px 0 0;
+  color: #86AB3C;
 }
 .fc-section-accordion-simple .accordion .accordion-topic.current .accordion-arrow i, .fc-section-accordion-tabs .accordion .accordion-topic.current .accordion-arrow i {
   transform: rotate(-90deg);
@@ -8639,9 +8630,6 @@ body#tinymce {
   font-weight: 700;
 }
 .fc-section-accordion-simple .accordion .accordion-response, .fc-section-accordion-tabs .accordion .accordion-response {
-  border-left: 1px solid #737373;
-  border-right: 1px solid #737373;
-  border-bottom: 1px solid #737373;
   padding: 22px 30px;
   display: none;
 }
@@ -8649,7 +8637,12 @@ body#tinymce {
   background-color: #F6F5F3;
 }
 .fc-section-accordion-simple .accordion .accordion-response h1, .fc-section-accordion-simple .accordion .accordion-response h2, .fc-section-accordion-simple .accordion .accordion-response h3, .fc-section-accordion-simple .accordion .accordion-response h4, .fc-section-accordion-simple .accordion .accordion-response h5, .fc-section-accordion-simple .accordion .accordion-response h6, .fc-section-accordion-simple .accordion .accordion-response ul, .fc-section-accordion-simple .accordion .accordion-response p, .fc-section-accordion-tabs .accordion .accordion-response h1, .fc-section-accordion-tabs .accordion .accordion-response h2, .fc-section-accordion-tabs .accordion .accordion-response h3, .fc-section-accordion-tabs .accordion .accordion-response h4, .fc-section-accordion-tabs .accordion .accordion-response h5, .fc-section-accordion-tabs .accordion .accordion-response h6, .fc-section-accordion-tabs .accordion .accordion-response ul, .fc-section-accordion-tabs .accordion .accordion-response p {
-  max-width: 600px;
+  max-width: calc(100% - 100px);
+}
+@media screen and (max-width: 1024px) {
+  .fc-section-accordion-simple .accordion .accordion-response h1, .fc-section-accordion-simple .accordion .accordion-response h2, .fc-section-accordion-simple .accordion .accordion-response h3, .fc-section-accordion-simple .accordion .accordion-response h4, .fc-section-accordion-simple .accordion .accordion-response h5, .fc-section-accordion-simple .accordion .accordion-response h6, .fc-section-accordion-simple .accordion .accordion-response ul, .fc-section-accordion-simple .accordion .accordion-response p, .fc-section-accordion-tabs .accordion .accordion-response h1, .fc-section-accordion-tabs .accordion .accordion-response h2, .fc-section-accordion-tabs .accordion .accordion-response h3, .fc-section-accordion-tabs .accordion .accordion-response h4, .fc-section-accordion-tabs .accordion .accordion-response h5, .fc-section-accordion-tabs .accordion .accordion-response h6, .fc-section-accordion-tabs .accordion .accordion-response ul, .fc-section-accordion-tabs .accordion .accordion-response p {
+    max-width: 100%;
+  }
 }
 .fc-section-accordion-simple .accordion .accordion-response p, .fc-section-accordion-simple .accordion .accordion-response li, .fc-section-accordion-tabs .accordion .accordion-response p, .fc-section-accordion-tabs .accordion .accordion-response li {
   font-size: 20px;

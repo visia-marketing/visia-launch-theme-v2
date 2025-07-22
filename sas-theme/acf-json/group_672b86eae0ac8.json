@@ -12,7 +12,7 @@
             "required": 0,
             "conditional_logic": 0,
             "wrapper": {
-                "width": "",
+                "width": "50",
                 "class": "",
                 "id": ""
             },
@@ -30,6 +30,27 @@
             "save_other_choice": 0
         },
         {
+            "key": "field_687a471bcf889",
+            "label": "Case Study Loop",
+            "name": "case_study_loop",
+            "aria-label": "",
+            "type": "true_false",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "message": "",
+            "default_value": 0,
+            "allow_in_bindings": 0,
+            "ui": 0,
+            "ui_on_text": "",
+            "ui_off_text": ""
+        },
+        {
             "key": "field_672b87402abce",
             "label": "Cards",
             "name": "cards",
@@ -37,7 +58,15 @@
             "type": "repeater",
             "instructions": "",
             "required": 0,
-            "conditional_logic": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_687a471bcf889",
+                        "operator": "!=",
+                        "value": "1"
+                    }
+                ]
+            ],
             "wrapper": {
                 "width": "",
                 "class": "",
@@ -66,7 +95,7 @@
                         "id": ""
                     },
                     "message": "",
-                    "default_value": 0,
+                    "default_value": 1,
                     "allow_in_bindings": 0,
                     "ui": 0,
                     "ui_on_text": "",
@@ -268,6 +297,32 @@
                     "parent_repeater": "field_672b87402abce"
                 }
             ]
+        },
+        {
+            "key": "field_687a4745cf88a",
+            "label": "Case Study Loop",
+            "name": "",
+            "aria-label": "",
+            "type": "message",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_687a471bcf889",
+                        "operator": "==",
+                        "value": "1"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "message": "This section will display a grid of case studies.",
+            "new_lines": "wpautop",
+            "esc_html": 0
         }
     ],
     "location": [
@@ -288,5 +343,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1752527743
+    "modified": 1752844137
 }

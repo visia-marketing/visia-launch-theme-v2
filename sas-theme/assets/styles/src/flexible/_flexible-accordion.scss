@@ -19,7 +19,7 @@
   }
 
   .tabs-title>a:focus, .tabs-title>a[aria-selected=true] {
-    background: $green;
+    //background: $green;
     color: #fff;
   }
 
@@ -29,7 +29,7 @@
   }
 
   .accordion {
-    border-top: 1px solid $grey-border;
+    //border-top: 1px solid $grey-border;
 
     &.separated {
       border-top: none;
@@ -39,9 +39,10 @@
       }
 
       .accordion-topic {
-        border: 1px solid $grey-border;
-        border-top: 1px solid $grey-border;
-        border-radius: 10px;
+        // border: 1px solid $grey-border;
+        // border-top:  0px 1px solid $grey-border;
+        //border-radius: 10px;
+        
 
         overflow: hidden;
       }
@@ -53,8 +54,8 @@
     }
 
     .accordion-topic {
-      border: 1px solid $grey-border;
-      border-top: none;
+      // border-bottom: 1px solid $grey-border;
+      border-top:  1px solid $grey-border;
       padding: 22px 30px;
       position: relative;
 
@@ -63,10 +64,13 @@
         font-size: 24px;
         font-weight: 400;
         margin: 0;
+        padding-right: 30px;
+        
+
       }
 
       .accordion-arrow {
-        border-left: 1px solid $grey-border;
+        //border-left: 1px solid $grey-border;
         display: flex;
          align-items: center;
          justify-content: center;
@@ -78,6 +82,10 @@
         width: 120px;
         transition: all .5s ease;
 
+        @media screen and (max-width: 1024px){
+          width: 60px;
+        }
+
         i {
           color: $black;
           font-size: 34px;
@@ -86,16 +94,17 @@
       }
 
       &:hover .accordion-arrow {
-        background-color: $green;
+        //background-color: $green;
 
         i {
-          color: #fff;
+          color: $green;
         }
 
       }
 
       &.current  {
-        border-radius: 10px 10px 0 0;
+        //border-radius: 10px 10px 0 0;
+
       }
 
       &.current .accordion-arrow i {
@@ -122,9 +131,9 @@
     }
 
     .accordion-response {
-      border-left: 1px solid $grey-border;
-      border-right: 1px solid $grey-border;
-      border-bottom: 1px solid $grey-border;
+      // border-left: 1px solid $grey-border;
+      // border-right: 1px solid $grey-border;
+      // border-bottom: 1px solid $grey-border;
       padding: 22px 30px;
       display: none;
 
@@ -133,7 +142,11 @@
       }
 
       h1, h2, h3, h4, h5, h6, ul, p {
-        max-width: 600px;
+        max-width:calc( 100% - 100px);
+
+        @media screen and (max-width: 1024px){
+          max-width: 100%;
+        }
       }
 
       p, li {
