@@ -6468,6 +6468,16 @@ a, button, .button, [type=submit] {
   padding-bottom: 4rem;
 }
 
+#archive-header {
+  padding-top: 6rem;
+  padding-bottom: 6rem;
+  margin-bottom: 4rem;
+  background: #F6F5F3;
+}
+#archive-header .columns {
+  margin-bottom: 0;
+}
+
 /* TTEEMMPMP */
 .Xwoocommerce-breadcrumb {
   display: none;

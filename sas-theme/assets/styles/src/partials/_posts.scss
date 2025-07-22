@@ -97,3 +97,17 @@
 
 
 }
+
+
+
+#archive-header{
+  padding-top: 6rem;
+  padding-bottom: 6rem;
+  margin-bottom: 4rem;
+  background: $gray-bg;
+
+  & .columns{
+    margin-bottom: 0;
+  }
+}
+
