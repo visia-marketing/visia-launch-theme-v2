@@ -6466,6 +6466,7 @@ a, button, .button, [type=submit] {
   font-size: 2rem;
 }
 .single-case-study .case-study--gallery {
+  padding-top: 4rem;
   padding-bottom: 4rem;
 }
 .single-case-study .case-study--gallery .gallery {
@@ -6484,9 +6485,11 @@ a, button, .button, [type=submit] {
   height: auto;
   border-radius: 1rem;
 }
-.single-case-study .case-study--feature, .single-case-study .case-study--overview {
+.single-case-study .case-study--feature {
+  padding-top: 3rem;
+}
+.single-case-study .case-study--overview {
   padding-top: 4rem;
-  padding-bottom: 4rem;
 }
 
 #archive-header {

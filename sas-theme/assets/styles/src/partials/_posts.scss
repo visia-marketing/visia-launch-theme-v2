@@ -97,6 +97,7 @@
     }
 
     &--gallery{
+      padding-top: 4rem;
       padding-bottom: 4rem;
 
       & .gallery{
@@ -119,10 +120,13 @@
       }
     }
 
-    &--feature,
+    &--feature{
+      padding-top: 3rem;
+    }
+
     &--overview{
       padding-top: 4rem;
-      padding-bottom: 4rem;
+      //padding-bottom: 4rem;
     }
   }
 
