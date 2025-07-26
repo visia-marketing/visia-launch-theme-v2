@@ -7366,6 +7366,9 @@ a, button, .button, [type=submit] {
 .main-footer .footer-menu li ul li a:hover {
   color: #86AB3C;
 }
+.main-footer .footer-menu .menu .active > a {
+  background: unset;
+}
 .main-footer .footer-contact {
   margin: 0;
   padding: 0;
@@ -8660,7 +8663,7 @@ body#tinymce {
   right: 10px;
 }
 .fc-section-accordion-simple .accordion .accordion-topic.current, .fc-section-accordion-tabs .accordion .accordion-topic.current {
-  background-color: #F6F5F3;
+  background-color: #ffffff;
   font-weight: 700;
 }
 .fc-section-accordion-simple .accordion .accordion-response, .fc-section-accordion-tabs .accordion .accordion-response {
@@ -8668,7 +8671,7 @@ body#tinymce {
   display: none;
 }
 .fc-section-accordion-simple .accordion .accordion-response.current, .fc-section-accordion-tabs .accordion .accordion-response.current {
-  background-color: #F6F5F3;
+  background-color: #ffffff;
 }
 .fc-section-accordion-simple .accordion .accordion-response h1, .fc-section-accordion-simple .accordion .accordion-response h2, .fc-section-accordion-simple .accordion .accordion-response h3, .fc-section-accordion-simple .accordion .accordion-response h4, .fc-section-accordion-simple .accordion .accordion-response h5, .fc-section-accordion-simple .accordion .accordion-response h6, .fc-section-accordion-simple .accordion .accordion-response ul, .fc-section-accordion-simple .accordion .accordion-response p, .fc-section-accordion-tabs .accordion .accordion-response h1, .fc-section-accordion-tabs .accordion .accordion-response h2, .fc-section-accordion-tabs .accordion .accordion-response h3, .fc-section-accordion-tabs .accordion .accordion-response h4, .fc-section-accordion-tabs .accordion .accordion-response h5, .fc-section-accordion-tabs .accordion .accordion-response h6, .fc-section-accordion-tabs .accordion .accordion-response ul, .fc-section-accordion-tabs .accordion .accordion-response p {
   max-width: calc(100% - 100px);

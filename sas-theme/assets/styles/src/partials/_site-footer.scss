@@ -105,6 +105,10 @@
 
     }
 
+    & .menu .active > a{
+      background: unset;
+    }
+
   }
 
   .footer-contact {
