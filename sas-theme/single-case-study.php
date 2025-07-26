@@ -51,8 +51,6 @@
           </div>
 
 
-          <?php get_template_part('flexible/section_testimonial_slider', '', array('testimonials' => $fields['testimonials']) ); ?>
-
           <?php if( array_key_exists('overview', $fields) ): ?>
             <div class="row case-study--overview">
               <div class="small-12 columns">
@@ -60,8 +58,6 @@
               </div>
             </div>
           <?php endif; ?>
-
-
           
           <?php if( array_key_exists('gallery', $fields) ): ?>
             <?php if( is_array($fields['gallery']) && count($fields['gallery']) > 0 ): ?>
@@ -74,11 +70,9 @@
           <?php endif; ?>
 
 
-
+          <?php get_template_part('flexible/section_testimonial_slider', '', array('testimonials' => $fields['testimonials']) ); ?>
           
 
-
-            </div>  
           </div>
       </div>
     </section>

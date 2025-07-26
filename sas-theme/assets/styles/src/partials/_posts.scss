@@ -63,13 +63,14 @@
 
 }
 
+
 .single-case-study{
 
 
   .case-study{
     &--header{
       background-size: cover;
-      height: calc(100vh - 192px);
+      height: 42rem;
       display: flex;
       flex-direction: column;
       justify-content: center;
@@ -84,8 +85,38 @@
 
     }
 
+    &--headline{
+      font-size: 4rem;
+      font-weight: 700;
+      color: $green;
+      margin-bottom: 4rem;
+    }
+
     &--location{
       font-size: 2rem;
+    }
+
+    &--gallery{
+      padding-bottom: 4rem;
+
+      & .gallery{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 2rem;
+
+        &-item{
+          max-width: 20%;
+          flex: 1;
+          margin-bottom: 2rem;
+
+          img{
+            width: 100%;
+            height: auto;
+            border-radius: 1rem;
+          }
+        }
+      }
     }
 
     &--feature,

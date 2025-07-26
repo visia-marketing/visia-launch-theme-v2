@@ -6340,10 +6340,6 @@ a, button, .button, [type=submit] {
   margin: 0 20px 20px 0;
 }
 
-.page-content-wrapper .page-content {
-  padding: 70px 0;
-}
-
 .page-header.page-header-image {
   display: flex;
   height: 400px;
@@ -6448,7 +6444,7 @@ a, button, .button, [type=submit] {
 
 .single-case-study .case-study--header {
   background-size: cover;
-  height: calc(100vh - 192px);
+  height: 42rem;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -6460,8 +6456,33 @@ a, button, .button, [type=submit] {
   padding: 2rem;
   border-radius: 1rem;
 }
+.single-case-study .case-study--headline {
+  font-size: 4rem;
+  font-weight: 700;
+  color: #86AB3C;
+  margin-bottom: 4rem;
+}
 .single-case-study .case-study--location {
   font-size: 2rem;
+}
+.single-case-study .case-study--gallery {
+  padding-bottom: 4rem;
+}
+.single-case-study .case-study--gallery .gallery {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+}
+.single-case-study .case-study--gallery .gallery-item {
+  max-width: 20%;
+  flex: 1;
+  margin-bottom: 2rem;
+}
+.single-case-study .case-study--gallery .gallery-item img {
+  width: 100%;
+  height: auto;
+  border-radius: 1rem;
 }
 .single-case-study .case-study--feature, .single-case-study .case-study--overview {
   padding-top: 4rem;
@@ -7388,7 +7409,7 @@ a, button, .button, [type=submit] {
 }
 @media print, screen and (min-width: 40em) {
   .main-footer .footer-bottom {
-    margin-top: 7rem;
+    margin-top: 3rem;
   }
 }
 
