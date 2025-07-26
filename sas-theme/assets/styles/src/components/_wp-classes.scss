@@ -1,0 +1,30 @@
+// WordPress Generated Classes
+// http://codex.wordpress.org/CSS#WordPress_Generated_Classes
+
+// Media alignment
+.alignnone {
+  margin-left: 0;
+  margin-right: 0;
+  max-width: 100%;
+  height: auto;
+}
+.aligncenter {
+  display: block;
+  margin: 0 auto;
+  height: auto;
+}
+.alignleft,
+.alignright {
+  margin-bottom: 0;
+  height: auto;
+}
+
+.alignright {
+  float: right;
+  margin: 0 0 20px 20px;
+}
+
+.alignleft {
+  float: left;
+  margin: 0 20px 20px 0;
+}

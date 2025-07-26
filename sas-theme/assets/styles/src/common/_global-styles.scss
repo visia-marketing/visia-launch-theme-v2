@@ -1,0 +1,35 @@
+
+
+body{
+
+    p{
+        font-size: 1.125rem;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 1.55;
+    }
+
+    h2{
+        font-size: 1.25rem;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 1.2;
+        //letter-spacing: -0.125rem;
+        letter-spacing: clamp(-0.0125rem, 4vw, -0.125rem);
+        font-size: clamp(1.825rem, 4vw, 3.375rem);
+        margin-bottom: clamp(.525rem, 4vw, 1.25rem);// 1.125rem;
+
+        &.section-h2{
+            margin-bottom: 4rem;
+            margin-bottom: clamp(2rem, 4vw, 4rem);// 1.125rem;
+        }
+    }
+
+    h4{
+        padding-top: 1rem;
+        padding-bottom: 0.6rem;
+    }
+
+
+
+}

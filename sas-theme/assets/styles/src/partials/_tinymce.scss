@@ -1,0 +1,197 @@
+body#tinymce {
+  background-color: #fff;
+  margin: 12px !important;
+}
+
+.g {
+
+  &-section-subtitle {
+    color: $green;
+    font-family: $sans;
+    font-style: normal;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.2rem;
+
+    @include breakpoint(medium) {
+      font-size: 1.5rem;
+      letter-spacing: 0.3rem;
+      line-height: 1.9375rem; /* 129.167% */
+    }
+
+  }
+
+  &-section-title {
+    color: $black;
+    display: block;
+    font-family: $sans;
+    font-size: 2.75rem;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 1.25;
+    letter-spacing: -0.125rem;
+
+    @include breakpoint(medium) {
+      font-size: 36px;
+    }
+
+    @include breakpoint(xlarge) {
+      font-size: 46px;
+    }
+
+  }
+
+  &-section-narrow-p{
+    display: block;
+    max-width: 36.5rem;
+    width: 100%;
+    margin: auto;
+  }
+
+  &-section-xnarrow-p{
+    display: block;
+    width: 22.5rem;
+    max-width: 100%;
+    margin: auto;
+  }
+
+  &-section-intro {
+    color: $black;
+    display: block;
+    font-family: $sans;
+    font-size: 16px;
+    font-weight: 400;
+    margin: 0 0 0;
+  }
+
+  &-small-text{
+    font-size: 0.9375rem;
+  }
+
+  &-medium-text{
+    font-size: 1.375rem;
+  }
+
+  &-large-text{
+    //font-size: 2.125rem;
+    font-size: clamp(1.75rem, 3vw, 2.125rem);
+    line-height: 3.125rem;
+    // letter-spacing: -0.125rem;
+    letter-spacing: clamp( -0.125rem, -0.25vw, -0.125rem);
+  }
+
+  &-xlarge-text{
+    font-size: 7.5rem;
+    font-size: clamp(5.25rem, 12vw, 7.5rem);
+    font-style: normal;
+    font-weight: 750;
+    line-height: 0.9;
+    letter-spacing: 0.0625rem;
+    text-transform: uppercase;
+    margin-left: auto;
+  }
+
+  &-button.button {
+    margin-right: 10px;
+    background-color: transparent;
+    border-radius: 2px;
+    border: 1px solid $black;
+    color: $black;
+    display: inline-block;
+    font-family: $sans;
+    font-size: 14px !important;
+    font-weight: 600;
+    margin-top: 1rem;
+    letter-spacing: 1.5px;
+    padding: 8px 34px 8px 20px;
+    position:relative;
+    text-transform: uppercase;
+
+    a {
+      position: relative;
+    }
+
+    &:before {
+      font-family: $fontawesome;
+      content: "\f054";
+      font-weight: 400;
+      position: absolute;
+       top: 8px;
+       right: 14px;
+      height: 30px;
+      font-size: 14px;
+      width: 8px;
+    }
+
+    i {
+      margin-left: 14px;
+      //font-size: 10px;
+    }
+
+    &:hover, &.active {
+      background-color: darken($primary,7%);
+      color: #fff;
+    }
+
+  }
+
+  &-image--top-left{
+    
+    border-radius: 1rem;
+    position: relative;
+    top: 0;
+    left: -16%;
+    display: block;
+    transition: all 0.5s ease-in-out;
+    padding-bottom: 2rem;
+
+    @include breakpoint(medium) {
+      left:  -6rem;
+    }
+
+    @include breakpoint(xlarge) {
+      position: absolute;
+      top: 0;
+      padding-bottom: 0;
+    }
+
+    @include breakpoint(xxlarge) {
+      position: absolute;
+      top: 0;
+    }
+
+
+  }
+
+  &-image--top-right,
+  &-image--bottom-right{
+    
+    position: relative;
+    border-radius: 1rem;
+    bottom: 0;
+    right: -16%;
+    margin-left: auto;
+    transition: all 0.5s ease-in-out;
+    display: block;
+    padding-top: 2rem;
+
+    @include breakpoint(medium) {
+      right:  -6rem;
+    }
+
+    @include breakpoint(xlarge) {
+      position: absolute;
+      bottom: 4rem;
+      padding-top: 0;
+    }
+
+    @include breakpoint(xxlarge) {
+      position: absolute;
+      //bottom: 0;
+      
+    }
+
+  }
+
+
+}
