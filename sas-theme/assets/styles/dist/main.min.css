@@ -7306,7 +7306,7 @@ a, button, .button, [type=submit] {
   font-weight: 600;
   line-height: 1.1875rem;
   text-transform: uppercase;
-  margin-bottom: 1rem;
+  margin-bottom: 0.125rem;
 }
 .main-footer .footer-logo {
   display: flex;
