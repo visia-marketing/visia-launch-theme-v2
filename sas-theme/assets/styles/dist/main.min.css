@@ -1658,42 +1658,42 @@ h1 {
   font-size: 1.5rem;
   line-height: 1.1;
   margin-top: 0;
-  margin-bottom: 0.5rem;
+  margin-bottom: 0;
 }
 
 h2 {
   font-size: 1.25rem;
   line-height: 1.1;
   margin-top: 0;
-  margin-bottom: 0.5rem;
+  margin-bottom: 0;
 }
 
 h3 {
   font-size: 1.1875rem;
   line-height: 1.1;
   margin-top: 0;
-  margin-bottom: 0.5rem;
+  margin-bottom: 0;
 }
 
 h4 {
   font-size: 1.125rem;
   line-height: 1.1;
   margin-top: 0;
-  margin-bottom: 0.5rem;
+  margin-bottom: 0;
 }
 
 h5 {
   font-size: 1.0625rem;
   line-height: 1.1;
   margin-top: 0;
-  margin-bottom: 0.5rem;
+  margin-bottom: 0;
 }
 
 h6 {
   font-size: 1rem;
   line-height: 1.1;
   margin-top: 0;
-  margin-bottom: 0.5rem;
+  margin-bottom: 0;
 }
 
 @media print, screen and (min-width: 40em) {
@@ -1718,7 +1718,7 @@ h6 {
 }
 @media print, screen and (min-width: 64em) {
   h1 {
-    font-size: 5rem;
+    font-size: 4rem;
   }
   h2 {
     font-size: 3.375rem;
@@ -7339,9 +7339,9 @@ a, button, .button, [type=submit] {
 .main-footer .footer-menu li > a {
   color: #002B49;
   display: inline-block;
-  font-size: 1.25rem;
+  font-size: 1.125rem;
+  line-height: 1.55;
   font-weight: 700;
-  line-height: 1;
   padding: 0;
   vertical-align: top;
 }
@@ -7357,11 +7357,8 @@ a, button, .button, [type=submit] {
 .main-footer .footer-menu li ul li a {
   color: #002B49;
   display: inline-block;
-  font-size: 15px;
-  font-weight: 400;
-  line-height: 1.2;
-  padding: 11px 0;
   vertical-align: top;
+  font-weight: 400;
 }
 .main-footer .footer-menu li ul li a:hover {
   color: #86AB3C;

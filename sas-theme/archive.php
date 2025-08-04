@@ -13,6 +13,16 @@
     </div>
 </section>
 
+<style>
+  #archive-header{
+    background-image: url(/wp-content/uploads/2025/07/Rectangle-15365.png);
+    position: relative;
+    overflow: hidden;
+    background-size: cover;
+  }
+</style>
+
+
 
 
   <section class="fc-section-columns fc-section-cards">

@@ -68,9 +68,9 @@
       > a {
         color: $black;
         display: inline-block;
-        font-size: 1.25rem;
+        font-size: 1.125rem;
+        line-height: 1.55;
         font-weight: 700;
-        line-height: 1;
         padding: 0;
         vertical-align: top;
       }
@@ -87,11 +87,8 @@
           a {
             color: $black;
             display: inline-block;
-            font-size: 15px;
-            font-weight: 400;
-            line-height: 1.2;
-            padding: 11px 0;
             vertical-align: top;
+            font-weight: 400;
     
             &:hover {
               color: $green;

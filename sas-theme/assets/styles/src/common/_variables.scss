@@ -223,7 +223,7 @@ $header-font-style: normal;
 $font-family-monospace: Consolas, 'Liberation Mono', Courier, monospace;
 $header-color: $header-color;
 $header-lineheight: 1.1; //Made it 1.1 cause of font family
-$header-margin-bottom: 0.5rem;
+$header-margin-bottom: 0.0rem;
 $header-styles: (
   small: (
     'h1': ('font-size': 24),
@@ -242,7 +242,7 @@ $header-styles: (
     'h6': ('font-size': 16),
   ),
   large: (
-    'h1': ('font-size': 80),
+    'h1': ('font-size': 64),
     'h2': ('font-size': 54),
     'h3': ('font-size': 22),
     'h4': ('font-size': 22),
