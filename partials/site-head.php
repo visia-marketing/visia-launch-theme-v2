@@ -8,9 +8,6 @@
 
   <?php wp_head(); ?> 
 
-  <?php global $csp_nonce; ?> 
-  <script src="https://kit.fontawesome.com/7ef9481af9.js" crossorigin="anonymous" nonce="<?php echo $csp_nonce;?>"></script>
-
   <?php if ( get_field('google_tag_manager_id', 'options') ):?>
     <!-- Google Tag Manager -->
     <script nonce="<?php echo $csp_nonce;?>">(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
