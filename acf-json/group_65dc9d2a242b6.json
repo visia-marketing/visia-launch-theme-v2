@@ -231,7 +231,7 @@
             {
                 "param": "options_page",
                 "operator": "==",
-                "value": "site-settings"
+                "value": "theme-settings"
             }
         ]
     ],
@@ -244,5 +244,6 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1737492828
+    "display_title": "",
+    "modified": 1760459713
 }
