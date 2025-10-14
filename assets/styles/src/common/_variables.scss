@@ -30,21 +30,18 @@ $dark-grey:   $dark-gray;
 $grey-rule:   $gray-rule;
 $grey-bg:     $gray-bg;
 $grey-border: $gray-border;
-//$black:       #2b2b2b;
 $white:       #ffffff;
 
 // Brand Colors - Set the brand colors here
-$green:       #86AB3C;
-$red:         $green;
-$black:      #002B49;
-$subtleBlue: #F7FCFF;
+$yellow:       #FBA919;
+$black:      #000000;
 
 $lightGrade: linear-gradient(0deg, rgba(255, 255, 255, 0.00) -6.56%, #EDF4FA 88.2%);
 $darkGrade: linear-gradient(270deg, rgba(0, 43, 73, 0.70) -5%, rgba(0, 34, 57, 0.70) 70%);
 
 
-$primary: $black;
-$secondary: $green;
+$primary: $yellow;
+$secondary: $dark-gray;
 $dark: darken($primary, 10%);
 
 ///////////////////////////////////////////////
@@ -60,10 +57,10 @@ $top-header-color: $black;
 $top-header-link-color: $black;
 
 // Main Header - this is confusing - header nav or headings
-$main-header-background: $white;
+$main-header-background: $light-gray;
 $main-header-link-color: $black;
 $main-header-link-font: $sans;
-$main-header-button-background-color: $green;
+$main-header-button-background-color: $primary;
 $main-header-button-link-color: $white;
 
 
@@ -86,7 +83,7 @@ $breadcrumb-text-color: $grey;
 $breadcrumb-anchor-color: $secondary;;
 
 // Footer
-$footer-bg: $green;
+$footer-bg: $medium-gray;
 
 
 //  Foundation for Sites Settings
