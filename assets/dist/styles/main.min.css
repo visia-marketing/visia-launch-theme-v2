@@ -1,5 +1,5 @@
 /*!********************************************************************************************************************************************************************************************!*\
-  !*** css ./node_modules/css-loader/dist/cjs.js!./node_modules/postcss-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[1].use[3]!./assets/styles/src/main.scss ***!
+  !*** css ./node_modules/css-loader/dist/cjs.js!./node_modules/postcss-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[1].use[3]!./assets/src/styles/main.scss ***!
   \********************************************************************************************************************************************************************************************/
 @charset "UTF-8";
 /*
@@ -5880,14 +5880,14 @@ a.thumbnail image {
 
 /* Slider */
 .slick-loading .slick-list {
-  background: #fff url(../../../assets/styles/dist/images/ajax-loader.gif) center center no-repeat;
+  background: #fff url(../../../assets/dist/styles/images/ajax-loader.gif) center center no-repeat;
 }
 
 /* Icons */
 @font-face {
   font-family: "slick";
-  src: url(../../../assets/styles/dist/fonts/slick.eot);
-  src: url(../../../assets/styles/dist/fonts/slick.eot?#iefix) format("embedded-opentype"), url(../../../assets/styles/dist/fonts/slick.woff) format("woff"), url(../../../assets/styles/dist/fonts/slick.ttf) format("truetype"), url(../../../assets/styles/dist/images/slick.svg#slick) format("svg");
+  src: url(../../../assets/dist/styles/fonts/slick.eot);
+  src: url(../../../assets/dist/styles/fonts/slick.eot?#iefix) format("embedded-opentype"), url(../../../assets/dist/styles/fonts/slick.woff) format("woff"), url(../../../assets/dist/styles/fonts/slick.ttf) format("truetype"), url(../../../assets/dist/styles/images/slick.svg#slick) format("svg");
   font-weight: normal;
   font-style: normal;
 }
