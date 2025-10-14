@@ -19,7 +19,7 @@
   }
 
   .tabs-title>a:focus, .tabs-title>a[aria-selected=true] {
-    background: $green;
+    background: $primary;
     color: #fff;
   }
 
@@ -86,7 +86,7 @@
       }
 
       &:hover .accordion-arrow {
-        background-color: $green;
+        background-color: $primary;
 
         i {
           color: #fff;

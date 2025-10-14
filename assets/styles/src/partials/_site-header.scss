@@ -17,7 +17,7 @@ $top-header-link-color: $top-header-link-color;
   z-index: 9;
 
   @include breakpoint(large) {
-    height: 82px;
+    height: 128px;
   }
 
   .row, .row > .columns {
@@ -49,10 +49,17 @@ $top-header-link-color: $top-header-link-color;
     height: 100%;
     margin-right: auto;
 
+    & a{
+      display: flex;
+      height: 100%;
+      padding: 1rem 0;
+    }
+
     img {
       //height: 19px;
       width: 100%;
       vertical-align: middle;
+      max-height: 100%;
 
       @include breakpoint(medium) {
         //height: 34px;
@@ -154,7 +161,7 @@ $top-header-link-color: $top-header-link-color;
           text-align: left;
           padding: 1rem 0.75rem;
           border: none;
-          border-top: 3px solid $green;
+          border-top: 3px solid $primary;
           margin-top: -3px;
   
           &.js-dropdown-active {
@@ -210,7 +217,7 @@ $top-header-link-color: $top-header-link-color;
         }
 
         &:last-child a {
-          background-color: $green;
+          background-color: $primary;
           border-radius: 2px;
           border: none;
           color: $white;
@@ -435,7 +442,7 @@ $top-header-link-color: $top-header-link-color;
         
         > a {
           background-color: transparent;
-          color: $green;
+          color: $primary;
         }
 
       }
@@ -491,7 +498,7 @@ $top-header-link-color: $top-header-link-color;
         
             > a {
               background-color: transparent;
-              color: $green;
+              color: $primary;
             }
     
           }
@@ -532,7 +539,7 @@ $top-header-link-color: $top-header-link-color;
 
           ul {
             margin: 20px;
-            border-left: 1px solid $green;
+            border-left: 1px solid $primary;
 
             li {
 
@@ -573,7 +580,7 @@ $top-header-link-color: $top-header-link-color;
 
       a {
       	background-color: transparent;
-        border: 2px solid $green;
+        border: 2px solid $primary;
         border-radius: 5px;
         color: #fff;
         display: block;
@@ -586,7 +593,7 @@ $top-header-link-color: $top-header-link-color;
       }
 
       &:first-child a {
-        background-color: $green;
+        background-color: $primary;
         color: #fff;
       }
 
@@ -597,7 +604,7 @@ $top-header-link-color: $top-header-link-color;
           //text-decoration: underline;
 
           &:first-child {
-            background-color: $green;
+            background-color: $primary;
             color: #fff;
           }
 
@@ -626,7 +633,7 @@ $top-header-link-color: $top-header-link-color;
         flex-grow: 1;
   
         i {
-          color: $green;
+          color: $primary;
           height: 32px;
           margin: 0 10px;
           font-size: 13px;
@@ -665,8 +672,8 @@ $top-header-link-color: $top-header-link-color;
       }
 
       .button {
-        background-color: $green;
-        background-color: $green;
+        background-color: $primary;
+        background-color: $primary;
         border: none;
         padding: 0;
         line-height: 32px;
