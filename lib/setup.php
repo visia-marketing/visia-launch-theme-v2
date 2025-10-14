@@ -129,6 +129,7 @@ function assets() {
 
   wp_enqueue_style('theme-fonts', $fonts , false, null);
   wp_enqueue_style('sage/css', Assets\asset_path('/dist/styles/main.min.css'), false, null);
+  wp_enqueue_style('font-awesome-cdn', 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css', false, null);
   wp_enqueue_style('default-css', get_stylesheet_uri() , false, null);
 
   if (is_single() && comments_open() && get_option('thread_comments')) {

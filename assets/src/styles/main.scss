@@ -22,12 +22,28 @@
 @include motion-ui-transitions;
 @include motion-ui-animations;
 
+// // Font Awesome - Comment out if you do not need itf
+//@import './font-awesome/css/font-awesome.css';
+// @import '../../../node_modules/@fortawesome/fontawesome-free/css/all.css';
+
+// $fa-font-path: "~@fortawesome/fontawesome-free/webfonts";
+// @import "~@fortawesome/fontawesome-free/scss/fontawesome.scss";
+// @import "~@fortawesome/fontawesome-free/scss/solid.scss";
+// @import "~@fortawesome/fontawesome-free/scss/brands.scss";
+// @import "~@fortawesome/fontawesome-free/scss/regular.scss";
+
+
+// @import '../../../node_modules/@fortawesome/fontawesome-free/scss/regular.scss';
+
+
 // Slick Carousel
 @import "../../../node_modules/slick-carousel/slick/slick.scss";
 @import "../../../node_modules/slick-carousel/slick/slick-theme.scss";
 
 // Simplelightbox
 @import "../../../node_modules/simplelightbox/";
+
+
 
 // Your custom styles
 @import "common/global-styles";
@@ -84,8 +100,7 @@
 // ///////////////////////////////////////////////
 
 
-// // Font Awesome - Comment out if you do not need itf
-// // @import "font-awesome/scss/font-awesome";
+
 
 // // Slick Carousel - works better than orbit
 // @import "../../../node_modules/slick-carousel/slick/slick.scss";

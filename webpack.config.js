@@ -54,10 +54,10 @@ module.exports = {
                 ]
             },
             {
-                test: /\.(woff(2)?|ttf|eot|svg|otf)$/,
+                test: /\.(woff|woff2|eot|ttf|otf)$/,
                 type: 'asset/resource',
                 generator: {
-                    filename: 'assets/dist/styles/fonts/[name][ext]'
+                  filename: 'webfonts/[name][ext]'
                 }
             },
             {
