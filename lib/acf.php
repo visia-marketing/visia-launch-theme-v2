@@ -3,60 +3,110 @@
 //namespace Roots\Sage\Acf;
 
 /**
- * Collapse ACF Fields
+ * Auto-Collapse ACF Flexible Content Layouts in Admin
+ * 
+ * Improves the admin UI experience by automatically collapsing all flexible content
+ * layouts when the page loads. This prevents long, unwieldy edit screens when there
+ * are many flexible content blocks.
+ * 
+ * Note: '.clones .layout' are excluded as these are the template/clone fields
+ * that ACF uses internally and shouldn't be collapsed.
  */
-
- add_action('acf/input/admin_head','my_acf_admin_head');
- function my_acf_admin_head() { ?>
-   <script type="text/javascript">
-   jQuery(document).ready(function($) {
-     $('.layout').not('.clones .layout').addClass('-collapsed');
-   });
-   </script>
-   <?php
- }
+add_action('acf/input/admin_head','my_acf_admin_head');
+function my_acf_admin_head() { ?>
+  <script type="text/javascript">
+  jQuery(document).ready(function($) {
+    // Add the collapsed class to all layouts except clone templates
+    $('.layout').not('.clones .layout').addClass('-collapsed');
+  });
+  </script>
+  <?php
+}
 
 
 
 /**
- * Convers a string to a usable anchor in if field Example String -> example-string
+ * Convert String to URL-Safe Anchor
+ * 
+ * Transforms any string into a valid HTML anchor/ID by:
+ * - Converting to lowercase
+ * - Removing special characters
+ * - Replacing spaces with hyphens
+ * 
+ * Example: "My Section Title!" becomes "my-section-title"
+ * 
+ * @param string $string The string to convert
+ * @return string URL-safe anchor string
  */
-
- function create_anchor($string) {
-  $string = strtolower($string);
-  $string = preg_replace('/[^a-z0-9]+/', ' ', $string);
-  $string = trim($string);
-  $string = str_replace(' ', '-', $string);
+function create_anchor($string) {
+  $string = strtolower($string);                    // Convert to lowercase
+  $string = preg_replace('/[^a-z0-9]+/', ' ', $string); // Replace non-alphanumeric with spaces
+  $string = trim($string);                          // Remove leading/trailing spaces
+  $string = str_replace(' ', '-', $string);         // Replace spaces with hyphens
   return $string;
 }
 
 
 
 /**
- * ACF Flexible Content
- */ 
-
- function get_flexible_content() {
+ * Render ACF Flexible Content Sections
+ * 
+ * Main function for outputting flexible content layouts.
+ * Loops through all flexible content rows and renders each with appropriate
+ * template parts and wrapper elements.
+ * 
+ * This creates a modular page builder system where editors can add/reorder
+ * content sections through the WordPress admin.
+ * 
+ * Structure:
+ * - Wrapper div with page-specific ID
+ * - Individual sections for each flexible content row
+ * - Dynamic classes and IDs for styling/JavaScript targeting
+ * - Optional background images for sections
+ */
+function get_flexible_content() {
+  // Check if the flexible_content field has any rows
   if (have_rows('flexible_content')) {
+    // Create main wrapper with unique ID based on page title
     echo '<div class="fc-wrapper" id="fc-wrapper-' . esc_attr(create_anchor(get_the_title())) . '">';
     
+    // Loop through each flexible content row
     while (have_rows('flexible_content')) : the_row();
-      $layout = get_row_layout();
-      $id = get_sub_field('id') ?: 'fc-section-' . get_row_index();
-      $class = get_sub_field('class') ?: '';
-      $justification = get_sub_field('justification') ?: '';
-      $column_style = get_sub_field('column_style') ?: '';
-      $background = get_sub_field('background') ?: '';
-      $background_image_id = get_sub_field('background_image');
+      /**
+       * Get layout type and field values for current row
+       */
+      $layout = get_row_layout();                                    // Layout name (e.g., 'hero', 'text_block')
+      $id = get_sub_field('id') ?: 'fc-section-' . get_row_index(); // Custom ID or auto-generated fallback
+      $class = get_sub_field('class') ?: '';                        // Optional custom CSS classes
+      $justification = get_sub_field('justification') ?: '';        // Content alignment classes
+      $column_style = get_sub_field('column_style') ?: '';          // Column layout classes
+      $background = get_sub_field('background') ?: '';              // Background type (color/image/etc)
+      $background_image_id = get_sub_field('background_image');     // Background image attachment ID
 
+      /**
+       * Build section element with dynamic classes
+       * Classes include:
+       * - fc-section: Base class for all sections
+       * - fc-section-[index]: Numbered class for nth-child targeting
+       * - fc-section-[background]: Background type class
+       * - Custom classes from ACF fields
+       */
       echo '<section class="fc-section fc-section-' . esc_attr(get_row_index()) . ' fc-section-' . esc_attr($background) . ' ' . esc_attr($class) . ' ' . esc_attr($justification) . ' ' . esc_attr($column_style) . '" id="' . esc_attr($id) . '">';
 
-      // Display the background image if the background type is 'image' and an image ID exists
+      /**
+       * Output background image if applicable
+       * Only displays if background type is 'image' and an image is selected
+       */
       if ($background === 'image' && $background_image_id) {
         echo wp_get_attachment_image($background_image_id, 'full', false, ['class' => 'fc-section-background-image']);
       }
 
+      /**
+       * Include the template part for this layout type
+       * Template should be located at: /flexible/[layout-name].php
+       */
       get_template_part('flexible/' . $layout);
+      
       echo '</section>';
 
     endwhile;
@@ -68,29 +118,65 @@
 
 
 /**
- * ACF Helper functions - Not using these but save just in case
+ * ACF Helper Functions
+ * 
+ * Collection of utility functions for common ACF output patterns.
+ * Note: These are marked as "not currently in use" but kept for potential future use.
  */
 
 
-//Torch Image attachement
+/**
+ * Output ACF Image Attachment
+ * 
+ * Helper to display an image from an ACF image field that returns an attachment ID.
+ * Wraps wp_get_attachment_image() with ACF-specific defaults.
+ * 
+ * @param int $image Attachment ID from ACF image field
+ * @param string $size WordPress image size (thumbnail, medium, large, full, or custom)
+ * @param string $class CSS class to apply to the image element
+ */
 function acf_attachment_img($image, $size = 'full', $class = 'nc'){
   if( $image ) {
       echo wp_get_attachment_image( $image, $size,'', array( "class" => $class ) );
   }
 }
 
-//Wrap ACF content
+/**
+ * Wrap ACF Field in HTML Element
+ * 
+ * Utility function to wrap any ACF field value in an HTML element.
+ * Useful for consistent markup when outputting text fields.
+ * 
+ * @param mixed $field The ACF field value to output
+ * @param string $element HTML element to wrap content in (div, p, h2, etc.)
+ * @param string $class CSS class for the wrapper element
+ */
 function acf_field($field, $element = 'div', $class='nc'){
-  if( !$field ){ return; }
+  if( !$field ){ return; } // Exit if field is empty
   echo '<' . $element . ' class="' . $class . '">' . $field . '</' . $element . '>';
 }
 
-//ACF button
+/**
+ * Output ACF Link Field as Button
+ * 
+ * Renders an ACF link field as a styled button element.
+ * Handles all link attributes (URL, target, title) and optional arrow icon.
+ * 
+ * @param array $link ACF link field array with url, title, and target
+ * @param bool $has_arrow Whether to append a right arrow icon
+ * @param string $class Additional CSS classes for the button
+ * @param string $attr Additional HTML attributes as a string
+ */
 function acf_button($link, $has_arrow=false, $class='nc', $attr=false){
-  if( !$link ) return;
+  if( !$link ) return; // Exit if no link provided
+  
+  // Set default target to _self if not specified
   $link['target'] = $link['target'] ?: '_self'; ?>
 
-  <a href="<?= esc_url($link['url']); ?>" target="<?= $link['target'] ?>" class="btn <?= $class ?>"<?php if($attr) echo ' ' . $attr ?>>
+  <a href="<?= esc_url($link['url']); ?>" 
+     target="<?= $link['target'] ?>" 
+     class="btn <?= $class ?>"
+     <?php if($attr) echo ' ' . $attr ?>>
     <?= $link['title']; ?>
     <?php if($has_arrow){ echo '<i class="fa-solid fa-angle-right"></i>'; }; ?>
   </a>
