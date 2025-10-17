@@ -9060,6 +9060,10 @@ body#tinymce {
 .fc-page-header .fc-section.fc-section-gray {
   background-color: #EEEDED;
 }
+.fc-wrapper .fc-section h2,
+.fc-page-header .fc-section h2 {
+  padding-bottom: 1.5rem;
+}
 .fc-wrapper.fc-wrapper-tabs .fc-section,
 .fc-page-header.fc-wrapper-tabs .fc-section {
   padding: 20px 0 20px;
