@@ -1,7 +1,7 @@
-<?php //$top_border = (get_sub_field('top_border') === 'yes') ? "top-border" : ""; ?>
+<?php $top_border = (get_sub_field('top_border') === 'yes') ? "top-border" : ""; ?>
 
 <?php if ( get_sub_field('section_heading_title') || get_sub_field('section_heading') ): ?>
-  <div class="row columns">
+  <div class="row columns <?php echo $top_border; ?>">
     <div class="fc-section-heading"> 
       <div class="row">
         <div class="small-12 columns">

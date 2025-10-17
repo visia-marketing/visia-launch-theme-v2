@@ -6579,64 +6579,29 @@ a, button, .button, [type=submit] {
   padding: 70px 0;
 }
 
-.page-header.page-header-image {
+.fc-page-header {
   display: flex;
-  height: 400px;
   position: relative;
+  overflow: hidden;
 }
-.page-header.page-header-image .page-header-image {
-  height: 100%;
+.fc-page-header img.page-header-image {
+  position: absolute;
+  width: 100%;
+  height: auto;
   -o-object-fit: cover;
      object-fit: cover;
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  width: 100%;
-  z-index: -1;
+  top: 50%;
+  transform: translateY(-50%);
 }
-.page-header.page-header-image .page-header-content-wrapper {
+.fc-page-header .page-header-content-wrapper {
   align-self: flex-end;
   width: 100%;
 }
-.page-header.page-header-image .page-header-content-wrapper .page-header-content {
-  background-color: rgba(251, 169, 25, 0.7);
-  padding: 18px 30px 18px;
+.fc-page-header .page-header-content-wrapper.fc-section-image, .fc-page-header .page-header-content-wrapper.page-header-expanded {
+  padding-top: 9.5rem;
 }
-@media print, screen and (min-width: 40em) {
-  .page-header.page-header-image .page-header-content-wrapper .page-header-content {
-    padding: 30px 30px 35px;
-  }
-}
-.page-header.page-header-image .page-header-content-wrapper .page-header-content .g-section-subtitle {
-  color: #fff;
-  margin-bottom: 10px;
-}
-.page-header.page-header-image .page-header-content-wrapper .page-header-content .g-section-title {
-  color: #fff;
-  margin: 0 0 0px;
-}
-
-.page-header.page-header-no-image {
-  display: flex;
-  position: relative;
-}
-.page-header.page-header-no-image .page-header-content-wrapper {
-  background-color: #FBA919;
-  align-self: flex-end;
-  width: 100%;
-}
-.page-header.page-header-no-image .page-header-content-wrapper .page-header-content {
-  padding: 40px 0;
-}
-.page-header.page-header-no-image .page-header-content-wrapper .page-header-content .g-section-subtitle {
-  color: #fff;
-  margin-bottom: 10px;
-}
-.page-header.page-header-no-image .page-header-content-wrapper .page-header-content .g-section-title {
-  color: #fff;
-  margin: 0 0 0px;
+.fc-page-header .page-header-content-wrapper .page-header-content p:last-child {
+  margin-bottom: 0;
 }
 
 .post-single .post-content-wrapper {
@@ -9016,29 +8981,40 @@ body#tinymce {
 }
 
 */
-.fc-wrapper .fc-section {
+.fc-wrapper .top-border > .fc-section-heading,
+.fc-page-header .top-border > .fc-section-heading {
+  border-top: 1px solid #000000;
+  padding-top: 2rem;
+}
+.fc-wrapper .fc-section,
+.fc-page-header .fc-section {
   padding: 30px 0;
   position: relative;
   overflow: hidden;
 }
 @media print, screen and (min-width: 40em) {
-  .fc-wrapper .fc-section {
+  .fc-wrapper .fc-section,
+  .fc-page-header .fc-section {
     padding: 50px 0;
   }
 }
-.fc-wrapper .fc-section.fc-section-1 {
+.fc-wrapper .fc-section.fc-section-1,
+.fc-page-header .fc-section.fc-section-1 {
   padding: 30px 0 30px;
 }
 @media print, screen and (min-width: 40em) {
-  .fc-wrapper .fc-section.fc-section-1 {
+  .fc-wrapper .fc-section.fc-section-1,
+  .fc-page-header .fc-section.fc-section-1 {
     padding: 70px 0 50px;
   }
 }
-.fc-wrapper .fc-section.fc-section-image {
+.fc-wrapper .fc-section.fc-section-image,
+.fc-page-header .fc-section.fc-section-image {
   background: radial-gradient(circle, rgba(0, 0, 0, 0.6) 0%, rgba(0, 0, 0, 0) 100%);
   position: relative;
 }
-.fc-wrapper .fc-section.fc-section-image img.fc-section-background-image {
+.fc-wrapper .fc-section.fc-section-image img.fc-section-background-image,
+.fc-page-header .fc-section.fc-section-image img.fc-section-background-image {
   height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
@@ -9050,25 +9026,42 @@ body#tinymce {
   width: 100%;
   z-index: -1;
 }
-.fc-wrapper .fc-section.fc-section-image h1, .fc-wrapper .fc-section.fc-section-image h2, .fc-wrapper .fc-section.fc-section-image h3, .fc-wrapper .fc-section.fc-section-image h4, .fc-wrapper .fc-section.fc-section-image h5, .fc-wrapper .fc-section.fc-section-image h6, .fc-wrapper .fc-section.fc-section-image p, .fc-wrapper .fc-section.fc-section-image li, .fc-wrapper .fc-section.fc-section-image a, .fc-wrapper .fc-section.fc-section-image .g-section-subtitle {
+.fc-wrapper .fc-section.fc-section-image h1, .fc-wrapper .fc-section.fc-section-image h2, .fc-wrapper .fc-section.fc-section-image h3, .fc-wrapper .fc-section.fc-section-image h4, .fc-wrapper .fc-section.fc-section-image h5, .fc-wrapper .fc-section.fc-section-image h6, .fc-wrapper .fc-section.fc-section-image p, .fc-wrapper .fc-section.fc-section-image li, .fc-wrapper .fc-section.fc-section-image a, .fc-wrapper .fc-section.fc-section-image .g-section-subtitle,
+.fc-page-header .fc-section.fc-section-image h1,
+.fc-page-header .fc-section.fc-section-image h2,
+.fc-page-header .fc-section.fc-section-image h3,
+.fc-page-header .fc-section.fc-section-image h4,
+.fc-page-header .fc-section.fc-section-image h5,
+.fc-page-header .fc-section.fc-section-image h6,
+.fc-page-header .fc-section.fc-section-image p,
+.fc-page-header .fc-section.fc-section-image li,
+.fc-page-header .fc-section.fc-section-image a,
+.fc-page-header .fc-section.fc-section-image .g-section-subtitle {
   color: #fff;
 }
-.fc-wrapper .fc-section.center {
+.fc-wrapper .fc-section.center,
+.fc-page-header .fc-section.center {
   text-align: center;
 }
-.fc-wrapper .fc-section.fc-section-dark {
+.fc-wrapper .fc-section.fc-section-dark,
+.fc-page-header .fc-section.fc-section-dark {
   background-color: #000000;
 }
-.fc-wrapper .fc-section.fc-section-dark h1, .fc-wrapper .fc-section.fc-section-dark h2, .fc-wrapper .fc-section.fc-section-dark h3, .fc-wrapper .fc-section.fc-section-dark h4, .fc-wrapper .fc-section.fc-section-dark h5, .fc-wrapper .fc-section.fc-section-dark h6, .fc-wrapper .fc-section.fc-section-dark p, .fc-wrapper .fc-section.fc-section-dark a, .fc-wrapper .fc-section.fc-section-dark li, .fc-wrapper .fc-section.fc-section-dark blockquote, .fc-wrapper .fc-section.fc-section-dark .g-style-section-title, .fc-wrapper .fc-section.fc-section-dark .g-style-section-heading {
+.fc-wrapper .fc-section.fc-section-dark *,
+.fc-page-header .fc-section.fc-section-dark * {
   color: #fff;
 }
-.fc-wrapper .fc-section.fc-section-dark a.button.grey {
+.fc-wrapper .fc-section.fc-section-dark a.button.grey,
+.fc-page-header .fc-section.fc-section-dark a.button.grey {
   color: #FBA919;
 }
-.fc-wrapper .fc-section.fc-section-grey {
+.fc-wrapper .fc-section.fc-section-grey, .fc-wrapper .fc-section.fc-section-gray,
+.fc-page-header .fc-section.fc-section-grey,
+.fc-page-header .fc-section.fc-section-gray {
   background-color: #EEEDED;
 }
-.fc-wrapper.fc-wrapper-tabs .fc-section {
+.fc-wrapper.fc-wrapper-tabs .fc-section,
+.fc-page-header.fc-wrapper-tabs .fc-section {
   padding: 20px 0 20px;
 }
 

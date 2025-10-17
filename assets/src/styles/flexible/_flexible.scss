@@ -5,7 +5,13 @@
 @import "../flexible/flexible-section-heading";
 @import "../flexible/flexible-styles";
 
-.fc-wrapper {
+.fc-wrapper,
+.fc-page-header {
+
+  & .top-border > .fc-section-heading{
+      border-top: 1px solid $black;
+      padding-top: 2rem;
+  }
 
   .fc-section {
     padding: 30px 0;
@@ -54,7 +60,8 @@
     &.fc-section-dark {
       background-color: $black;
 
-      h1, h2, h3, h4, h5, h6, p, a, li, blockquote, .g-style-section-title, .g-style-section-heading {
+      //h1, h2, h3, h4, h5, h6, p, a, li, blockquote, .g-style-section-title, .g-style-section-heading, .g-section-subtitle {
+      & * {
         color: #fff;
       }
 
@@ -64,7 +71,8 @@
 
     }
 
-    &.fc-section-grey {
+    &.fc-section-grey,
+    &.fc-section-gray {
       background-color: #EEEDED;
     }
 
@@ -79,6 +87,8 @@
   }
 
 }
+
+
 
 .fc-section-cta {
   padding: 20px 0;

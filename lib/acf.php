@@ -66,22 +66,75 @@ function create_anchor($string) {
  */
 function get_flexible_content() {
   // Check if the flexible_content field has any rows
+
+
+  get_template_part('partials/page-header');
+  
+
   if (have_rows('flexible_content')) {
     // Create main wrapper with unique ID based on page title
     echo '<div class="fc-wrapper" id="fc-wrapper-' . esc_attr(create_anchor(get_the_title())) . '">';
-    
+
     // Loop through each flexible content row
     while (have_rows('flexible_content')) : the_row();
       /**
        * Get layout type and field values for current row
        */
-      $layout = get_row_layout();                                    // Layout name (e.g., 'hero', 'text_block')
       $id = get_sub_field('id') ?: 'fc-section-' . get_row_index(); // Custom ID or auto-generated fallback
       $class = get_sub_field('class') ?: '';                        // Optional custom CSS classes
-      $justification = get_sub_field('justification') ?: '';        // Content alignment classes
-      $column_style = get_sub_field('column_style') ?: '';          // Column layout classes
+      $border = get_sub_field('border') ?: '';                      // Border style classes   
       $background = get_sub_field('background') ?: '';              // Background type (color/image/etc)
       $background_image_id = get_sub_field('background_image');     // Background image attachment ID
+      
+      
+      $top_padding = get_sub_field('top_padding') ?: 0;
+      $bottom_padding = get_sub_field('bottom_padding') ?: 0;
+      $content_spacing = get_sub_field('content_spacing') ?: 0;
+      $vertical_align = get_sub_field('vertical_align') ?: '';
+      $horizontal_align = get_sub_field('horizontal_align') ?: '';
+
+
+      echo '<style>
+        #' . esc_html($id) . ' {
+          padding-top: ' . esc_html( ($top_padding * 1.5) ) . 'rem;
+          padding-bottom: ' . esc_html( ($bottom_padding * 1.5 ) ) . 'rem;
+          position: relative;
+        }
+
+        #' . esc_html($id) . ' > .fc-section-content {
+          gap: ' . esc_html( ($content_spacing * 1.5) ) . 'rem;
+          align-items: ' . esc_html($vertical_align) . ';
+          justify-content: ' . esc_html($horizontal_align) . ';
+        }
+
+        #' . esc_html($id) . ' > .fc-section-columns .content-columns {
+          margin-bottom: ' . esc_html( ($content_spacing * 1.5) ) . 'rem;
+        }
+      </style>';
+
+      // add background image if set
+      echo '<style>';
+        if ($background === 'image' && $background_image_id) {
+          $background_image_url = wp_get_attachment_image_url($background_image_id, 'full');
+          echo '#' . esc_html($id) . '::before { 
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            display: block;
+            background-image: url(' . esc_url($background_image_url) . '); 
+            background-size: cover; 
+            background-position: center; 
+          }';
+        }
+      echo '</style>';
+
+
+
+
 
       /**
        * Build section element with dynamic classes
@@ -91,7 +144,7 @@ function get_flexible_content() {
        * - fc-section-[background]: Background type class
        * - Custom classes from ACF fields
        */
-      echo '<section class="fc-section fc-section-' . esc_attr(get_row_index()) . ' fc-section-' . esc_attr($background) . ' ' . esc_attr($class) . ' ' . esc_attr($justification) . ' ' . esc_attr($column_style) . '" id="' . esc_attr($id) . '">';
+      echo '<section class="fc-section fc-section-' . esc_attr(get_row_index()) . ' fc-section-' . esc_attr($background) . ' ' . esc_attr($class) . '" id="' . esc_attr($id) . '">';
 
       /**
        * Output background image if applicable
@@ -105,7 +158,8 @@ function get_flexible_content() {
        * Include the template part for this layout type
        * Template should be located at: /flexible/[layout-name].php
        */
-      get_template_part('flexible/' . $layout);
+
+      get_template_part('flexible/section_flexible_section');// ' . $layout);
       
       echo '</section>';
 
