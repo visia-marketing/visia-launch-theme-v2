@@ -3,223 +3,6 @@
     "title": "TEMPLATE: Flexible",
     "fields": [
         {
-            "key": "field_67350fa2ff7fb",
-            "label": "Page Options",
-            "name": "",
-            "aria-label": "",
-            "type": "accordion",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "open": 0,
-            "multi_expand": 0,
-            "endpoint": 0
-        },
-        {
-            "key": "field_673511a22e409",
-            "label": "Breadcrumb Builder",
-            "name": "breadcrumb_builder",
-            "aria-label": "",
-            "type": "group",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "layout": "block",
-            "sub_fields": [
-                {
-                    "key": "field_673514457a813",
-                    "label": "Page Section (ex. Solutions) - Optional",
-                    "name": "page_section",
-                    "aria-label": "",
-                    "type": "text",
-                    "instructions": "",
-                    "required": 0,
-                    "conditional_logic": 0,
-                    "wrapper": {
-                        "width": "25",
-                        "class": "",
-                        "id": ""
-                    },
-                    "default_value": "",
-                    "maxlength": "",
-                    "allow_in_bindings": 0,
-                    "placeholder": "",
-                    "prepend": "",
-                    "append": ""
-                },
-                {
-                    "key": "field_673514707a814",
-                    "label": "Parent Link - Optional",
-                    "name": "parent_link",
-                    "aria-label": "",
-                    "type": "page_link",
-                    "instructions": "",
-                    "required": 0,
-                    "conditional_logic": 0,
-                    "wrapper": {
-                        "width": "25",
-                        "class": "",
-                        "id": ""
-                    },
-                    "post_type": "",
-                    "post_status": "",
-                    "taxonomy": "",
-                    "allow_archives": 1,
-                    "multiple": 1,
-                    "allow_null": 1,
-                    "allow_in_bindings": 0
-                },
-                {
-                    "key": "field_673514b77a815",
-                    "label": "Alternate Page Title - Optional",
-                    "name": "alternate_page_title",
-                    "aria-label": "",
-                    "type": "text",
-                    "instructions": "",
-                    "required": 0,
-                    "conditional_logic": 0,
-                    "wrapper": {
-                        "width": "25",
-                        "class": "",
-                        "id": ""
-                    },
-                    "default_value": "",
-                    "maxlength": "",
-                    "allow_in_bindings": 0,
-                    "placeholder": "",
-                    "prepend": "",
-                    "append": ""
-                }
-            ]
-        },
-        {
-            "key": "field_67351a6f3b7a2",
-            "label": "Product Links",
-            "name": "product_links",
-            "aria-label": "",
-            "type": "group",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "layout": "block",
-            "sub_fields": [
-                {
-                    "key": "field_67350e5fff7f9",
-                    "label": "Link to Product",
-                    "name": "link_to_product",
-                    "aria-label": "",
-                    "type": "post_object",
-                    "instructions": "",
-                    "required": 0,
-                    "conditional_logic": 0,
-                    "wrapper": {
-                        "width": "33",
-                        "class": "",
-                        "id": ""
-                    },
-                    "post_type": [
-                        "product"
-                    ],
-                    "post_status": "",
-                    "taxonomy": "",
-                    "return_format": "id",
-                    "multiple": 0,
-                    "allow_null": 1,
-                    "allow_in_bindings": 0,
-                    "bidirectional": 0,
-                    "ui": 1,
-                    "bidirectional_target": []
-                },
-                {
-                    "key": "field_67350e8aff7fa",
-                    "label": "Link to Product Experimental",
-                    "name": "link_to_product_experimental",
-                    "aria-label": "",
-                    "type": "post_object",
-                    "instructions": "",
-                    "required": 0,
-                    "conditional_logic": 0,
-                    "wrapper": {
-                        "width": "33",
-                        "class": "",
-                        "id": ""
-                    },
-                    "post_type": [
-                        "product"
-                    ],
-                    "post_status": "",
-                    "taxonomy": "",
-                    "return_format": "id",
-                    "multiple": 0,
-                    "allow_null": 1,
-                    "allow_in_bindings": 0,
-                    "bidirectional": 0,
-                    "ui": 1,
-                    "bidirectional_target": []
-                },
-                {
-                    "key": "field_67351a36ebf64",
-                    "label": "Link to Product Certified",
-                    "name": "link_to_product_certified",
-                    "aria-label": "",
-                    "type": "post_object",
-                    "instructions": "",
-                    "required": 0,
-                    "conditional_logic": 0,
-                    "wrapper": {
-                        "width": "33",
-                        "class": "",
-                        "id": ""
-                    },
-                    "post_type": [
-                        "product"
-                    ],
-                    "post_status": "",
-                    "taxonomy": "",
-                    "return_format": "id",
-                    "multiple": 0,
-                    "allow_null": 1,
-                    "allow_in_bindings": 0,
-                    "bidirectional": 0,
-                    "ui": 1,
-                    "bidirectional_target": []
-                }
-            ]
-        },
-        {
-            "key": "field_67350fb0ff7fc",
-            "label": "Page Options End",
-            "name": "",
-            "aria-label": "",
-            "type": "accordion",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "open": 0,
-            "multi_expand": 0,
-            "endpoint": 1
-        },
-        {
             "key": "field_672245e4809d3",
             "label": "Flexible Content",
             "name": "flexible_content",
@@ -766,6 +549,38 @@
                     ],
                     "min": "",
                     "max": ""
+                },
+                "layout_68f1455dfb8e1": {
+                    "key": "layout_68f1455dfb8e1",
+                    "name": "section_flexible_section",
+                    "label": "Flexible Section",
+                    "display": "block",
+                    "sub_fields": [
+                        {
+                            "key": "field_68f1455dfb8e4",
+                            "label": "Flexible Section",
+                            "name": "flexible_section",
+                            "aria-label": "",
+                            "type": "clone",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "clone": [
+                                "group_68f144b3d68fe"
+                            ],
+                            "display": "seamless",
+                            "layout": "block",
+                            "prefix_label": 0,
+                            "prefix_name": 0
+                        }
+                    ],
+                    "min": "",
+                    "max": ""
                 }
             },
             "min": "",
@@ -796,7 +611,7 @@
             }
         ]
     ],
-    "menu_order": 0,
+    "menu_order": 2,
     "position": "acf_after_title",
     "style": "default",
     "label_placement": "top",
@@ -807,5 +622,6 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1737989712
+    "display_title": "",
+    "modified": 1760709893
 }
