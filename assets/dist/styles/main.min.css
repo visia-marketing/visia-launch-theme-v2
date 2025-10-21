@@ -8766,10 +8766,6 @@ body#tinymce {
   color: #000000;
 }
 .fc-section-cards .content-cards p {
-  font-size: 1.3125rem;
-  font-style: normal;
-  font-weight: 400;
-  line-height: 1.75rem; /* 133.333% */
   margin-bottom: 1.5rem;
 }
 .fc-section-cards .content-cards > a {

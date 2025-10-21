@@ -53,7 +53,7 @@
             "sub_fields": [
                 {
                     "key": "field_672b87492abcf",
-                    "label": "Card Icon",
+                    "label": "Card Image",
                     "name": "card_icon",
                     "aria-label": "",
                     "type": "image",
@@ -159,5 +159,6 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1737989565
+    "display_title": "",
+    "modified": 1761054538
 }
