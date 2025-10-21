@@ -3,6 +3,8 @@
   $page_header_style = get_field('page_header_style');
   //print_r($page_header_content);
   // print_r($page_header_style);
+  $show_page_header = get_field('show_page_header');
+
 
   if( array_key_exists( 'heading', $page_header_content) ){
     if( $page_header_content['heading'] ){
@@ -41,36 +43,37 @@
 ?>
 
 
-
-<header class="fc-page-header page-header" id="page_header_<?php echo get_the_ID();?>">
-  <?php 
-  if( $page_heading_background === 'image' ){
-      echo wp_get_attachment_image( $page_heading_background_image, 'large', false, array( "class" => "page-header-image" ) );
-  }
-  ?>
-  <div class="page-header-content-wrapper fc-section fc-section-<?php echo $page_heading_background;?> page-header-<?php echo $page_heading_size; ?>">
-    <div class="row">
-      <div class="small-12 columns">
-        <div class="page-header-content">
-          <?php 
-          $header_content = get_field('page_header_content');
-         // if ( $page_heading || $page_sub_heading ): 
-          ?>
-            <?php if ( !empty($page_sub_heading) ): ?>
-              <p class="g-section-subtitle">
-                <?php echo esc_html($page_sub_heading); ?>
-            </p>
-            <?php endif; ?>
-            <h1 class="g-section-title">
-              <?php if ( $page_heading ): echo esc_html($page_heading); else: the_title(); endif; ?>
-            </h1>
-            <?php if ( !empty($page_heading_text) ): ?>
-              <p>
-                  <?php echo esc_html($page_heading_text); ?>
+<?php if( $show_page_header ): ?>
+  <header class="fc-page-header page-header" id="page_header_<?php echo get_the_ID();?>">
+    <?php 
+    if( $page_heading_background === 'image' ){
+        echo wp_get_attachment_image( $page_heading_background_image, 'large', false, array( "class" => "page-header-image" ) );
+    }
+    ?>
+    <div class="page-header-content-wrapper fc-section fc-section-<?php echo $page_heading_background;?> page-header-<?php echo $page_heading_size; ?>">
+      <div class="row">
+        <div class="small-12 columns">
+          <div class="page-header-content">
+            <?php 
+            $header_content = get_field('page_header_content');
+          // if ( $page_heading || $page_sub_heading ): 
+            ?>
+              <?php if ( !empty($page_sub_heading) ): ?>
+                <p class="g-section-subtitle">
+                  <?php echo esc_html($page_sub_heading); ?>
               </p>
-          <?php  endif; ?>
+              <?php endif; ?>
+              <h1 class="g-section-title">
+                <?php if ( $page_heading ): echo esc_html($page_heading); else: the_title(); endif; ?>
+              </h1>
+              <?php if ( !empty($page_heading_text) ): ?>
+                <p>
+                    <?php echo esc_html($page_heading_text); ?>
+                </p>
+            <?php  endif; ?>
+          </div>
         </div>
       </div>
     </div>
-  </div>
-</header>
+  </header>
+<?php endif; ?>
