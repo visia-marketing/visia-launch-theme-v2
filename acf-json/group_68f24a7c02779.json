@@ -1,6 +1,6 @@
 {
     "key": "group_68f24a7c02779",
-    "title": "COMPONENT: Page Header",
+    "title": "Page Header",
     "fields": [
         {
             "key": "field_68f78dae9a4d7",
@@ -297,6 +297,11 @@
                 "param": "page_template",
                 "operator": "==",
                 "value": "template-flexible.php"
+            },
+            {
+                "param": "page_type",
+                "operator": "!=",
+                "value": "front_page"
             }
         ]
     ],
@@ -305,10 +310,12 @@
     "style": "default",
     "label_placement": "top",
     "instruction_placement": "label",
-    "hide_on_screen": "",
+    "hide_on_screen": [
+        "the_content"
+    ],
     "active": true,
     "description": "",
     "show_in_rest": 0,
     "display_title": "",
-    "modified": 1761054240
+    "modified": 1761153186
 }
