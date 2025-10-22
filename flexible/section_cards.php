@@ -87,7 +87,6 @@ switch ($per_row) {
       <?php endforeach; ?>
 
       
-      </div>
+    </div>
 
-  </div>
 </div>

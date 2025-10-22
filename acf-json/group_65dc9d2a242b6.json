@@ -1,6 +1,6 @@
 {
     "key": "group_65dc9d2a242b6",
-    "title": "OPT: Site Settings",
+    "title": "OPT: Theme Settings",
     "fields": [
         {
             "key": "field_65dc9d6a51c1f",
@@ -64,20 +64,59 @@
             "selected": 0
         },
         {
+            "key": "field_68f9144a17303",
+            "label": "Background",
+            "name": "cta_background",
+            "aria-label": "",
+            "type": "select",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "15",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "light": "Light",
+                "dark": "Dark",
+                "grey": "Grey",
+                "image": "Image"
+            },
+            "default_value": false,
+            "return_format": "value",
+            "multiple": 0,
+            "allow_null": 0,
+            "allow_in_bindings": 0,
+            "ui": 0,
+            "ajax": 0,
+            "placeholder": "",
+            "create_options": 0,
+            "save_options": 0
+        },
+        {
             "key": "field_65dca6385d547",
-            "label": "CTA Background Image",
+            "label": "Background Image",
             "name": "cta_background_image",
             "aria-label": "",
             "type": "image",
             "instructions": "",
             "required": 0,
-            "conditional_logic": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_68f9144a17303",
+                        "operator": "==",
+                        "value": "image"
+                    }
+                ]
+            ],
             "wrapper": {
-                "width": "",
+                "width": "25",
                 "class": "",
                 "id": ""
             },
-            "return_format": "array",
+            "return_format": "id",
             "library": "all",
             "min_width": "",
             "min_height": "",
@@ -86,6 +125,7 @@
             "max_height": "",
             "max_size": "",
             "mime_types": "",
+            "allow_in_bindings": 1,
             "preview_size": "medium"
         },
         {
@@ -287,5 +327,5 @@
     "description": "",
     "show_in_rest": 0,
     "display_title": "",
-    "modified": 1760480030
+    "modified": 1761154398
 }

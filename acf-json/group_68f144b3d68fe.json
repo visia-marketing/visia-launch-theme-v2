@@ -230,6 +230,70 @@
                     ],
                     "min": "",
                     "max": ""
+                },
+                "layout_68f915d455823": {
+                    "key": "layout_68f915d455823",
+                    "name": "section_call_to_action",
+                    "label": "Call To Action",
+                    "display": "block",
+                    "sub_fields": [
+                        {
+                            "key": "field_68f915e255826",
+                            "label": "Call to Action",
+                            "name": "call_to_action",
+                            "aria-label": "",
+                            "type": "clone",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "clone": [
+                                "group_68f914f404c03"
+                            ],
+                            "display": "seamless",
+                            "layout": "block",
+                            "prefix_label": 0,
+                            "prefix_name": 0
+                        }
+                    ],
+                    "min": "",
+                    "max": ""
+                },
+                "layout_68f91711b3050": {
+                    "key": "layout_68f91711b3050",
+                    "name": "section_faqs",
+                    "label": "Frequently Asked Questions",
+                    "display": "block",
+                    "sub_fields": [
+                        {
+                            "key": "field_68f91711b3052",
+                            "label": "Frequently Asked Questions",
+                            "name": "frequently_asked_questions",
+                            "aria-label": "",
+                            "type": "clone",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "clone": [
+                                "group_68f9163689802"
+                            ],
+                            "display": "seamless",
+                            "layout": "block",
+                            "prefix_label": 0,
+                            "prefix_name": 0
+                        }
+                    ],
+                    "min": "",
+                    "max": ""
                 }
             },
             "min": "",
@@ -256,5 +320,5 @@
     "description": "",
     "show_in_rest": 0,
     "display_title": "",
-    "modified": 1761153665
+    "modified": 1761154880
 }
