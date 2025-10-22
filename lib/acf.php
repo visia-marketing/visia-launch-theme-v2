@@ -150,9 +150,9 @@ function get_flexible_content() {
        * Output background image if applicable
        * Only displays if background type is 'image' and an image is selected
        */
-      if ($background === 'image' && $background_image_id) {
-        echo wp_get_attachment_image($background_image_id, 'full', false, ['class' => 'fc-section-background-image']);
-      }
+      // if ($background === 'image' && $background_image_id) {
+      //   echo wp_get_attachment_image($background_image_id, 'full', false, ['class' => 'fc-section-background-image']);
+      // }
 
       /**
        * Include the template part for this layout type
