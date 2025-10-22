@@ -85,7 +85,7 @@
             "sub_fields": [
                 {
                     "key": "field_68f24ad8154ae",
-                    "label": "Eyebrow",
+                    "label": "Section Heading",
                     "name": "sub_heading",
                     "aria-label": "",
                     "type": "text",
@@ -127,7 +127,7 @@
                 },
                 {
                     "key": "field_68f24af3154af",
-                    "label": "Heading Text",
+                    "label": "Block Text",
                     "name": "heading_text",
                     "aria-label": "",
                     "type": "text",
@@ -317,5 +317,5 @@
     "description": "",
     "show_in_rest": 0,
     "display_title": "",
-    "modified": 1761153186
+    "modified": 1761153821
 }
