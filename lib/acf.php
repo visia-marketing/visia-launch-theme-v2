@@ -93,7 +93,7 @@ function get_flexible_content() {
       $vertical_align = get_sub_field('vertical_align') ?: '';
       $horizontal_align = get_sub_field('horizontal_align') ?: '';
 
-
+      //echo get_row_layout();
       echo '<style>
         #' . esc_html($id) . ' {
           padding-top: ' . esc_html( ($top_padding * 1.5) ) . 'rem;
@@ -159,7 +159,7 @@ function get_flexible_content() {
        * Template should be located at: /flexible/[layout-name].php
        */
 
-      get_template_part('flexible/section_flexible_section');// ' . $layout);
+      get_template_part('flexible/'.get_row_layout().'');// ' . $layout);
       
       echo '</section>';
 
