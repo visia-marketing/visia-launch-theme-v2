@@ -36,7 +36,8 @@
             },
             "choices": {
                 "plain": "Plain",
-                "accordion": "Accordion"
+                "separated": "Separated Accordion",
+                "stacked": "Stacked Accordion"
             },
             "default_value": "",
             "return_format": "value",
@@ -152,5 +153,5 @@
     "description": "",
     "show_in_rest": 0,
     "display_title": "",
-    "modified": 1761155088
+    "modified": 1761236603
 }
