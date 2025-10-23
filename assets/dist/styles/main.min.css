@@ -8720,14 +8720,6 @@ body#tinymce {
   font-size: 20px;
 }
 
-.fc-section-columns + .fc-section-accordion-simple,
-.fc-section-columns + .fc-section-accordion-tabs {
-  margin-top: 2rem;
-}
-
-.fc-faq-section:not(.fc-section-accordion-simple) {
-  margin-top: 2rem;
-}
 .fc-faq-section:not(.fc-section-accordion-simple) .accordion-arrow {
   display: none;
 }
