@@ -9071,10 +9071,10 @@ body * .fc-section-grey, body * .fc-section-gray, body * .background--gray, body
   background-color: #EEEDED;
 }
 body * .background--image.background--light * {
-  color: #000000 !important;
+  color: #000000;
 }
 body * .background--image.background--dark * {
-  color: #fff !important;
+  color: #fff;
 }
 
 .fc-section-cta {

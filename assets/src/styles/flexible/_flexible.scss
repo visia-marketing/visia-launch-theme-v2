@@ -115,13 +115,13 @@ body *{
 
   & .background--image.background--light{
     & * {
-      color: $black !important;
+      color: $black;
     }
   }
 
   & .background--image.background--dark{
     & * {
-      color: #fff !important;
+      color: #fff;
     }
   }
 
