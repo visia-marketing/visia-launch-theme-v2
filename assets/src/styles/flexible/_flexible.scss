@@ -60,7 +60,16 @@
 
 
     & h2{
-      padding-bottom: 1.5rem;
+      padding-top: 2.5rem;
+    }
+
+    & p:has(.g-section-subtitle){
+      margin-bottom: 0;
+
+      & + h2{
+        padding-top: 0;
+      }
+
     }
 
   }

@@ -7581,7 +7581,7 @@ body#tinymce {
   font-weight: 400;
   letter-spacing: 2px;
   line-height: 1.2;
-  margin-bottom: 12px;
+  margin-bottom: 0px;
   text-transform: uppercase;
 }
 @media print, screen and (min-width: 40em) {
@@ -9058,7 +9058,15 @@ body#tinymce {
 }
 .fc-wrapper .fc-section h2,
 .fc-page-header .fc-section h2 {
-  padding-bottom: 1.5rem;
+  padding-top: 2.5rem;
+}
+.fc-wrapper .fc-section p:has(.g-section-subtitle),
+.fc-page-header .fc-section p:has(.g-section-subtitle) {
+  margin-bottom: 0;
+}
+.fc-wrapper .fc-section p:has(.g-section-subtitle) + h2,
+.fc-page-header .fc-section p:has(.g-section-subtitle) + h2 {
+  padding-top: 0;
 }
 .fc-wrapper.fc-wrapper-tabs .fc-section,
 .fc-page-header.fc-wrapper-tabs .fc-section {
