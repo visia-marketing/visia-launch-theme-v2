@@ -104,9 +104,9 @@
             "conditional_logic": [
                 [
                     {
-                        "field": "field_68f91ab2f2830",
-                        "operator": "!=",
-                        "value": "default"
+                        "field": "field_68f914f4e30cb",
+                        "operator": "==",
+                        "value": "image"
                     }
                 ]
             ],
@@ -201,5 +201,5 @@
     "description": "",
     "show_in_rest": 0,
     "display_title": "",
-    "modified": 1761156130
+    "modified": 1761229196
 }

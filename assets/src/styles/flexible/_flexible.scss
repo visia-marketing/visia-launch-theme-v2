@@ -6,7 +6,8 @@
 @import "../flexible/flexible-styles";
 
 .fc-wrapper,
-.fc-page-header {
+.fc-page-header,
+.call-to-action{
 
   & .top-border > .fc-section-heading{
       border-top: 1px solid $black;
@@ -57,25 +58,6 @@
       text-align: center;
     } 
 
-    &.fc-section-dark {
-      background-color: $black;
-
-      //h1, h2, h3, h4, h5, h6, p, a, li, blockquote, .g-style-section-title, .g-style-section-heading, .g-section-subtitle {
-      & * {
-        color: #fff;
-      }
-
-      a.button.grey {
-        color: $primary;
-      }
-
-    }
-
-    &.fc-section-grey,
-    &.fc-section-gray {
-      background-color: #EEEDED;
-    }
-
 
     & h2{
       padding-bottom: 1.5rem;
@@ -93,10 +75,46 @@
 
 }
 
+body *{
+  & .background--light {
+    background-color: $white;
+  
+    //h1, h2, h3, h4, h5, h6, p, a, li, blockquote, .g-style-section-title, .g-style-section-heading, .g-section-subtitle {
+    & * {
+      color: $black;
+    }
+  
+    a.button.grey {
+      color: $primary;
+    }
+  
+  }
+  
+  & .background--dark {
+    background-color: $black;
+  
+    //h1, h2, h3, h4, h5, h6, p, a, li, blockquote, .g-style-section-title, .g-style-section-heading, .g-section-subtitle {
+    & * {
+      color: #fff;
+    }
+  
+    a.button.grey {
+      color: $primary;
+    }
+  
+  }
+  
+  & .background--grey,
+  & .background--gray {
+    background-color: #EEEDED !important;
+  }
+}
+
+
 
 
 .fc-section-cta {
-  padding: 20px 0;
+  padding: 80px 0;
   
   &:after {
     content: "";
