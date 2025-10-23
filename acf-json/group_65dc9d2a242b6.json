@@ -64,6 +64,32 @@
             "selected": 0
         },
         {
+            "key": "field_68f924a5c8b57",
+            "label": "CTA Width",
+            "name": "cta_width",
+            "aria-label": "",
+            "type": "radio",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "20",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "full": "Full Width",
+                "boxed": "Boxed"
+            },
+            "default_value": "",
+            "return_format": "value",
+            "allow_null": 0,
+            "other_choice": 0,
+            "allow_in_bindings": 0,
+            "layout": "horizontal",
+            "save_other_choice": 0
+        },
+        {
             "key": "field_68f9144a17303",
             "label": "Background",
             "name": "cta_background",
@@ -143,9 +169,10 @@
                 "id": ""
             },
             "default_value": "",
+            "allow_in_bindings": 1,
             "tabs": "visual",
-            "toolbar": "basic",
-            "media_upload": 0,
+            "toolbar": "full",
+            "media_upload": 1,
             "delay": 0
         },
         {
@@ -327,5 +354,5 @@
     "description": "",
     "show_in_rest": 0,
     "display_title": "",
-    "modified": 1761154398
+    "modified": 1761229396
 }

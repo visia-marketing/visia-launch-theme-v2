@@ -8979,39 +8979,46 @@ body#tinymce {
 
 */
 .fc-wrapper .top-border > .fc-section-heading,
-.fc-page-header .top-border > .fc-section-heading {
+.fc-page-header .top-border > .fc-section-heading,
+.call-to-action .top-border > .fc-section-heading {
   border-top: 1px solid #000000;
   padding-top: 2rem;
 }
 .fc-wrapper .fc-section,
-.fc-page-header .fc-section {
+.fc-page-header .fc-section,
+.call-to-action .fc-section {
   padding: 30px 0;
   position: relative;
   overflow: hidden;
 }
 @media print, screen and (min-width: 40em) {
   .fc-wrapper .fc-section,
-  .fc-page-header .fc-section {
+  .fc-page-header .fc-section,
+  .call-to-action .fc-section {
     padding: 50px 0;
   }
 }
 .fc-wrapper .fc-section.fc-section-1,
-.fc-page-header .fc-section.fc-section-1 {
+.fc-page-header .fc-section.fc-section-1,
+.call-to-action .fc-section.fc-section-1 {
   padding: 30px 0 30px;
 }
 @media print, screen and (min-width: 40em) {
   .fc-wrapper .fc-section.fc-section-1,
-  .fc-page-header .fc-section.fc-section-1 {
+  .fc-page-header .fc-section.fc-section-1,
+  .call-to-action .fc-section.fc-section-1 {
     padding: 70px 0 50px;
   }
 }
 .fc-wrapper .fc-section.fc-section-image,
-.fc-page-header .fc-section.fc-section-image {
+.fc-page-header .fc-section.fc-section-image,
+.call-to-action .fc-section.fc-section-image {
   background: radial-gradient(circle, rgba(0, 0, 0, 0.6) 0%, rgba(0, 0, 0, 0) 100%);
   position: relative;
 }
 .fc-wrapper .fc-section.fc-section-image img.fc-section-background-image,
-.fc-page-header .fc-section.fc-section-image img.fc-section-background-image {
+.fc-page-header .fc-section.fc-section-image img.fc-section-background-image,
+.call-to-action .fc-section.fc-section-image img.fc-section-background-image {
   height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
@@ -9033,41 +9040,59 @@ body#tinymce {
 .fc-page-header .fc-section.fc-section-image p,
 .fc-page-header .fc-section.fc-section-image li,
 .fc-page-header .fc-section.fc-section-image a,
-.fc-page-header .fc-section.fc-section-image .g-section-subtitle {
+.fc-page-header .fc-section.fc-section-image .g-section-subtitle,
+.call-to-action .fc-section.fc-section-image h1,
+.call-to-action .fc-section.fc-section-image h2,
+.call-to-action .fc-section.fc-section-image h3,
+.call-to-action .fc-section.fc-section-image h4,
+.call-to-action .fc-section.fc-section-image h5,
+.call-to-action .fc-section.fc-section-image h6,
+.call-to-action .fc-section.fc-section-image p,
+.call-to-action .fc-section.fc-section-image li,
+.call-to-action .fc-section.fc-section-image a,
+.call-to-action .fc-section.fc-section-image .g-section-subtitle {
   color: #fff;
 }
 .fc-wrapper .fc-section.center,
-.fc-page-header .fc-section.center {
+.fc-page-header .fc-section.center,
+.call-to-action .fc-section.center {
   text-align: center;
 }
-.fc-wrapper .fc-section.fc-section-dark,
-.fc-page-header .fc-section.fc-section-dark {
-  background-color: #000000;
-}
-.fc-wrapper .fc-section.fc-section-dark *,
-.fc-page-header .fc-section.fc-section-dark * {
-  color: #fff;
-}
-.fc-wrapper .fc-section.fc-section-dark a.button.grey,
-.fc-page-header .fc-section.fc-section-dark a.button.grey {
-  color: #FBA919;
-}
-.fc-wrapper .fc-section.fc-section-grey, .fc-wrapper .fc-section.fc-section-gray,
-.fc-page-header .fc-section.fc-section-grey,
-.fc-page-header .fc-section.fc-section-gray {
-  background-color: #EEEDED;
-}
 .fc-wrapper .fc-section h2,
-.fc-page-header .fc-section h2 {
+.fc-page-header .fc-section h2,
+.call-to-action .fc-section h2 {
   padding-bottom: 1.5rem;
 }
 .fc-wrapper.fc-wrapper-tabs .fc-section,
-.fc-page-header.fc-wrapper-tabs .fc-section {
+.fc-page-header.fc-wrapper-tabs .fc-section,
+.call-to-action.fc-wrapper-tabs .fc-section {
   padding: 20px 0 20px;
 }
 
+body * .background--light {
+  background-color: #ffffff;
+}
+body * .background--light * {
+  color: #000000;
+}
+body * .background--light a.button.grey {
+  color: #FBA919;
+}
+body * .background--dark {
+  background-color: #000000;
+}
+body * .background--dark * {
+  color: #fff;
+}
+body * .background--dark a.button.grey {
+  color: #FBA919;
+}
+body * .background--grey, body * .background--gray {
+  background-color: #EEEDED !important;
+}
+
 .fc-section-cta {
-  padding: 20px 0;
+  padding: 80px 0;
 }
 .fc-section-cta:after {
   content: "";
