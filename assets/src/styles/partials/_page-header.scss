@@ -1,0 +1,38 @@
+.fc-page-header {
+  display: flex;
+  //height: 100px;
+  position: relative;
+  overflow: hidden;
+
+
+  & img.page-header-image{
+    position: absolute;
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    top:50%;
+    transform: translateY(-50%);
+  }
+
+  .page-header-content-wrapper {
+    //background-color: $primary;
+    align-self: flex-end;
+    width: 100%;
+
+    &.fc-section-image,
+    &.page-header-expanded{
+      padding-top: 9.5rem;
+    }
+
+    .page-header-content {
+
+     & p:last-child{
+      margin-bottom: 0;
+     }
+
+    }
+
+  }
+
+
+}

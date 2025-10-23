@@ -6,20 +6,20 @@ const webpack = require('webpack');
 module.exports = {
     entry: {
         main: [
-            './assets/scripts/src/main.js',
-            './assets/styles/src/main.scss'
+            './assets/src/scripts/main.js',
+            './assets/src/styles/main.scss'
         ]
     },
-    devtool: 'source-map', // Recommended for development
+    devtool: 'source-map',
     output: {
-        filename: 'assets/scripts/dist/[name].min.js',
+        filename: 'assets/dist/scripts/[name].min.js',
         path: path.resolve(__dirname)
     },
     resolve: {
         alias: {
-          'jquery': 'jquery/src/jquery',
-          'foundation': 'foundation-sites/js/foundation.core',
-          'slick-carousel': 'slick-carousel/slick/slick.js'
+            'jquery': 'jquery/src/jquery',
+            'foundation': 'foundation-sites/js/foundation.core',
+            'slick-carousel': 'slick-carousel/slick/slick.js'
         }
     },
     module: {
@@ -40,44 +40,42 @@ module.exports = {
                     MiniCssExtractPlugin.loader,
                     'css-loader',
                     'postcss-loader',
-                    // 'sass-loader'
                     {
                         loader: 'sass-loader',
                         options: {
-                          sassOptions: {
-                            includePaths: [
-                              path.resolve(__dirname, 'node_modules/foundation-sites/scss'),
-                              path.resolve(__dirname, 'assets/styles/src')
-                            ]
-                          }
+                            sassOptions: {
+                                includePaths: [
+                                    path.resolve(__dirname, 'node_modules/foundation-sites/scss'),
+                                    path.resolve(__dirname, 'assets/src/styles')
+                                ]
+                            }
                         }
-                      }
+                    }
                 ]
             },
             {
-                test: /\.(woff(2)?|ttf|eot|svg|otf)$/,
+                test: /\.(woff|woff2|eot|ttf|otf)$/,
                 type: 'asset/resource',
                 generator: {
-                    filename: 'assets/styles/dist/fonts/[name][ext]'
+                  filename: 'webfonts/[name][ext]'
                 }
             },
             {
                 test: /\.(png|jpg|jpeg|gif|svg)$/,
                 type: 'asset/resource',
                 generator: {
-                    filename: 'assets/styles/dist/images/[name][ext]'
+                    filename: 'assets/dist/styles/images/[name][ext]'
                 }
             }
-            
         ]
     },
     plugins: [
         new MiniCssExtractPlugin({
-            filename: 'assets/styles/dist/[name].min.css'
+            filename: 'assets/dist/styles/[name].min.css'
         }),
         new WebpackBar({
-            name: 'build', // Customize the name if you want
-            color: '#00ff00', // Customize the color
+            name: 'build',
+            color: '#00ff00',
         }),
         new webpack.ProvidePlugin({
             $: 'jquery',
@@ -87,14 +85,14 @@ module.exports = {
         })
     ],
     stats: {
-        assets: true, // Keep assets by chunk messages
-        assetsSort: "size", // Optionally, sort the assets by size
-        children: false, // Hide child compilation details
-        chunks: true, // Show chunks (by chunk)
-        chunkModules: false, // Hide modules within chunks
-        modules: false, // Hide the modules section
-        warnings: false, // Keep the warnings
-        performance: true, // Keep performance warnings
-        excludeAssets: [/assets\/styles\/dist\/fonts/, /assets\/styles\/dist\/images/], // Exclude specific asset paths
-      },
+        assets: true,
+        assetsSort: "size",
+        children: false,
+        chunks: true,
+        chunkModules: false,
+        modules: false,
+        warnings: false,
+        performance: true,
+        excludeAssets: [/assets\/dist\/styles\/fonts/, /assets\/dist\/styles\/images/],
+    },
 };

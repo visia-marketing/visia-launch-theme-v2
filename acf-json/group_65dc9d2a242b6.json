@@ -1,45 +1,7 @@
 {
     "key": "group_65dc9d2a242b6",
-    "title": "OPT: Site Settings",
+    "title": "OPT: Theme Settings",
     "fields": [
-        {
-            "key": "field_65dc9d2a51c1d",
-            "label": "Global",
-            "name": "",
-            "aria-label": "",
-            "type": "tab",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "placement": "left",
-            "endpoint": 0,
-            "selected": 0
-        },
-        {
-            "key": "field_65dc9d5351c1e",
-            "label": "Google Tag Manager ID",
-            "name": "google_tag_manager_id",
-            "aria-label": "",
-            "type": "text",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "default_value": "",
-            "maxlength": "",
-            "placeholder": "",
-            "prepend": "",
-            "append": ""
-        },
         {
             "key": "field_65dc9d6a51c1f",
             "label": "Header",
@@ -102,20 +64,59 @@
             "selected": 0
         },
         {
+            "key": "field_68f9144a17303",
+            "label": "Background",
+            "name": "cta_background",
+            "aria-label": "",
+            "type": "select",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "15",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "light": "Light",
+                "dark": "Dark",
+                "grey": "Grey",
+                "image": "Image"
+            },
+            "default_value": false,
+            "return_format": "value",
+            "multiple": 0,
+            "allow_null": 0,
+            "allow_in_bindings": 0,
+            "ui": 0,
+            "ajax": 0,
+            "placeholder": "",
+            "create_options": 0,
+            "save_options": 0
+        },
+        {
             "key": "field_65dca6385d547",
-            "label": "CTA Background Image",
+            "label": "Background Image",
             "name": "cta_background_image",
             "aria-label": "",
             "type": "image",
             "instructions": "",
             "required": 0,
-            "conditional_logic": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_68f9144a17303",
+                        "operator": "==",
+                        "value": "image"
+                    }
+                ]
+            ],
             "wrapper": {
-                "width": "",
+                "width": "25",
                 "class": "",
                 "id": ""
             },
-            "return_format": "array",
+            "return_format": "id",
             "library": "all",
             "min_width": "",
             "min_height": "",
@@ -124,7 +125,45 @@
             "max_height": "",
             "max_size": "",
             "mime_types": "",
+            "allow_in_bindings": 1,
             "preview_size": "medium"
+        },
+        {
+            "key": "field_68fa3bb23feb1",
+            "label": "CTA Content Color",
+            "name": "cta_text_color",
+            "aria-label": "",
+            "type": "select",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_68f9144a17303",
+                        "operator": "==",
+                        "value": "image"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "25",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "light": "Dark",
+                "dark": "Light"
+            },
+            "default_value": false,
+            "return_format": "value",
+            "multiple": 0,
+            "allow_null": 0,
+            "allow_in_bindings": 0,
+            "ui": 0,
+            "ajax": 0,
+            "placeholder": "",
+            "create_options": 0,
+            "save_options": 0
         },
         {
             "key": "field_65dca6545d548",
@@ -141,9 +180,10 @@
                 "id": ""
             },
             "default_value": "",
+            "allow_in_bindings": 1,
             "tabs": "visual",
-            "toolbar": "basic",
-            "media_upload": 0,
+            "toolbar": "full",
+            "media_upload": 1,
             "delay": 0
         },
         {
@@ -224,6 +264,86 @@
             "placeholder": "",
             "prepend": "",
             "append": ""
+        },
+        {
+            "key": "field_65dc9d2a51c1d",
+            "label": "Global",
+            "name": "",
+            "aria-label": "",
+            "type": "tab",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "placement": "left",
+            "endpoint": 0,
+            "selected": 0
+        },
+        {
+            "key": "field_65dc9d5351c1e",
+            "label": "Google Tag Manager ID",
+            "name": "google_tag_manager_id",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "maxlength": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": ""
+        },
+        {
+            "key": "field_68eec78f3debe",
+            "label": "Google\/Typekit Font URL",
+            "name": "google_typekit_font_url",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "Leave blank for default: Source Sans via Google Fonts",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "maxlength": "",
+            "allow_in_bindings": 1,
+            "placeholder": "",
+            "prepend": "",
+            "append": ""
+        },
+        {
+            "key": "field_68eec937b877d",
+            "label": "Font Awesome Kit URL",
+            "name": "fontawesome_kit_url",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "Leave blank for default: Font Awesome 6 Free",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "maxlength": "",
+            "allow_in_bindings": 1,
+            "placeholder": "",
+            "prepend": "",
+            "append": ""
         }
     ],
     "location": [
@@ -245,5 +365,5 @@
     "description": "",
     "show_in_rest": 0,
     "display_title": "",
-    "modified": 1760459713
+    "modified": 1761230014
 }

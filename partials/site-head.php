@@ -3,13 +3,16 @@
   <meta charset="utf-8">
   <meta http-equiv="x-ua-compatible" content="ie=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <?php $font = get_field( 'google_typekit_font_url', 'options'); ?>
+  <?php if( str_contains( $font, 'google' ) || empty($font) ): ?>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <?php endif; ?>
+
+
 
   <?php wp_head(); ?> 
-
-  <?php global $csp_nonce; ?> 
-  <script src="https://kit.fontawesome.com/7ef9481af9.js" crossorigin="anonymous" nonce="<?php echo $csp_nonce;?>"></script>
 
   <?php if ( get_field('google_tag_manager_id', 'options') ):?>
     <!-- Google Tag Manager -->

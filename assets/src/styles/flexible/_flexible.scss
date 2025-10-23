@@ -1,0 +1,189 @@
+@import "../flexible/flexible-accordion";
+@import "../flexible/flexible-columns";
+@import "../flexible/flexible-cards";
+@import "../flexible/flexible-page-header";
+@import "../flexible/flexible-section-heading";
+@import "../flexible/flexible-styles";
+
+.fc-wrapper,
+.fc-page-header
+{
+
+  & .top-border > .fc-section-heading{
+      border-top: 1px solid $black;
+      padding-top: 2rem;
+  }
+
+  .fc-section {
+    padding: 30px 0;
+    position: relative;
+    overflow: hidden;
+
+    @include breakpoint(medium) {
+      padding: 50px 0;
+    }
+
+    &.fc-section-1 {
+      padding: 30px 0 30px;
+
+      @include breakpoint(medium) {
+        padding: 70px 0 50px;
+      }
+
+    }
+
+    &.fc-section-image {
+      background: radial-gradient(circle, rgba(0, 0, 0, 0.6) 0%, rgba(0, 0, 0, 0) 100%);
+      position: relative;
+
+      img.fc-section-background-image {
+        height: 100%;
+        object-fit: cover;
+        position: absolute;
+         top: 0;
+         left: 0;
+         right: 0;
+         bottom: 0;
+        width: 100%;
+        z-index: -1;
+      }
+
+      h1, h2, h3, h4, h5, h6, p, li, a, .g-section-subtitle {
+        color: #fff;
+      }
+
+    }
+   
+    &.center {
+      text-align: center;
+    } 
+
+
+    & h2{
+      padding-top: 2.5rem;
+    }
+
+    & p:has(.g-section-subtitle){
+      margin-bottom: 0;
+
+      & + h2{
+        padding-top: 0;
+      }
+
+    }
+
+  }
+
+  &.fc-wrapper-tabs {
+
+    .fc-section {
+      padding: 20px 0 20px;
+    }
+
+  }
+
+}
+
+body *{
+  & .background--light,
+  & .fc-section-light {
+    background-color: $white;
+  
+    //h1, h2, h3, h4, h5, h6, p, a, li, blockquote, .g-style-section-title, .g-style-section-heading, .g-section-subtitle {
+    & * {
+      color: $black;
+    }
+  
+    a.button.grey {
+      color: $primary;
+    }
+  
+  }
+  
+  & .fc-section-dark,
+  & .fc-section-light {
+    background-color: $black;
+  
+    //h1, h2, h3, h4, h5, h6, p, a, li, blockquote, .g-style-section-title, .g-style-section-heading, .g-section-subtitle {
+    & * {
+      color: #fff;
+    }
+  
+    a.button.grey {
+      color: $primary;
+    }
+  
+  }
+  
+  & .fc-section-grey,
+  & .fc-section-gray,
+  & .background--gray,
+  & .background--grey {
+    background-color: #EEEDED;
+  }
+
+  & .background--image.background--light{
+    & * {
+      color: $black;
+    }
+  }
+
+  & .background--image.background--dark{
+    & * {
+      color: #fff;
+    }
+  }
+
+
+}
+
+
+
+
+.fc-section-cta {
+  padding: 80px 0;
+  
+  &:after {
+    content: "";
+    position: absolute;
+    left: 10%;
+    top: 0;
+    height: 150%;
+    width: 300px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    opacity: .5;
+  }
+  
+
+  .flex {
+    display: flex;
+    flex-direction:column;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+
+    @include breakpoint(medium) {
+      flex-direction: row;
+      gap: 50px;
+    }
+
+    h6 {
+      font-size: 22px;
+      margin-bottom: 0;
+      text-align: center;
+
+      @include breakpoint(medium) {
+        flex-direction: row;
+        text-align: left;
+      }
+
+    }
+
+    .button {
+      margin: 0;
+    }
+
+  }
+
+}

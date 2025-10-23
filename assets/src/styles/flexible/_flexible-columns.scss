@@ -1,0 +1,30 @@
+.fc-section-columns {
+  
+  .content-columns {
+    // margin-bottom: 40px;
+    // padding-bottom: 15px;
+    padding-right: 20px;
+  }
+
+}
+
+.fc-section.lines {
+
+  .fc-section-columns {
+  
+    .content-columns {
+      border-left: 1px solid #c3c3c3;
+      padding-left: 20px
+    }
+    
+  }
+
+  .card-cell-columns {
+    background-color: #fff;
+    border: 1px solid #f2f2f2;
+    border-radius: 10px;
+    box-shadow: 0 5px 10px rgba(0,0,0,.1);
+    overflow: hidden;
+  }
+
+}

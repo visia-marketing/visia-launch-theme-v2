@@ -34,9 +34,9 @@ switch ($per_row) {
 
             <div class="card-image">
                 <?php if( $card['post_object_tf'] ): ?>
-                    <?php $image = get_the_post_thumbnail($card['case_study_id'], 'large'); ?>
+                    <?php $image = get_the_post_thumbnail($card['case_study_id'], 'thumbnail'); ?>
                 <?php else: ?>
-                    <?php $image = wp_get_attachment_image($card['card_icon'], 'large'); ?>
+                    <?php $image = wp_get_attachment_image($card['card_icon'], 'thumbnail'); ?>
                 <?php endif; ?>
                 
                 <?php if( $image ): ?>
@@ -87,7 +87,6 @@ switch ($per_row) {
       <?php endforeach; ?>
 
       
-      </div>
+    </div>
 
-  </div>
 </div>

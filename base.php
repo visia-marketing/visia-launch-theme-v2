@@ -47,9 +47,9 @@ use Roots\Sage\Wrapper;
     <div class="off-canvas-content" data-off-canvas-content>
     
       <?php do_action('get_header'); ?>
-    
+        
       <?php get_template_part('partials/site-header'); ?>
-    
+
       <div class="wrap" role="document">
         <main class="main">
           

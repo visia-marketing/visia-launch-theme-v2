@@ -1,93 +1,187 @@
 <?php
 /**
- * Cleaner walker for wp_nav_menu()
- *
+ * Custom Navigation Walker for WordPress Menus
+ * 
+ * Creates cleaner HTML markup for navigation menus with Foundation framework support.
+ * Extends WordPress's Walker_Nav_Menu class to customize menu output.
  */
 
 class Roots_Nav_Walker extends Walker_Nav_Menu {
+  /**
+   * Check if menu item is currently active
+   * 
+   * Searches for WordPress's various "current" class names and active states.
+   * 
+   * @param string $classes Space-separated list of CSS classes
+   * @return bool True if item is current/active, false otherwise
+   */
   function check_current($classes) {
     return preg_match('/(current[-_])|active|dropdown/', $classes);
   }
 
+  /**
+   * Start Level Output
+   * 
+   * Outputs the opening HTML for a new submenu level.
+   * Uses Foundation framework's submenu classes for styling.
+   * 
+   * @param string $output Passed by reference. Used to append additional content
+   * @param int $depth Depth of menu item. 0 for top level
+   * @param array $args Array of wp_nav_menu() arguments
+   */
   function start_lvl(&$output, $depth = 0, $args = array()) {
+    // Foundation-specific classes for vertical dropdown submenus
     $output .= "\n<ul class=\"submenu menu vertical\" data-submenu>\n";
   }
 
+  /**
+   * Start Element Output
+   * 
+   * Generates the HTML for individual menu items.
+   * Handles special cases like dropdowns, dividers, and headers.
+   * 
+   * @param string $output Passed by reference. Used to append additional content
+   * @param object $item Menu item data object
+   * @param int $depth Depth of menu item. 0 for top level
+   * @param array $args Array of wp_nav_menu() arguments
+   * @param int $id Current menu item ID
+   */
   function start_el(&$output, $item, $depth = 0, $args = array(), $id = 0) {
     $item_html = '';
+    // Let parent class build the initial HTML
     parent::start_el($item_html, $item, $depth, $args);
 
+    /**
+     * Handle dropdown toggles for top-level items with children
+     * Currently commented out - likely for Bootstrap dropdown compatibility
+     */
     if ($item->is_dropdown && ($depth === 0)) {
+      // Bootstrap dropdown toggle markup (currently disabled)
       // $item_html = str_replace('<a', '<a class="dropdown-toggle" data-toggle="dropdown" data-target="#"', $item_html);
       // $item_html = str_replace('</a>', ' <b class="caret"></b></a>', $item_html);
     }
+    /**
+     * Handle divider menu items
+     * Removes the anchor tag for menu items marked as dividers
+     */
     elseif (stristr($item_html, 'li class="divider')) {
       $item_html = preg_replace('/<a[^>]*>.*?<\/a>/iU', '', $item_html);
     }
+    /**
+     * Handle dropdown header items
+     * Removes the anchor tag but keeps the text for header items
+     */
     elseif (stristr($item_html, 'li class="dropdown-header')) {
       $item_html = preg_replace('/<a[^>]*>(.*)<\/a>/iU', '$1', $item_html);
     }
 
+    // Apply custom filters to allow further modification
     $item_html = apply_filters('roots/wp_nav_menu_item', $item_html);
     $output .= $item_html;
   }
 
+  /**
+   * Display Element
+   * 
+   * Determines if a menu item has children and adds appropriate classes.
+   * Called before the element and its children are processed.
+   * 
+   * @param object $element Data object for menu item
+   * @param array $children_elements List of elements that are children of the current element
+   * @param int $max_depth Maximum depth to traverse
+   * @param int $depth Current depth
+   * @param array $args Array of wp_nav_menu() arguments
+   * @param string $output Passed by reference. Used to append additional content
+   */
   function display_element($element, &$children_elements, $max_depth, $depth = 0, $args, &$output) {
+    // Check if this element has children and we haven't reached max depth
     $element->is_dropdown = ((!empty($children_elements[$element->ID]) && (($depth + 1) < $max_depth || ($max_depth === 0))));
 
+    // Add Foundation's 'has-submenu' class to parent items
     if ($element->is_dropdown) {
-      $element->classes[] = 'has-submenu'; //'has-dropdown';
+      $element->classes[] = 'has-submenu'; // Foundation class (Bootstrap would use 'has-dropdown')
     }
 
+    // Let parent class handle the rest of the display
     parent::display_element($element, $children_elements, $max_depth, $depth, $args, $output);
   }
 }
 
 /**
- * Remove the id="" on nav menu items
- * Return 'menu-slug' for nav menu classes
+ * Clean up navigation menu item classes
+ * 
+ * Removes WordPress default classes and adds cleaner, more semantic ones.
+ * Converts various "current" states to a single "active" class.
+ * 
+ * @param array $classes Array of CSS classes applied to menu item
+ * @param object $item Current menu item object
+ * @return array Modified array of classes
  */
 function roots_nav_menu_css_class($classes, $item) {
+  // Create a URL-friendly slug from the menu item title
   $slug = sanitize_title($item->title);
+  
+  // Replace various WordPress "current" classes with a single "active" class
   $classes = preg_replace('/(current(-menu-|[-_]page[-_])(item|parent|ancestor))/', 'active', $classes);
-  //$classes = preg_replace('/(current(-menu-|[-_]page[-_])(item|ancestor))/', 'active', $classes);
+  
+  // Remove WordPress default menu classes (menu-item-ID, page-item-ID, etc.)
   $classes = preg_replace('/^((menu|page)[-_\w+]+)+/', '', $classes);
 
+  // Add semantic class based on menu item title
   $classes[] = 'menu-' . $slug;
 
+  // Remove duplicate classes
   $classes = array_unique($classes);
 
-  //return array_filter($classes, 'is_element_empty');
-
+  // Filter out empty values using anonymous function
+  // (Replaces older is_element_empty function)
   return array_filter($classes, function ($element) {
       $element = trim($element);
       return !empty($element);
     });
 }
 add_filter('nav_menu_css_class', 'roots_nav_menu_css_class', 10, 2);
+
+/**
+ * Remove ID attributes from navigation menu items
+ * 
+ * IDs are often unnecessary and can cause conflicts.
+ * Returns null to completely remove the ID attribute.
+ */
 add_filter('nav_menu_item_id', '__return_null');
 
 /**
- * Clean up wp_nav_menu_args
- *
- * Remove the container
- * Use Roots_Nav_Walker() by default
+ * Modify default WordPress navigation menu arguments
+ * 
+ * Sets sensible defaults for cleaner markup:
+ * - Removes container div
+ * - Sets default markup structure
+ * - Sets default depth
+ * - Uses custom walker class
+ * 
+ * @param array $args Original menu arguments
+ * @return array Modified menu arguments
  */
 function roots_nav_menu_args($args = '') {
+  // Remove the default container div wrapper
   $roots_nav_menu_args['container'] = false;
 
+  // Set default list wrapper if not specified
   if (!$args['items_wrap']) {
     $roots_nav_menu_args['items_wrap'] = '<ul class="%2$s">%3$s</ul>';
   }
 
+  // Set default menu depth to 2 levels if not specified
   if (!$args['depth']) {
     $roots_nav_menu_args['depth'] = 2;
   }
 
+  // Use custom walker class if none specified
   if (!$args['walker']) {
     $roots_nav_menu_args['walker'] = new Roots_Nav_Walker();
   }
 
+  // Merge custom defaults with provided arguments (provided args take precedence)
   return array_merge($args, $roots_nav_menu_args);
 }
 add_filter('wp_nav_menu_args', 'roots_nav_menu_args');
