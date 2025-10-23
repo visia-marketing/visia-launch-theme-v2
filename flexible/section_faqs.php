@@ -53,10 +53,10 @@ if($style == 'plain'){
             
                 {
                     "@type": "Question",
-                    "name": "<?php echo esc_js( get_sub_field('question') ); ?>",
+                    "name": "<?php echo htmlspecialchars( get_sub_field('question') ); ?>",
                     "acceptedAnswer": {
                         "@type": "Answer",
-                        "text": "<?php echo esc_js( get_sub_field('answer') ); ?>"
+                        "text": "<?php echo htmlspecialchars( get_sub_field('answer') ); ?>"
                     }
                 }
                 <?php if( $length != get_row_index()  ): ?>
