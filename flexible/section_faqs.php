@@ -1,7 +1,11 @@
 <?php
 $style = get_sub_field('faq_style');
 $fields = get_sub_field('questions_and_answers');
-$length = count($fields);
+$length = 0;
+if( is_array($fields) ){
+    $length = count($fields);
+}
+
 
 $faq_container_class = 'fc-faq-section';
 $faq_class = '';
