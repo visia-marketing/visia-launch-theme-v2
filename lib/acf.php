@@ -159,7 +159,7 @@ function get_flexible_content() {
        * Template should be located at: /flexible/[layout-name].php
        */
 
-      get_template_part('flexible/'.get_row_layout().'');// ' . $layout);
+      get_template_part('flexible/'.get_row_layout());// ' . $layout);
       
       echo '</section>';
 
