@@ -77,6 +77,21 @@ function setup() {
    * @link http://codex.wordpress.org/Function_Reference/add_image_size
    */
   add_theme_support('post-thumbnails');
+  //set_post_thumbnail_size( 300, 190, true ); // Set featured image size (width, height, crop)
+
+
+  update_option( 'thumbnail_size_w', 300 ); // Set your desired width
+	update_option( 'thumbnail_size_h', 190 );  // Set your desired height
+	update_option( 'thumbnail_size_crop', 1 ); // 0 for soft crop (resize), 1 for hard crop (crop to exact dimensions)
+
+	update_option( 'large_size_w', 1440 ); // Set your desired width
+	update_option( 'large_size_h', 1100 );  // Set your desired height
+	update_option( 'large_size_crop', 0 ); // 0 for soft crop (resize), 1 for hard crop (crop to exact dimensions)
+  
+	update_option( 'medium_size_w', 768 ); // Set your desired width
+	update_option( 'medium_size_h', 768 );  // Set your desired height
+	update_option( 'medium_size_crop', 0 ); // 0 for soft crop (resize), 1 for hard crop (crop to exact dimensions)
+
 
   /**
    * Post Formats

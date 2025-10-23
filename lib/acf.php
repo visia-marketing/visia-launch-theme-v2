@@ -101,14 +101,16 @@ function get_flexible_content() {
           position: relative;
         }
 
-        #' . esc_html($id) . ' > .fc-section-content {
+        #' . esc_html($id) . '.fc-section {
+          display: flex;
+          flex-direction: column;
           gap: ' . esc_html( ($content_spacing * 1.5) ) . 'rem;
-          align-items: ' . esc_html($vertical_align) . ';
+          align-items: center;
           justify-content: ' . esc_html($horizontal_align) . ';
         }
 
-        #' . esc_html($id) . ' > .fc-section-columns .content-columns {
-          margin-bottom: ' . esc_html( ($content_spacing * 1.5) ) . 'rem;
+        #' . esc_html($id) . ' > .fc-section-columns {
+          min-width: 100%;
         }
       </style>';
 

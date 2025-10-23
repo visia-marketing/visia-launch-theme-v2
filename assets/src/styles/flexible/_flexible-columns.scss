@@ -1,25 +1,11 @@
 .fc-section-columns {
   
   .content-columns {
-    margin-bottom: 40px;
-    padding-bottom: 15px;
+    // margin-bottom: 40px;
+    // padding-bottom: 15px;
     padding-right: 20px;
   }
 
-  &.fc-section-two-column-card {
-
-    .content-columns {
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: flex-start;
-      margin:0;
-      padding: 30px;
-    }
-
-
-  }
-  
 }
 
 .fc-section.lines {
