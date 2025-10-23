@@ -7,7 +7,7 @@
 
 .fc-wrapper,
 .fc-page-header,
-.call-to-action{
+{
 
   & .top-border > .fc-section-heading{
       border-top: 1px solid $black;
@@ -76,7 +76,8 @@
 }
 
 body *{
-  & .background--light {
+  & .background--light,
+  & .fc-section-light {
     background-color: $white;
   
     //h1, h2, h3, h4, h5, h6, p, a, li, blockquote, .g-style-section-title, .g-style-section-heading, .g-section-subtitle {
@@ -90,7 +91,8 @@ body *{
   
   }
   
-  & .background--dark {
+  & .fc-section-dark,
+  & .fc-section-light {
     background-color: $black;
   
     //h1, h2, h3, h4, h5, h6, p, a, li, blockquote, .g-style-section-title, .g-style-section-heading, .g-section-subtitle {
@@ -104,10 +106,26 @@ body *{
   
   }
   
-  & .background--grey,
-  & .background--gray {
-    background-color: #EEEDED !important;
+  & .fc-section-grey,
+  & .fc-section-gray,
+  & .background--gray,
+  & .background--grey {
+    background-color: #EEEDED;
   }
+
+  & .background--image.background--light{
+    & * {
+      color: $black !important;
+    }
+  }
+
+  & .background--image.background--dark{
+    & * {
+      color: #fff !important;
+    }
+  }
+
+
 }
 
 
