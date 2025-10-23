@@ -282,7 +282,7 @@
                 "Large",
                 "X Large"
             ],
-            "default_value": 1,
+            "default_value": 0,
             "return_format": "value",
             "multiple": 0,
             "allow_null": 0,
@@ -391,5 +391,5 @@
     "description": "",
     "show_in_rest": 0,
     "display_title": "",
-    "modified": 1760714144
+    "modified": 1761242586
 }
