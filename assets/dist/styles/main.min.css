@@ -8979,46 +8979,39 @@ body#tinymce {
 
 */
 .fc-wrapper .top-border > .fc-section-heading,
-.fc-page-header .top-border > .fc-section-heading,
-.call-to-action .top-border > .fc-section-heading {
+.fc-page-header .top-border > .fc-section-heading {
   border-top: 1px solid #000000;
   padding-top: 2rem;
 }
 .fc-wrapper .fc-section,
-.fc-page-header .fc-section,
-.call-to-action .fc-section {
+.fc-page-header .fc-section {
   padding: 30px 0;
   position: relative;
   overflow: hidden;
 }
 @media print, screen and (min-width: 40em) {
   .fc-wrapper .fc-section,
-  .fc-page-header .fc-section,
-  .call-to-action .fc-section {
+  .fc-page-header .fc-section {
     padding: 50px 0;
   }
 }
 .fc-wrapper .fc-section.fc-section-1,
-.fc-page-header .fc-section.fc-section-1,
-.call-to-action .fc-section.fc-section-1 {
+.fc-page-header .fc-section.fc-section-1 {
   padding: 30px 0 30px;
 }
 @media print, screen and (min-width: 40em) {
   .fc-wrapper .fc-section.fc-section-1,
-  .fc-page-header .fc-section.fc-section-1,
-  .call-to-action .fc-section.fc-section-1 {
+  .fc-page-header .fc-section.fc-section-1 {
     padding: 70px 0 50px;
   }
 }
 .fc-wrapper .fc-section.fc-section-image,
-.fc-page-header .fc-section.fc-section-image,
-.call-to-action .fc-section.fc-section-image {
+.fc-page-header .fc-section.fc-section-image {
   background: radial-gradient(circle, rgba(0, 0, 0, 0.6) 0%, rgba(0, 0, 0, 0) 100%);
   position: relative;
 }
 .fc-wrapper .fc-section.fc-section-image img.fc-section-background-image,
-.fc-page-header .fc-section.fc-section-image img.fc-section-background-image,
-.call-to-action .fc-section.fc-section-image img.fc-section-background-image {
+.fc-page-header .fc-section.fc-section-image img.fc-section-background-image {
   height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
@@ -9040,55 +9033,48 @@ body#tinymce {
 .fc-page-header .fc-section.fc-section-image p,
 .fc-page-header .fc-section.fc-section-image li,
 .fc-page-header .fc-section.fc-section-image a,
-.fc-page-header .fc-section.fc-section-image .g-section-subtitle,
-.call-to-action .fc-section.fc-section-image h1,
-.call-to-action .fc-section.fc-section-image h2,
-.call-to-action .fc-section.fc-section-image h3,
-.call-to-action .fc-section.fc-section-image h4,
-.call-to-action .fc-section.fc-section-image h5,
-.call-to-action .fc-section.fc-section-image h6,
-.call-to-action .fc-section.fc-section-image p,
-.call-to-action .fc-section.fc-section-image li,
-.call-to-action .fc-section.fc-section-image a,
-.call-to-action .fc-section.fc-section-image .g-section-subtitle {
+.fc-page-header .fc-section.fc-section-image .g-section-subtitle {
   color: #fff;
 }
 .fc-wrapper .fc-section.center,
-.fc-page-header .fc-section.center,
-.call-to-action .fc-section.center {
+.fc-page-header .fc-section.center {
   text-align: center;
 }
 .fc-wrapper .fc-section h2,
-.fc-page-header .fc-section h2,
-.call-to-action .fc-section h2 {
+.fc-page-header .fc-section h2 {
   padding-bottom: 1.5rem;
 }
 .fc-wrapper.fc-wrapper-tabs .fc-section,
-.fc-page-header.fc-wrapper-tabs .fc-section,
-.call-to-action.fc-wrapper-tabs .fc-section {
+.fc-page-header.fc-wrapper-tabs .fc-section {
   padding: 20px 0 20px;
 }
 
-body * .background--light {
+body * .background--light, body * .fc-section-light {
   background-color: #ffffff;
 }
-body * .background--light * {
+body * .background--light *, body * .fc-section-light * {
   color: #000000;
 }
-body * .background--light a.button.grey {
+body * .background--light a.button.grey, body * .fc-section-light a.button.grey {
   color: #FBA919;
 }
-body * .background--dark {
+body * .fc-section-dark, body * .fc-section-light {
   background-color: #000000;
 }
-body * .background--dark * {
+body * .fc-section-dark *, body * .fc-section-light * {
   color: #fff;
 }
-body * .background--dark a.button.grey {
+body * .fc-section-dark a.button.grey, body * .fc-section-light a.button.grey {
   color: #FBA919;
 }
-body * .background--grey, body * .background--gray {
-  background-color: #EEEDED !important;
+body * .fc-section-grey, body * .fc-section-gray, body * .background--gray, body * .background--grey {
+  background-color: #EEEDED;
+}
+body * .background--image.background--light * {
+  color: #000000 !important;
+}
+body * .background--image.background--dark * {
+  color: #fff !important;
 }
 
 .fc-section-cta {

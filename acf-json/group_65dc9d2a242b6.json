@@ -64,32 +64,6 @@
             "selected": 0
         },
         {
-            "key": "field_68f924a5c8b57",
-            "label": "CTA Width",
-            "name": "cta_width",
-            "aria-label": "",
-            "type": "radio",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "20",
-                "class": "",
-                "id": ""
-            },
-            "choices": {
-                "full": "Full Width",
-                "boxed": "Boxed"
-            },
-            "default_value": "",
-            "return_format": "value",
-            "allow_null": 0,
-            "other_choice": 0,
-            "allow_in_bindings": 0,
-            "layout": "horizontal",
-            "save_other_choice": 0
-        },
-        {
             "key": "field_68f9144a17303",
             "label": "Background",
             "name": "cta_background",
@@ -153,6 +127,43 @@
             "mime_types": "",
             "allow_in_bindings": 1,
             "preview_size": "medium"
+        },
+        {
+            "key": "field_68fa3bb23feb1",
+            "label": "CTA Content Color",
+            "name": "cta_text_color",
+            "aria-label": "",
+            "type": "select",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_68f9144a17303",
+                        "operator": "==",
+                        "value": "image"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "25",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "light": "Dark",
+                "dark": "Light"
+            },
+            "default_value": false,
+            "return_format": "value",
+            "multiple": 0,
+            "allow_null": 0,
+            "allow_in_bindings": 0,
+            "ui": 0,
+            "ajax": 0,
+            "placeholder": "",
+            "create_options": 0,
+            "save_options": 0
         },
         {
             "key": "field_65dca6545d548",
@@ -354,5 +365,5 @@
     "description": "",
     "show_in_rest": 0,
     "display_title": "",
-    "modified": 1761229396
+    "modified": 1761230014
 }
