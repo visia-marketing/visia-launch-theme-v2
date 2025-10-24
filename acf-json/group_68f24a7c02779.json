@@ -262,15 +262,7 @@
                     "type": "radio",
                     "instructions": "",
                     "required": 0,
-                    "conditional_logic": [
-                        [
-                            {
-                                "field": "field_68f24b9ab8873",
-                                "operator": "!=",
-                                "value": "image"
-                            }
-                        ]
-                    ],
+                    "conditional_logic": 0,
                     "wrapper": {
                         "width": "",
                         "class": "",
@@ -297,11 +289,6 @@
                 "param": "page_template",
                 "operator": "==",
                 "value": "template-flexible.php"
-            },
-            {
-                "param": "page_type",
-                "operator": "!=",
-                "value": "front_page"
             }
         ]
     ],
@@ -317,5 +304,5 @@
     "description": "",
     "show_in_rest": 0,
     "display_title": "",
-    "modified": 1761153821
+    "modified": 1761320809
 }

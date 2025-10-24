@@ -7,10 +7,10 @@
 
 // Custom Fonts - Get more fonts here https://fonts.google.com/ and add to lib/setup.php
 
-$sourceSans: "Source Sans 3", sans-serif;
+$avenirNext: "Avenir Next", Avenir, "Canada Type Gibson", sans-serif;
 $fontawesome: "Font Awesome 6 Free";
 
-$sans:      $sourceSans;
+$sans:      $avenirNext;
 $serif:     $sans;
 
 ///////////////////////////////////////////////
@@ -72,7 +72,7 @@ $nav-font-size: 15px;
 // Headers
 $header-color: $primary;
 $header-font:  $sans;
-$header-weight: 800;
+$header-weight: 700;
 
 // Anchors
 $anchor-color: $secondary;

@@ -471,7 +471,7 @@ body {
   margin: 0;
   padding: 0;
   background: #ffffff;
-  font-family: "Source Sans 3", sans-serif;
+  font-family: "Avenir Next", Avenir, "Canada Type Gibson", sans-serif;
   font-weight: normal;
   line-height: 1.6;
   color: #000000;
@@ -1638,9 +1638,9 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: "Source Sans 3", sans-serif;
+  font-family: "Avenir Next", Avenir, "Canada Type Gibson", sans-serif;
   font-style: normal;
-  font-weight: 800;
+  font-weight: 700;
   color: #FBA919;
   text-rendering: optimizeLegibility;
 }
@@ -6366,7 +6366,7 @@ a, button, .button, [type=submit] {
   border-radius: 2px;
   border: none;
   color: #ffffff;
-  font-family: "Source Sans 3", sans-serif;
+  font-family: "Avenir Next", Avenir, "Canada Type Gibson", sans-serif;
   font-size: 13px !important;
   font-weight: 600;
   letter-spacing: 0.75px;
@@ -6597,8 +6597,9 @@ a, button, .button, [type=submit] {
   align-self: flex-end;
   width: 100%;
 }
-.fc-page-header .page-header-content-wrapper.fc-section-image, .fc-page-header .page-header-content-wrapper.page-header-expanded {
-  padding-top: 9.5rem;
+.fc-page-header .page-header-content-wrapper.page-header-expanded {
+  padding-top: 12.5rem;
+  padding-bottom: 12.5rem;
 }
 .fc-page-header .page-header-content-wrapper .page-header-content p:last-child {
   margin-bottom: 0;
@@ -6613,7 +6614,7 @@ a, button, .button, [type=submit] {
 .post-single .post-content-wrapper .post-header .post-type {
   color: #000000;
   display: block;
-  font-family: "Source Sans 3", sans-serif;
+  font-family: "Avenir Next", Avenir, "Canada Type Gibson", sans-serif;
   font-size: 15px;
   letter-spacing: 3px;
   margin: 70px 0 30px;
@@ -6641,7 +6642,7 @@ a, button, .button, [type=submit] {
   text-transform: uppercase;
 }
 .post-single .post-content-wrapper .post-header .post-meta time {
-  font-family: "Source Sans 3", sans-serif;
+  font-family: "Avenir Next", Avenir, "Canada Type Gibson", sans-serif;
   font-size: 15px;
   letter-spacing: 1px;
 }
@@ -6652,7 +6653,7 @@ a, button, .button, [type=submit] {
 }
 
 .Xproduct_title.entry-title {
-  font-family: "Source Sans 3", sans-serif;
+  font-family: "Avenir Next", Avenir, "Canada Type Gibson", sans-serif;
   font-size: 50px;
   font-weight: 700;
   margin-top: 75px !important;
@@ -6745,11 +6746,11 @@ a, button, .button, [type=submit] {
 }
 .main-search .main-search-bar .main-search-form form label input::-moz-placeholder {
   color: #3A3A3A;
-  font-family: "Source Sans 3", sans-serif;
+  font-family: "Avenir Next", Avenir, "Canada Type Gibson", sans-serif;
 }
 .main-search .main-search-bar .main-search-form form label input::placeholder {
   color: #3A3A3A;
-  font-family: "Source Sans 3", sans-serif;
+  font-family: "Avenir Next", Avenir, "Canada Type Gibson", sans-serif;
 }
 .main-search .main-search-bar .main-search-form form button {
   margin-left: auto;
@@ -7072,7 +7073,7 @@ a, button, .button, [type=submit] {
     border-radius: 2px;
     border: none;
     color: #ffffff;
-    font-family: "Source Sans 3", sans-serif;
+    font-family: "Avenir Next", Avenir, "Canada Type Gibson", sans-serif;
     font-size: 14px !important;
     font-weight: 600;
     letter-spacing: 1px;
@@ -7325,7 +7326,7 @@ a, button, .button, [type=submit] {
   border-radius: 5px;
   color: #fff;
   display: block;
-  font-family: "Source Sans 3", sans-serif;
+  font-family: "Avenir Next", Avenir, "Canada Type Gibson", sans-serif;
   font-size: 13px !important;
   font-weight: 500;
   margin: 10px auto 10px;
@@ -7576,7 +7577,7 @@ body#tinymce {
 .g-section-subtitle {
   color: #000000;
   display: block;
-  font-family: "Source Sans 3", sans-serif;
+  font-family: "Avenir Next", Avenir, "Canada Type Gibson", sans-serif;
   font-size: 14px;
   font-weight: 400;
   letter-spacing: 2px;
@@ -7593,7 +7594,7 @@ body#tinymce {
 .g-section-title {
   color: #000000;
   display: block;
-  font-family: "Source Sans 3", sans-serif;
+  font-family: "Avenir Next", Avenir, "Canada Type Gibson", sans-serif;
   font-size: 26px;
   font-weight: 800;
   margin: 0 0 30px;
@@ -7611,7 +7612,7 @@ body#tinymce {
 .g-section-intro {
   color: #000000;
   display: block;
-  font-family: "Source Sans 3", sans-serif;
+  font-family: "Avenir Next", Avenir, "Canada Type Gibson", sans-serif;
   font-size: 16px;
   font-weight: 400;
   margin: 0 0 0;
@@ -7619,7 +7620,7 @@ body#tinymce {
 .g-section-large-numbers {
   color: #FBA919;
   display: block;
-  font-family: "Source Sans 3", sans-serif;
+  font-family: "Avenir Next", Avenir, "Canada Type Gibson", sans-serif;
   font-size: 90px;
   font-weight: 300;
   line-height: 1;
@@ -7632,7 +7633,7 @@ body#tinymce {
   border: 1px solid #000000;
   color: #000000;
   display: inline-block;
-  font-family: "Source Sans 3", sans-serif;
+  font-family: "Avenir Next", Avenir, "Canada Type Gibson", sans-serif;
   font-size: 14px !important;
   font-weight: 600;
   margin-top: 1rem;
@@ -8657,7 +8658,7 @@ body#tinymce {
   background: #ffffff;
 }
 .fc-section-accordion-simple .accordion .accordion-topic h4, .fc-section-accordion-tabs .accordion .accordion-topic h4 {
-  font-family: "Source Sans 3", sans-serif;
+  font-family: "Avenir Next", Avenir, "Canada Type Gibson", sans-serif;
   font-size: 24px;
   font-weight: 400;
   margin: 0;
@@ -8797,6 +8798,26 @@ body#tinymce {
 
 .fc-section-columns + .fc-section-cards {
   margin-top: 2rem;
+}
+
+.fc-page-header.page-header .page-header-content-wrapper {
+  position: relative;
+  z-index: 2;
+}
+.fc-page-header.page-header .page-header-content-wrapper:after {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(6, 47, 110, 0.66);
+  z-index: -1;
+  mix-blend-mode: multiply;
+}
+.fc-page-header.page-header h1 {
+  font-weight: 500;
 }
 
 .fc-section-heading {
