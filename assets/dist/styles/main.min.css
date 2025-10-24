@@ -8804,18 +8804,6 @@ body#tinymce {
   position: relative;
   z-index: 2;
 }
-.fc-page-header.page-header .page-header-content-wrapper:after {
-  content: "";
-  display: block;
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(6, 47, 110, 0.66);
-  z-index: -1;
-  mix-blend-mode: multiply;
-}
 .fc-page-header.page-header h1 {
   font-weight: 500;
 }
@@ -9044,8 +9032,9 @@ body#tinymce {
 }
 .fc-wrapper .fc-section.fc-section-image,
 .fc-page-header .fc-section.fc-section-image {
-  background: radial-gradient(circle, rgba(0, 0, 0, 0.6) 0%, rgba(0, 0, 0, 0) 100%);
+  background: rgba(6, 47, 110, 0.66);
   position: relative;
+  background-blend-mode: multiply;
 }
 .fc-wrapper .fc-section.fc-section-image img.fc-section-background-image,
 .fc-page-header .fc-section.fc-section-image img.fc-section-background-image {
