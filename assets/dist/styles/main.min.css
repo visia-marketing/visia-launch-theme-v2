@@ -9092,13 +9092,13 @@ body * .background--light *, body * .fc-section-light * {
 body * .background--light a.button.grey, body * .fc-section-light a.button.grey {
   color: #FBA919;
 }
-body * .fc-section-dark, body * .fc-section-light {
+body * .fc-section-dark {
   background-color: #000000;
 }
-body * .fc-section-dark *, body * .fc-section-light * {
+body * .fc-section-dark * {
   color: #fff;
 }
-body * .fc-section-dark a.button.grey, body * .fc-section-light a.button.grey {
+body * .fc-section-dark a.button.grey {
   color: #FBA919;
 }
 body * .fc-section-grey, body * .fc-section-gray, body * .background--gray, body * .background--grey {
