@@ -9070,6 +9070,9 @@ body#tinymce {
   text-transform: uppercase;
   padding-bottom: 0;
 }
+.animated-numbers .animated-numbers-grid .number-container .countup-animated-number .append, .animated-numbers .animated-numbers-grid .number-container .countup-animated-number .prepend {
+  text-transform: none !important;
+}
 .animated-numbers .animated-numbers-grid.number-columns--2 {
   justify-content: space-evenly;
 }
