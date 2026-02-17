@@ -2,41 +2,45 @@
   $page_header_content = get_field('page_header_content');
   $page_header_style = get_field('page_header_style');
   $show_page_header = get_field('show_page_header');
-  if( is_front_page() ){
-    $show_page_header = false;
+  // if( is_front_page() ){
+  //   $show_page_header = false;
+  // }
+
+  if( is_array( $page_header_content) ){
+
+    if( array_key_exists( 'heading', $page_header_content) ){
+      if( $page_header_content['heading'] ){
+        $page_heading = $page_header_content['heading'];
+      }    
+    }
+    if( array_key_exists( 'sub_heading', $page_header_content) ){
+      if( $page_header_content['sub_heading'] ){
+        $page_sub_heading = $page_header_content['sub_heading'];
+      }    
+    }
+    if( array_key_exists( 'heading_text', $page_header_content) ){
+      if( $page_header_content['heading_text'] ){
+        $page_heading_text = $page_header_content['heading_text'];
+      }    
+    }
   }
 
-
-  if( array_key_exists( 'heading', $page_header_content) ){
-    if( $page_header_content['heading'] ){
-      $page_heading = $page_header_content['heading'];
-    }    
-  }
-  if( array_key_exists( 'sub_heading', $page_header_content) ){
-    if( $page_header_content['sub_heading'] ){
-      $page_sub_heading = $page_header_content['sub_heading'];
-    }    
-  }
-  if( array_key_exists( 'heading_text', $page_header_content) ){
-    if( $page_header_content['heading_text'] ){
-      $page_heading_text = $page_header_content['heading_text'];
-    }    
-  }
-
-  if( array_key_exists( 'background', $page_header_style) ){
-    if( $page_header_style['background'] ){
-      $page_heading_background = $page_header_style['background'];
-    }    
-  }
-  if( array_key_exists( 'background_image', $page_header_style) ){
-    if( $page_header_style['background_image'] ){
-      $page_heading_background_image = $page_header_style['background_image'];
-    }    
-  }
-  if( array_key_exists( 'header_size', $page_header_style) ){
-    if( $page_header_style['header_size'] ){
-      $page_heading_size = $page_header_style['header_size'];
-    }    
+  if( is_array( $page_header_style) ){
+    if( array_key_exists( 'background', $page_header_style) ){
+      if( $page_header_style['background'] ){
+        $page_heading_background = $page_header_style['background'];
+      }    
+    }
+    if( array_key_exists( 'background_image', $page_header_style) ){
+      if( $page_header_style['background_image'] ){
+        $page_heading_background_image = $page_header_style['background_image'];
+      }    
+    }
+    if( array_key_exists( 'header_size', $page_header_style) ){
+      if( $page_header_style['header_size'] ){
+        $page_heading_size = $page_header_style['header_size'];
+      }    
+    }
   }
 
 
@@ -53,7 +57,7 @@
     ?>
     <div class="page-header-content-wrapper fc-section fc-section-<?php echo $page_heading_background;?> page-header-<?php echo $page_heading_size; ?>">
       <div class="row">
-        <div class="small-12 columns">
+        <div class="small-12 large-8 large-offset-2 text-center columns">
           <div class="page-header-content">
             <?php 
             $header_content = get_field('page_header_content');
