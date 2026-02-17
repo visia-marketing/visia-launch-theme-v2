@@ -2,6 +2,13 @@
 $cards = get_sub_field('cards');
 $per_row = get_sub_field('cards_per_row');
 
+$aos = get_sub_field('animate_in');
+if ($aos == 'no_animation') {
+    $aos = false;
+}else{
+    $duration = get_sub_field('duration');
+}
+
 $class = 'columns cards';
 
 switch ($per_row) {
@@ -26,10 +33,12 @@ switch ($per_row) {
   <div class="row padding-row" data-equalizer>
     <?php get_template_part('flexible/section_header'); ?>
     
+    <?php $delay = 0; ?>
 
     <?php foreach( $cards as $card ): ?>
 
-      <div class="<?php echo $class; ?>">
+      <?php $delay += 100; ?>
+      <div class="<?php echo $class; ?>" <?php if($aos != false): ?>data-aos="<?php echo $aos; ?>" data-aos-duration="<?php echo $aos_duration; ?>" data-aos-delay="<?php echo $delay; ?>"<?php endif; ?>> 
         <div class="content content-cards" data-equalizer-watch>
 
             <div class="card-image">
