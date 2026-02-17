@@ -42,11 +42,7 @@ switch ($per_row) {
         <div class="content content-cards" data-equalizer-watch>
 
             <div class="card-image">
-                <?php if( $card['post_object_tf'] ): ?>
-                    <?php $image = get_the_post_thumbnail($card['case_study_id'], 'thumbnail'); ?>
-                <?php else: ?>
-                    <?php $image = wp_get_attachment_image($card['card_icon'], 'thumbnail'); ?>
-                <?php endif; ?>
+                <?php $image = wp_get_attachment_image($card['card_icon'], 'thumbnail'); ?>
                 
                 <?php if( $image ): ?>
                     <div class="card-image-inner">
@@ -56,31 +52,17 @@ switch ($per_row) {
             </div>
 
             <h3 class="card-title">
-                <?php if( $card['post_object_tf'] ): ?>
-                    <a href="<?php echo get_permalink($card['case_study_id']); ?>">
-                        <?php echo get_the_title($card['case_study_id']); ?>
-                    </a>
-                <?php else: ?>
-                    <a href="<?php echo $card['card_link']; ?>">
-                        <?php echo $card['card_title']; ?>
-                    </a>
-                <?php endif; ?>
-            </h2>
+                <a href="<?php echo $card['card_link']; ?>">
+                    <?php echo $card['card_title']; ?>
+                </a>
+            </h3>
         
             <p class="card-p">
-                <?php if( !$card['post_object_tf'] ): ?>
-                    <?php echo $card['card_description']; ?>
-                <?php else: ?>
-                    <?php echo get_the_excerpt($card['case_study_id']); ?>
-                <?php endif; ?>
+                <?php echo $card['card_description']; ?>
             </p>
 
-
-                <?php if( $card['post_object_tf'] ): ?>
-                    <a href="<?php echo get_permalink($card['case_study_id']); ?>">
-                        Read More
-                    </a>
-                <?php else: ?>
+            <?php if( array_key_exists( 'card_link', $card) ): ?>
+                <?php if( is_array( $card['card_link']) ): ?>
                     <a href="<?php echo $card['card_link']['url']; ?>">
                         <?php if($card['card_link']['title']): ?>
                             <?php echo $card['card_link']['title']; ?>
@@ -89,6 +71,8 @@ switch ($per_row) {
                         <?php endif; ?>
                     </a>
                 <?php endif; ?>
+            <?php endif; ?>
+
         
         </div>
       </div>

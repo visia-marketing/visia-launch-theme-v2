@@ -2,9 +2,9 @@
   $page_header_content = get_field('page_header_content');
   $page_header_style = get_field('page_header_style');
   $show_page_header = get_field('show_page_header');
-  if( is_front_page() ){
-    $show_page_header = false;
-  }
+  // if( is_front_page() ){
+  //   $show_page_header = false;
+  // }
 
   if( is_array( $page_header_content) ){
 
@@ -57,7 +57,7 @@
     ?>
     <div class="page-header-content-wrapper fc-section fc-section-<?php echo $page_heading_background;?> page-header-<?php echo $page_heading_size; ?>">
       <div class="row">
-        <div class="small-12 columns">
+        <div class="small-12 large-8 large-offset-2 text-center columns">
           <div class="page-header-content">
             <?php 
             $header_content = get_field('page_header_content');
