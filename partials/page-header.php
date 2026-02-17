@@ -6,37 +6,41 @@
     $show_page_header = false;
   }
 
+  if( is_array( $page_header_content) ){
 
-  if( array_key_exists( 'heading', $page_header_content) ){
-    if( $page_header_content['heading'] ){
-      $page_heading = $page_header_content['heading'];
-    }    
-  }
-  if( array_key_exists( 'sub_heading', $page_header_content) ){
-    if( $page_header_content['sub_heading'] ){
-      $page_sub_heading = $page_header_content['sub_heading'];
-    }    
-  }
-  if( array_key_exists( 'heading_text', $page_header_content) ){
-    if( $page_header_content['heading_text'] ){
-      $page_heading_text = $page_header_content['heading_text'];
-    }    
+    if( array_key_exists( 'heading', $page_header_content) ){
+      if( $page_header_content['heading'] ){
+        $page_heading = $page_header_content['heading'];
+      }    
+    }
+    if( array_key_exists( 'sub_heading', $page_header_content) ){
+      if( $page_header_content['sub_heading'] ){
+        $page_sub_heading = $page_header_content['sub_heading'];
+      }    
+    }
+    if( array_key_exists( 'heading_text', $page_header_content) ){
+      if( $page_header_content['heading_text'] ){
+        $page_heading_text = $page_header_content['heading_text'];
+      }    
+    }
   }
 
-  if( array_key_exists( 'background', $page_header_style) ){
-    if( $page_header_style['background'] ){
-      $page_heading_background = $page_header_style['background'];
-    }    
-  }
-  if( array_key_exists( 'background_image', $page_header_style) ){
-    if( $page_header_style['background_image'] ){
-      $page_heading_background_image = $page_header_style['background_image'];
-    }    
-  }
-  if( array_key_exists( 'header_size', $page_header_style) ){
-    if( $page_header_style['header_size'] ){
-      $page_heading_size = $page_header_style['header_size'];
-    }    
+  if( is_array( $page_header_style) ){
+    if( array_key_exists( 'background', $page_header_style) ){
+      if( $page_header_style['background'] ){
+        $page_heading_background = $page_header_style['background'];
+      }    
+    }
+    if( array_key_exists( 'background_image', $page_header_style) ){
+      if( $page_header_style['background_image'] ){
+        $page_heading_background_image = $page_header_style['background_image'];
+      }    
+    }
+    if( array_key_exists( 'header_size', $page_header_style) ){
+      if( $page_header_style['header_size'] ){
+        $page_heading_size = $page_header_style['header_size'];
+      }    
+    }
   }
 
 
