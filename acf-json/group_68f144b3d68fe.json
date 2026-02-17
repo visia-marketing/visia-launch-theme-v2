@@ -1,6 +1,6 @@
 {
     "key": "group_68f144b3d68fe",
-    "title": "COMPONENT: Flexible Section",
+    "title": "!COMPONENT: Flexible Section",
     "fields": [
         {
             "key": "field_68f145e511540",
@@ -262,6 +262,38 @@
                     ],
                     "min": "",
                     "max": ""
+                },
+                "layout_69949ce2f809b": {
+                    "key": "layout_69949ce2f809b",
+                    "name": "section_animated_numbers",
+                    "label": "Animated Numbers",
+                    "display": "block",
+                    "sub_fields": [
+                        {
+                            "key": "field_69949ceef809e",
+                            "label": "Animated Numbers",
+                            "name": "animated_numbers",
+                            "aria-label": "",
+                            "type": "clone",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "clone": [
+                                "group_6983d4af7e06f"
+                            ],
+                            "display": "seamless",
+                            "layout": "block",
+                            "prefix_label": 0,
+                            "prefix_name": 0
+                        }
+                    ],
+                    "min": "",
+                    "max": ""
                 }
             },
             "min": "",
@@ -288,5 +320,5 @@
     "description": "",
     "show_in_rest": 0,
     "display_title": "",
-    "modified": 1761232429
+    "modified": 1771347210
 }
