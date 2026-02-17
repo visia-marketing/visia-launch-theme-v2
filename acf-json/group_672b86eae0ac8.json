@@ -12,7 +12,7 @@
             "required": 0,
             "conditional_logic": 0,
             "wrapper": {
-                "width": "",
+                "width": "25",
                 "class": "",
                 "id": ""
             },
@@ -26,8 +26,77 @@
             "return_format": "value",
             "allow_null": 0,
             "other_choice": 0,
+            "allow_in_bindings": 1,
             "layout": "horizontal",
             "save_other_choice": 0
+        },
+        {
+            "key": "field_69949694f4a35",
+            "label": "Animate In",
+            "name": "animate_in",
+            "aria-label": "",
+            "type": "select",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "25",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "no_animation": "No Animation",
+                "fade-in": "Fade In",
+                "fade-up": "Fade In Up"
+            },
+            "default_value": false,
+            "return_format": "value",
+            "multiple": 0,
+            "allow_null": 0,
+            "allow_in_bindings": 0,
+            "ui": 0,
+            "ajax": 0,
+            "placeholder": "",
+            "create_options": 0,
+            "save_options": 0
+        },
+        {
+            "key": "field_69949706f4a36",
+            "label": "Duration",
+            "name": "duration",
+            "aria-label": "",
+            "type": "number",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_69949694f4a35",
+                        "operator": "==",
+                        "value": "fade-in"
+                    }
+                ],
+                [
+                    {
+                        "field": "field_69949694f4a35",
+                        "operator": "==",
+                        "value": "fade-up"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "35",
+                "class": "",
+                "id": ""
+            },
+            "default_value": 1000,
+            "min": "",
+            "max": 2000,
+            "allow_in_bindings": 1,
+            "placeholder": "",
+            "step": 50,
+            "prepend": "1000 ms = 1 second",
+            "append": "ms"
         },
         {
             "key": "field_672b87402abce",
@@ -160,5 +229,5 @@
     "description": "",
     "show_in_rest": 0,
     "display_title": "",
-    "modified": 1761054538
+    "modified": 1771346095
 }

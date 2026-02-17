@@ -11,8 +11,10 @@
  * ======================================================================== */
 import $ from 'jquery';
 import 'foundation-sites';
-// import 'slick-carousel';
-// import 'simple-lightbox';
+import 'slick-carousel';
+import 'simple-lightbox';
+import AOS from 'aos';
+import { CountUp } from 'countup.js';
 
 // If you only need specific modules:
 // import { Foundation, Accordion, Tabs } from 'foundation-sites';
@@ -26,6 +28,38 @@ import 'foundation-sites';
       init: function() {
         
         $(document).foundation(); // Foundation JavaScript
+
+
+        AOS.init({
+          duration: 1000,
+          once: true,
+        },
+          console.log('AOS loaded')
+        );
+
+        if (document.querySelector('.countup-animated-number')) {
+          const animatedNumbers = document.querySelectorAll('.countup-animated-number .number-span');
+        
+          animatedNumbers.forEach((element) => {
+            let targetNumber = parseInt(element.getAttribute('data-target'), 10);
+            let delayMs = parseInt(element.getAttribute('data-delay'), 10);
+            let startVal = parseInt(element.getAttribute('data-start'), 10) || 0;
+        
+            let countUp = new CountUp(element, targetNumber, {
+              duration: 2,
+              separator: ',',
+              enableScrollSpy: true,
+              scrollSpyOnce: true,
+              scrollSpyDelay: delayMs,
+              startVal: startVal,
+            });
+        
+            if (countUp.error) {
+              console.error(countUp.error);
+            }
+            console.log('CountUpJS loaded')
+          });
+        }
 
         
       
