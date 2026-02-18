@@ -3,32 +3,63 @@
     "title": "COMPONENT: Cards",
     "fields": [
         {
-            "key": "field_672b86eb2abcd",
-            "label": "Cards Per Row",
-            "name": "cards_per_row",
+            "key": "field_699505fab74b7",
+            "label": "Display",
+            "name": "cards_display",
             "aria-label": "",
-            "type": "radio",
+            "type": "select",
             "instructions": "",
             "required": 0,
             "conditional_logic": 0,
             "wrapper": {
-                "width": "25",
+                "width": "15",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "grid": "Grid",
+                "carousel": "Carousel"
+            },
+            "default_value": false,
+            "return_format": "value",
+            "multiple": 0,
+            "allow_null": 0,
+            "allow_in_bindings": 0,
+            "ui": 0,
+            "ajax": 0,
+            "placeholder": "",
+            "create_options": 0,
+            "save_options": 0
+        },
+        {
+            "key": "field_672b86eb2abcd",
+            "label": "Cards Per Row",
+            "name": "cards_per_row",
+            "aria-label": "",
+            "type": "select",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "15",
                 "class": "",
                 "id": ""
             },
             "choices": {
                 "2": "2",
                 "3": "3",
-                "4": "4",
-                "5": "5"
+                "4": "4"
             },
             "default_value": 4,
             "return_format": "value",
+            "multiple": 0,
             "allow_null": 0,
-            "other_choice": 0,
-            "allow_in_bindings": 1,
-            "layout": "horizontal",
-            "save_other_choice": 0
+            "allow_in_bindings": 0,
+            "ui": 0,
+            "ajax": 0,
+            "placeholder": "",
+            "create_options": 0,
+            "save_options": 0
         },
         {
             "key": "field_69949694f4a35",
@@ -40,7 +71,7 @@
             "required": 0,
             "conditional_logic": 0,
             "wrapper": {
-                "width": "25",
+                "width": "15",
                 "class": "",
                 "id": ""
             },
@@ -85,7 +116,7 @@
                 ]
             ],
             "wrapper": {
-                "width": "35",
+                "width": "25",
                 "class": "",
                 "id": ""
             },
@@ -94,8 +125,46 @@
             "max": 2000,
             "allow_in_bindings": 1,
             "placeholder": "",
-            "step": 50,
+            "step": "",
             "prepend": "1000 ms = 1 second",
+            "append": "ms"
+        },
+        {
+            "key": "field_6995055f8a2bd",
+            "label": "Step",
+            "name": "animation_step",
+            "aria-label": "",
+            "type": "number",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_69949694f4a35",
+                        "operator": "==",
+                        "value": "fade-in"
+                    }
+                ],
+                [
+                    {
+                        "field": "field_69949694f4a35",
+                        "operator": "==",
+                        "value": "fade-up"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "10",
+                "class": "",
+                "id": ""
+            },
+            "default_value": 100,
+            "min": "",
+            "max": 1000,
+            "allow_in_bindings": 1,
+            "placeholder": "",
+            "step": 50,
+            "prepend": "",
             "append": "ms"
         },
         {
@@ -229,5 +298,5 @@
     "description": "",
     "show_in_rest": 0,
     "display_title": "",
-    "modified": 1771346095
+    "modified": 1771382958
 }
