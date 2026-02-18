@@ -6579,6 +6579,10 @@ a, button, .button, [type=submit] {
   margin: 0 20px 20px 0;
 }
 
+.row .column:last-child:not(:first-child), .row .columns:last-child:not(:first-child) {
+  float: left !important;
+}
+
 .page-content-wrapper .page-content {
   padding: 70px 0;
 }
@@ -8762,30 +8766,30 @@ body#tinymce {
 }
 
 .fc-section-cards .cards {
-  padding-right: 0.9rem;
-  padding-left: 0.9rem;
+  padding-right: 1rem;
+  padding-left: 1rem;
 }
-.fc-section-cards .content-cards img {
-  aspect-ratio: 3/2;
-  -o-object-fit: cover;
-     object-fit: cover;
-  margin-bottom: 2rem;
-  min-width: 100%;
+.fc-section-cards .content-cards {
+  background: #fff;
+  margin-bottom: 2.5rem;
 }
-.fc-section-cards .content-cards h3 {
+.fc-section-cards .content-cards--inner {
+  padding: 2rem;
+}
+.fc-section-cards .content-cards--inner h3 {
   padding-bottom: 0.75rem;
 }
-.fc-section-cards .content-cards h3 a {
+.fc-section-cards .content-cards--inner h3 a {
   font-size: 1.75rem;
   font-style: normal;
   font-weight: 700;
   line-height: 1.3;
   color: #000000;
 }
-.fc-section-cards .content-cards p {
+.fc-section-cards .content-cards--inner p {
   margin-bottom: 1.5rem;
 }
-.fc-section-cards .content-cards > a {
+.fc-section-cards .content-cards--inner > a {
   color: #000000;
   font-size: 1.125rem;
   font-style: normal;
@@ -8798,6 +8802,33 @@ body#tinymce {
   text-decoration-thickness: auto;
   text-underline-offset: auto;
   text-underline-position: from-font;
+}
+.fc-section-cards .content-cards img {
+  aspect-ratio: 3/2;
+  -o-object-fit: cover;
+     object-fit: cover;
+  min-width: 100%;
+}
+.fc-section-cards .slick-arrow {
+  height: 100% !important;
+  width: 3rem;
+  z-index: 99;
+}
+.fc-section-cards .slick-arrow.slick-prev {
+  background: linear-gradient(90deg, #f6f5f3 25%, rgba(246, 245, 243, 0) 100%);
+}
+@media screen and (min-width: 1400px) {
+  .fc-section-cards .slick-arrow.slick-prev {
+    left: -3rem !important;
+  }
+}
+.fc-section-cards .slick-arrow.slick-next {
+  background: linear-gradient(270deg, #f6f5f3 25%, rgba(246, 245, 243, 0) 100%);
+}
+@media screen and (min-width: 1400px) {
+  .fc-section-cards .slick-arrow.slick-next {
+    right: -3rem !important;
+  }
 }
 
 .fc-section-columns + .fc-section-cards {
@@ -9235,7 +9266,7 @@ body * .fc-section-dark a.button.grey {
   color: #FBA919;
 }
 body * .fc-section-grey, body * .fc-section-gray, body * .background--gray, body * .background--grey {
-  background-color: #EEEDED;
+  background-color: #F6F5F3;
 }
 body * .background--image.background--light * {
   color: #000000;

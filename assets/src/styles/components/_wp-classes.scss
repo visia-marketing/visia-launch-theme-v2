@@ -28,3 +28,8 @@
   float: left;
   margin: 0 20px 20px 0;
 }
+
+.row .column:last-child:not(:first-child){
+  float: left !important; 
+
+}
