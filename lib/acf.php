@@ -110,7 +110,8 @@ function get_flexible_content() {
         }
 
         #' . esc_html($id) . ' > .fc-section-columns {
-          min-width: 100%;
+          min-width: calc(100% - 4rem);
+          max-width: calc(100% - 4rem);
         }
       </style>';
 
